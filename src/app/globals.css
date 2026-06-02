@@ -134,7 +134,7 @@
     border: 2px dashed #d9c9b3;
     border-radius: 28px;
     color: #8a6d4a;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     text-align: center;
     padding: 24px;
@@ -249,4 +249,108 @@
   /* Reveal-on-scroll stagger */
   .stagger-5 { transition-delay: 500ms; }
   .stagger-6 { transition-delay: 600ms; }
+}
+
+/* ===== Article prose (patient-education content) ===== */
+/* Hand-rolled reading styles for rendered Markdown — keeps the warm palette
+   and avoids pulling in @tailwindcss/typography. */
+.article-prose {
+  color: #3d4947; /* on-surface-variant */
+  font-size: 18px;
+  line-height: 1.8;
+}
+.article-prose > * + * {
+  margin-top: 1.25em;
+}
+.article-prose h1,
+.article-prose h2,
+.article-prose h3,
+.article-prose h4 {
+  color: #171d1c; /* on-surface */
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.article-prose h1 { font-size: 32px; margin-top: 1.6em; margin-bottom: 0.6em; }
+.article-prose h2 { font-size: 28px; margin-top: 1.9em; margin-bottom: 0.6em; }
+.article-prose h3 { font-size: 22px; font-weight: 700; margin-top: 1.6em; margin-bottom: 0.5em; }
+.article-prose h4 { font-size: 18px; font-weight: 700; margin-top: 1.4em; margin-bottom: 0.4em; }
+.article-prose p { margin: 0; }
+.article-prose a {
+  color: #00685f; /* primary */
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 104, 95, 0.35);
+  transition: text-decoration-color 0.2s ease;
+}
+.article-prose a:hover {
+  text-decoration-color: #00685f;
+}
+.article-prose strong {
+  color: #171d1c;
+  font-weight: 800;
+}
+.article-prose em {
+  font-style: italic;
+}
+.article-prose ul,
+.article-prose ol {
+  padding-left: 0.25em;
+}
+.article-prose ul {
+  list-style: none;
+}
+.article-prose ul li {
+  position: relative;
+  padding-left: 1.6em;
+}
+.article-prose ul li::before {
+  content: '';
+  position: absolute;
+  left: 0.25em;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00685f;
+}
+.article-prose ol {
+  list-style: decimal;
+  padding-left: 1.4em;
+}
+.article-prose ol li::marker {
+  color: #00685f;
+  font-weight: 800;
+}
+.article-prose li + li {
+  margin-top: 0.5em;
+}
+.article-prose blockquote {
+  border-left: 4px solid #00685f;
+  background: #fbf7f1;
+  padding: 16px 24px;
+  border-radius: 0 16px 16px 0;
+  font-style: italic;
+  color: #171d1c;
+}
+.article-prose code {
+  background: #f0e9dc;
+  color: #8a6d4a;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.article-prose hr {
+  border: none;
+  height: 1px;
+  background: #e8d8bf;
+  margin: 2.5em 0;
+}
+.article-prose img {
+  border-radius: 16px;
+  border: 1px solid #e8d8bf;
+  max-width: 100%;
+  height: auto;
 }

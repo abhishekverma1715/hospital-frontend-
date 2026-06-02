@@ -72,15 +72,15 @@ const config: Config = {
         "margin-mobile": "20px"
       },
       fontFamily: {
-        "headline-md": ["Plus Jakarta Sans"],
-        "label-md": ["Plus Jakarta Sans"],
-        "body-lg": ["Plus Jakarta Sans"],
-        "headline-lg-mobile": ["Plus Jakarta Sans"],
-        "headline-sm": ["Plus Jakarta Sans"],
-        "display-lg": ["Plus Jakarta Sans"],
-        "body-md": ["Plus Jakarta Sans"],
-        "label-overline": ["Plus Jakarta Sans"],
-        "headline-lg": ["Plus Jakarta Sans"]
+        "headline-md": ["Inter", "sans-serif"],
+        "label-md": ["Inter", "sans-serif"],
+        "body-lg": ["Inter", "sans-serif"],
+        "headline-lg-mobile": ["Inter", "sans-serif"],
+        "headline-sm": ["Inter", "sans-serif"],
+        "display-lg": ["Inter", "sans-serif"],
+        "body-md": ["Inter", "sans-serif"],
+        "label-overline": ["Inter", "sans-serif"],
+        "headline-lg": ["Inter", "sans-serif"]
       },
       fontSize: {
         "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
