@@ -2,17 +2,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 
-type Placeholder = { label: string; dim: string; className?: string };
-
-function ImgPlaceholder({ label, dim, className = '' }: Placeholder) {
-  return (
-    <div className={`img-placeholder ${className}`} role="img" aria-label={`Placeholder: ${label}`}>
-      <span className="ph-label">{label}</span>
-      <span className="ph-dim">{dim}</span>
-    </div>
-  );
-}
-
 export default function HomePage() {
   const [calculatorStep, setCalculatorStep] = useState(1);
   const [calculatorScore, setCalculatorScore] = useState(0);
@@ -145,11 +134,13 @@ export default function HomePage() {
 
           {/* Right column: image placeholder + floating stat cards */}
           <div className="lg:col-span-5 relative">
-            <ImgPlaceholder
-              label="Hero — clinic / doctor with patient"
-              dim="800 × 900"
-              className="aspect-[4/5] w-full"
-            />
+            <div className="aspect-[4/5] w-full rounded-[32px] overflow-hidden shadow-2xl border border-white/20">
+              <img 
+                src="/assets/photo_2026-06-10_20-31-08.jpg" 
+                alt="Dr. K. Sivakumar with patient" 
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             <div className="absolute -bottom-8 -left-8 sm:-left-12 soft-card p-5 w-[180px] hidden sm:block">
               <span className="material-symbols-outlined text-primary text-[28px] mb-2">groups</span>
@@ -170,6 +161,28 @@ export default function HomePage() {
                 <div className="text-[14px] font-extrabold">+91 99763 79697</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Trust Badges & Certifications ===== */}
+      <section className="py-12 bg-white border-b border-[#e8d8bf]/50">
+        <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
+            {[
+              { icon: 'verified_user', title: 'CMC Vellore Certified', description: 'EQAS Certified Laboratory' },
+              { icon: 'medical_services', title: 'NABH Standards', description: 'Quality Healthcare' },
+              { icon: 'school', title: 'Medical Council', description: 'Registered Practitioners' },
+              { icon: 'workspace_premium', title: '17+ Years Experience', description: 'Trusted Care' }
+            ].map((cert, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-3 bg-[#fff1de] rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                  <span className="material-symbols-outlined text-[#c8731f] group-hover:text-white text-[32px] transition-colors">{cert.icon}</span>
+                </div>
+                <h4 className="font-bold text-on-surface text-sm mb-1">{cert.title}</h4>
+                <p className="text-xs text-on-surface-variant">{cert.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -214,11 +227,13 @@ export default function HomePage() {
             </div>
 
             <div className="order-1 lg:order-2 relative">
-              <ImgPlaceholder
-                label="Hospital exterior — Kumbakonam"
-                dim="900 × 1100"
-                className="w-full h-full min-h-[480px] lg:min-h-[600px]"
-              />
+              <div className="w-full h-full min-h-[480px] lg:min-h-[600px] rounded-[32px] overflow-hidden shadow-2xl border border-white/20">
+                <img 
+                  src="/assets/photo_2026-06-10_20-31-00.jpg" 
+                  alt="Karunya Sugalaya Hospital Interior" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="grid grid-cols-2 gap-3">
                   {[
@@ -267,7 +282,13 @@ export default function HomePage() {
                   Diabrain analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. We use data, not just intuition.
                 </p>
                 <div className="mt-auto pt-6 border-t border-[#e8d8bf]">
-                  <ImgPlaceholder label="Doctor reviewing dashboard" dim="600 × 360" className="w-full aspect-[5/3]" />
+                  <div className="w-full aspect-[5/3] rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/assets/photo_2026-06-10_20-31-03.jpg" 
+                      alt="Doctor using Dialog EMR system" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -383,6 +404,102 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== Community Outreach & Events ===== */}
+      <section className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+        <div className="max-w-container-max-width mx-auto">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Community Outreach</span>
+            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Serving the Community Beyond Clinic Walls</h2>
+            <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
+              From diabetes awareness camps to corporate health initiatives, we actively engage with our community to promote health education and early detection.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                image: '/assets/CampThirupurambiam.jpg',
+                title: 'Medical Camp at Thirupurambiam',
+                description: 'Free diabetes screening and awareness camp serving rural communities with comprehensive health checkups.',
+                category: 'Medical Camp'
+              },
+              {
+                image: '/assets/CampToyotaKumb.jpg',
+                title: 'Toyota Kumbakonam Partnership',
+                description: 'Corporate health initiative in collaboration with Toyota providing employee wellness screening.',
+                category: 'Corporate Partnership'
+              },
+              {
+                image: '/assets/DiabetesAwareness.jpg',
+                title: 'Diabetes Awareness Campaign',
+                description: 'Community education program focused on prevention, early detection, and lifestyle management.',
+                category: 'Awareness Campaign'
+              }
+            ].map((event, i) => (
+              <div key={i} className="soft-card group overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={event.image} 
+                    alt={event.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="text-[11px] font-bold text-primary tracking-widest uppercase mb-2">{event.category}</div>
+                  <h3 className="text-[18px] font-bold text-on-surface mb-3">{event.title}</h3>
+                  <p className="text-[15px] text-on-surface-variant leading-relaxed">{event.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Hospital Tour & Videos ===== */}
+      <section className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+        <div className="max-w-container-max-width mx-auto">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Hospital Tour</span>
+            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Experience Karunya Sugalaya</h2>
+            <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
+              Take a virtual tour of our facilities and see our commitment to patient care in action.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="soft-card p-4">
+              <div className="aspect-video rounded-2xl overflow-hidden bg-black mb-4">
+                <video 
+                  controls 
+                  className="w-full h-full object-cover"
+                  poster="/assets/photo_2026-06-10_20-31-26.jpg"
+                >
+                  <source src="/assets/video_2026-06-10_20-48-54.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <h3 className="text-[20px] font-bold text-on-surface mb-2">Facility Tour</h3>
+              <p className="text-[15px] text-on-surface-variant">Explore our modern facilities including consultation rooms, laboratory, and inpatient wards.</p>
+            </div>
+
+            <div className="soft-card p-4">
+              <div className="aspect-video rounded-2xl overflow-hidden bg-black mb-4">
+                <video 
+                  controls 
+                  className="w-full h-full object-cover"
+                  poster="/assets/photo_2026-06-10_20-48-47.jpg"
+                >
+                  <source src="/assets/video_2026-06-10_20-48-59.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <h3 className="text-[20px] font-bold text-on-surface mb-2">Patient Care Approach</h3>
+              <p className="text-[15px] text-on-surface-variant">Learn about our patient-centered approach and comprehensive diabetes management philosophy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== Meet the doctors ===== */}
       <section className="py-24 warm-mesh-soft px-margin-mobile md:px-margin-desktop animate-fade-in-up">
         <div className="max-w-container-max-width mx-auto">
@@ -400,7 +517,13 @@ export default function HomePage() {
               { name: 'Dr. Lakshmi', role: 'Consultant Physician', specialties: ['RITAM Holistic', 'Women’s Diabetes Care', 'Tamil-first consults'], blurb: 'Lead of the RITAM holistic programme. Patients describe her consults as unhurried, thorough, and in their language.' },
             ].map((d, i) => (
               <div key={i} className="soft-card p-6 group flex flex-col sm:flex-row gap-6 items-start">
-                <ImgPlaceholder label={`Portrait — ${d.name}`} dim="400 × 480" className="w-full sm:w-40 h-48 sm:h-48 flex-shrink-0" />
+                <div className="w-full sm:w-40 h-48 sm:h-48 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src={i === 0 ? '/assets/photo_2026-06-10_20-31-22.jpg' : '/assets/photo_2026-06-10_20-31-24.jpg'} 
+                    alt={`Portrait of ${d.name}`} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="flex flex-col flex-grow">
                   <h3 className="text-[22px] font-extrabold text-on-surface mb-1">{d.name}</h3>
                   <div className="text-[13px] font-bold text-primary tracking-wide uppercase mb-3">{d.role}</div>
@@ -439,8 +562,16 @@ export default function HomePage() {
               { quote: 'I came in for a routine review and the doctor flagged early kidney changes I had no symptoms of. That early detection changed my treatment completely. The digital records meant every doctor I saw had my full history.', name: 'Karthikeyan P.', meta: 'Patient since 2023 · Thanjavur' },
             ].map((t, i) => (
               <div key={i} className={`soft-card p-8 sm:p-10 flex flex-col ${i === 1 ? 'md:translate-y-6' : ''}`}>
+                <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden mb-6 relative">
+                  <img 
+                    src={i === 0 ? '/assets/photo_2026-06-10_20-48-51.jpg' : i === 1 ? '/assets/photo_2026-06-10_20-48-52.jpg' : '/assets/photo_2026-06-10_20-49-08.jpg'}
+                    alt={`Patient ${t.name}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                </div>
                 <div className="quote-mark mb-2">&ldquo;</div>
-                <p className="text-[16px] text-on-surface italic mb-8 flex-grow leading-relaxed">{t.quote}</p>
+                <p className="text-[16px] text-on-surface italic mb-6 flex-grow leading-relaxed">{t.quote}</p>
                 <div className="border-t border-[#e8d8bf] pt-6 flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#fff1de] flex items-center justify-center text-[#c8731f] font-extrabold text-[18px]">
                     {t.name.charAt(0)}

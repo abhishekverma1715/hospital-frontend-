@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import EmergencyButton from '@/components/EmergencyButton';
 
 export const metadata: Metadata = {
   title: 'Karunya Sugalaya — Diabetes Care & Research Centre, Kumbakonam',
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <EmergencyButton />
       </body>
     </html>
   );
