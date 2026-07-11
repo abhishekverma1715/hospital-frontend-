@@ -12,9 +12,9 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="bg-surface-container-low py-16 md:py-24 px-margin-mobile md:px-margin-desktop text-center border-b border-outline-variant/30">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[12px] font-bold text-primary tracking-widest uppercase mb-4">Find Us</p>
-          <h1 className="text-[48px] leading-[56px] font-bold text-on-surface mb-6">Visit Karunya Sugalaya.</h1>
-          <p className="text-[18px] text-on-surface-variant leading-relaxed">
+          <p className="text-xs sm:text-sm font-bold text-primary tracking-widest uppercase mb-4">Find Us</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-[54px] leading-[1.15] font-extrabold text-on-surface mb-6">Visit Karunya Sugalaya.</h1>
+          <p className="text-base sm:text-lg text-on-surface-variant leading-relaxed font-normal">
             Located in the heart of Kumbakonam — easily accessible from Thanjavur, Nagapattinam, and the surrounding districts of the Cauvery delta.
           </p>
         </div>

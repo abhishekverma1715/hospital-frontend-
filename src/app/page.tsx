@@ -1,6 +1,8 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import Hero from '@/components/Hero';
+import QuickBoxes from '@/components/QuickBoxes';
 
 export default function HomePage() {
   const [calculatorStep, setCalculatorStep] = useState(1);
@@ -83,177 +85,122 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ===== Hero ===== */}
-      <section className="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden warm-mesh animate-fade-in-up">
-        <div className="blob w-[420px] h-[420px] -top-32 -left-24 bg-[#ffd5a9]" />
-        <div className="blob blob-2 w-[480px] h-[480px] top-1/3 -right-32 bg-[#ade8de]" />
-        <div className="blob blob-3 w-[360px] h-[360px] bottom-0 left-1/3 bg-[#ffc3af]" />
+      {/* ===== Hero Slider ===== */}
+      <Hero />
 
-        <div className="max-w-container-max-width mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
-          <div className="lg:col-span-7 flex flex-col gap-6">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/70 backdrop-blur-sm text-primary font-bold rounded-full text-[12px] tracking-widest uppercase w-max border border-[#e8d8bf] shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Live longer, healthier
-            </span>
-            <h1 className="font-display-lg text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.05] text-on-surface font-extrabold tracking-tight">
-              Illness to <span className="relative inline-block">
-                <span className="relative z-10">Wellness</span>
-                <span className="absolute left-0 right-0 bottom-1 h-3 bg-[#ffd5a9]/70 -z-0 rounded-full" />
-              </span>.
-            </h1>
-            <h2 className="text-[20px] sm:text-[24px] font-bold text-on-surface-variant max-w-xl">
-              Moving from Care to Cure for chronic conditions.
-            </h2>
-            <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant max-w-xl leading-relaxed">
-              Karunya Sugalaya has been Kumbakonam&apos;s trusted diabetes care centre since 2008. Over 50,000 patients. Over 2 lakh prescriptions. Led by a Key Opinion Leader, Metabolic Physician who built his own AI tools with a small team of technologists — because better data means better care.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-2">
-              <Link href="/book" className="group bg-primary hover:bg-primary-container text-on-primary px-8 py-4 rounded-full text-[16px] font-bold shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 flex items-center gap-2">
-                Book Appointment
-                <span className="material-symbols-outlined text-[20px] nudge-caret">arrow_forward</span>
-              </Link>
-              <Link href="#about" className="bg-white/80 backdrop-blur-sm hover:bg-white text-primary border border-[#e8d8bf] px-8 py-4 rounded-full text-[16px] font-bold transition-all duration-300 hover:-translate-y-1 shadow-sm">
-                About the Hospital
-              </Link>
-            </div>
-
-            <div className="flex flex-wrap gap-3 mt-6">
-              {[
-                { icon: 'bed', label: '12-Bed Facility' },
-                { icon: 'health_and_safety', label: 'RITAM Holistic' },
-                { icon: 'verified', label: 'CMC Vellore Certified' },
-              ].map((t) => (
-                <div key={t.label} className="bg-white/70 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-[14px] font-bold text-on-surface-variant border border-[#e8d8bf]/70">
-                  <span className="material-symbols-outlined text-primary text-[18px]">{t.icon}</span>
-                  {t.label}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right column: image placeholder + floating stat cards */}
-          <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/5] w-full rounded-[32px] overflow-hidden shadow-2xl border border-white/20">
-              <img 
-                src="/assets/photo_2026-06-10_20-31-08.jpg" 
-                alt="Dr. K. Sivakumar with patient" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="absolute -bottom-8 -left-8 sm:-left-12 soft-card p-5 w-[180px] hidden sm:block">
-              <span className="material-symbols-outlined text-primary text-[28px] mb-2">groups</span>
-              <div className="font-display-lg text-[32px] font-extrabold text-on-surface counter" data-suffix="k+" data-target="50">0</div>
-              <div className="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Patients</div>
-            </div>
-
-            <div className="absolute -top-6 -right-4 sm:-right-10 soft-card p-5 w-[170px] hidden sm:block">
-              <span className="material-symbols-outlined text-[#c8731f] text-[28px] mb-2">clinical_notes</span>
-              <div className="font-display-lg text-[32px] font-extrabold text-on-surface counter" data-suffix="+" data-target="20">0</div>
-              <div className="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Years</div>
-            </div>
-
-            <div className="absolute top-1/2 -right-2 sm:-right-6 -translate-y-1/2 bg-[#b91c1c] text-white p-4 rounded-2xl shadow-xl shadow-red-500/30 hidden md:flex items-center gap-3 hover:-translate-y-[calc(50%+4px)] transition-transform">
-              <span className="material-symbols-outlined text-[24px]" style={{ fontVariationSettings: "'FILL' 1" }}>emergency</span>
+      {/* ===== Jothydev Style Accreditations Banner ===== */}
+      <section className="py-10 bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0D5C75] text-white border-b border-white/10">
+        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-[#06B6D4]/20 border border-[#06B6D4]/40 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-[#06B6D4] text-[28px]">verified_user</span>
+              </div>
               <div>
-                <div className="text-[11px] font-bold uppercase tracking-wider opacity-90">24/7 Emergency</div>
-                <div className="text-[14px] font-extrabold">+91 99763 79697</div>
+                <span className="text-[10px] font-bold tracking-widest uppercase text-cyan-300">IDF Standard Protocol</span>
+                <h3 className="text-base font-bold text-white mt-0.5">IDF Accredited Care Equivalent</h3>
+                <p className="text-xs text-gray-300 mt-1">International Diabetes Federation guidelines strictly applied across clinical management.</p>
               </div>
             </div>
+
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-[#E07A5F]/20 border border-[#E07A5F]/40 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-[#E07A5F] text-[28px]">local_hospital</span>
+              </div>
+              <div>
+                <span className="text-[10px] font-bold tracking-widest uppercase text-orange-300">Quality Assured</span>
+                <h3 className="text-base font-bold text-white mt-0.5">NABH Hospital Safety Standards</h3>
+                <p className="text-xs text-gray-300 mt-1">National Accreditation Board safety protocols followed for outpatient &amp; inpatient care.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-emerald-400 text-[28px]">biotech</span>
+              </div>
+              <div>
+                <span className="text-[10px] font-bold tracking-widest uppercase text-emerald-300">Diagnostic Gold Standard</span>
+                <h3 className="text-base font-bold text-white mt-0.5">CMC Vellore EQAS Certified</h3>
+                <p className="text-xs text-gray-300 mt-1">External Quality Assurance Scheme verified laboratory ensuring 99.4% assay accuracy.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* ===== Trust Badges & Certifications ===== */}
-      <section className="py-12 bg-white border-b border-[#e8d8bf]/50">
-        <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
-            {[
-              { icon: 'verified_user', title: 'CMC Vellore Certified', description: 'EQAS Certified Laboratory' },
-              { icon: 'medical_services', title: 'NABH Standards', description: 'Quality Healthcare' },
-              { icon: 'school', title: 'Medical Council', description: 'Registered Practitioners' },
-              { icon: 'workspace_premium', title: '17+ Years Experience', description: 'Trusted Care' }
-            ].map((cert, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-3 bg-[#fff1de] rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-                  <span className="material-symbols-outlined text-[#c8731f] group-hover:text-white text-[32px] transition-colors">{cert.icon}</span>
-                </div>
-                <h4 className="font-bold text-on-surface text-sm mb-1">{cert.title}</h4>
-                <p className="text-xs text-on-surface-variant">{cert.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ===== Quick Action Facilities Grid (Collaborative & Everyday Care) ===== */}
+      <QuickBoxes />
 
-      {/* ===== About ===== */}
-      <section id="about" className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
-        <div className="max-w-container-max-width mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">About Karunya Sugalaya</span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">A hospital built on Care, Research, and Technology.</h2>
-            <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
-              Karunya Sugalaya was founded in March 2011 on 9, Ramasami Kovil West Street, Kumbakonam, as a specialist Diabetes Care Centre — bringing consultation, laboratory, and pharmacy under one roof.
-            </p>
-          </div>
+      {/* ===== About Hospital Section (Jothydev Reference Layout) ===== */}
+      <section id="about" className="py-20 bg-[#F8FAFC] border-y border-gray-200">
+        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Story Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider">
+                About Karunya Sugalaya
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight">
+                One of the Best Specialist Diabetes Care &amp; Research Hospitals in Kumbakonam, Tamil Nadu
+              </h2>
+              <p className="text-base text-[#475569] leading-relaxed">
+                For nearly two decades, Karunya Sugalaya Diabetes Research Centre has stood as your trusted partner in diabetes care, offering uninterrupted support across Kumbakonam, Thanjavur, and the Cauvery delta region. Our commitment extends beyond mere treatment to elevating metabolic healthcare standards.
+              </p>
+              <p className="text-base text-[#475569] leading-relaxed">
+                We are dedicated to empowering patients through comprehensive diabetes education, ensuring each individual gains the tools to thrive. Moreover, under the leadership of Dr. K. Sivakumar, MD, our team integrates cutting-edge CGM and tele-management protocols.
+              </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
-            <div className="order-2 lg:order-1 flex flex-col gap-6">
-              <div className="soft-card p-8 group">
-                <div className="icon-chip bg-[#fff1de] text-[#c8731f] mb-5">
-                  <span className="material-symbols-outlined text-[28px]">apartment</span>
-                </div>
-                <h3 className="text-[20px] font-bold text-on-surface mb-3">Expanding to Meet Needs</h3>
-                <p className="text-[16px] text-on-surface-variant leading-relaxed">
-                  In 2012, responding to growing patient numbers, we opened our inpatient facility. Today the centre runs as a specialist day-care unit — 12 beds, individual AC rooms, a foot care clinic, physiotherapy, and retinal photography for early diabetic eye disease detection.
-                </p>
-              </div>
-
-              <div className="relative p-8 rounded-[28px] text-white shadow-xl overflow-hidden bg-gradient-to-br from-primary to-[#005049] group hover:-translate-y-1 transition-transform duration-500">
-                <div className="absolute right-0 bottom-0 opacity-15 transform translate-x-1/4 translate-y-1/4">
-                  <span className="material-symbols-outlined text-[180px]">smart_toy</span>
-                </div>
-                <div className="relative z-10">
-                  <div className="icon-chip bg-white/15 backdrop-blur-sm text-white mb-5">
-                    <span className="material-symbols-outlined text-[28px]">biotech</span>
+              {/* Jothydev Style Key Milestones Bullets */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {[
+                  'Diabetes Tele Medicine System (DTMS® & DiaX.AI)',
+                  'Continuous Glucose Monitoring (CGM) Center',
+                  'Insulin Pump Therapy & Fitting Unit',
+                  '12-Bed Day-Care & Foot Salvage Clinic',
+                ].map((point, idx) => (
+                  <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-gray-200 shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-[#0D5C75] shrink-0" />
+                    <span className="text-sm font-bold text-[#0F172A]">{point}</span>
                   </div>
-                  <h3 className="text-[20px] font-bold mb-3">Technology &amp; Data Driven</h3>
-                  <p className="text-[16px] opacity-90 leading-relaxed">
-                    In 2017 we migrated to a Java-based EMR. In 2022 we built DiaX.AI. Dialog holds complete records of 50,000+ patients and 2 lakh+ prescriptions — a data asset that powers research and faster care at every consultation.
-                  </p>
+                ))}
+              </div>
+
+              <div className="pt-4 flex flex-wrap gap-4">
+                <Link 
+                  href="/about" 
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#0D5C75] hover:bg-[#094356] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
+                >
+                  <span>Read Full Hospital Story</span>
+                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-gray-50 text-[#0F172A] border border-gray-300 font-bold text-sm transition-all"
+                >
+                  <span>Explore All Departments</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Visual Image & Stats */}
+            <div className="lg:col-span-5 relative">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[1/1] relative">
+                <img 
+                  src="/assets/photo_2026-06-10_20-48-52.jpg" 
+                  alt="Karunya Sugalaya Hospital Leadership" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h4 className="text-xl font-extrabold mt-2">Dr. K. Sivakumar, MD</h4>
+                  <p className="text-xs text-gray-200 mt-0.5">Specialist Diabetologist &amp; Key Opinion Leader</p>
                 </div>
               </div>
             </div>
 
-            <div className="order-1 lg:order-2 relative">
-              <div className="w-full h-full min-h-[480px] lg:min-h-[600px] rounded-[32px] overflow-hidden shadow-2xl border border-white/20">
-                <img 
-                  src="/assets/photo_2026-06-10_20-31-00.jpg" 
-                  alt="Karunya Sugalaya Hospital Interior" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { label: 'Founded', target: '2012', suffix: '' },
-                    { label: 'Specialists', target: '4', suffix: '' },
-                    { label: 'Patients', target: '50', suffix: 'k+' },
-                    { label: 'Emergency', target: '24×7', suffix: '', static: true },
-                  ].map((s, i) => (
-                    <div key={i} className="bg-white/80 backdrop-blur-md p-4 rounded-2xl border border-white shadow-sm">
-                      <div className="font-headline-sm text-[22px] font-extrabold text-primary">
-                        {s.static ? '24×7' : (
-                          <span className="counter" data-target={s.target} data-suffix={s.suffix}>0</span>
-                        )}
-                      </div>
-                      <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mt-1">{s.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -500,47 +447,175 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Meet the doctors ===== */}
+      {/* ===== Meet Our Leadership & Specialists ===== */}
       <section className="py-24 warm-mesh-soft px-margin-mobile md:px-margin-desktop animate-fade-in-up">
         <div className="max-w-container-max-width mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Our Team</span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Meet the doctors.</h2>
+            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">
+              Our Leadership &amp; Clinical Specialists
+            </span>
+            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">
+              Meet Our Expert Diabetologists
+            </h2>
             <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
-              Led by specialists who combine deep clinical experience with research and technology.
+              Renowned specialists combining over two decades of clinical Diabetology experience with personalized patient care.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {[
-              { name: 'Dr. Sivakumar', role: 'Metabolic Physician · Founder', specialties: ['Diabetes', 'Endocrinology', 'AI in Medicine'], blurb: 'Key Opinion Leader with 20+ years in metabolic disease. Built DiaX.AI and the Dialog EMR alongside a small technologist team.' },
-              { name: 'Dr. Lakshmi', role: 'Consultant Physician', specialties: ['RITAM Holistic', 'Women’s Diabetes Care', 'Tamil-first consults'], blurb: 'Lead of the RITAM holistic programme. Patients describe her consults as unhurried, thorough, and in their language.' },
-            ].map((d, i) => (
-              <div key={i} className="soft-card p-6 group flex flex-col sm:flex-row gap-6 items-start">
-                <div className="w-full sm:w-40 h-48 sm:h-48 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src={i === 0 ? '/assets/photo_2026-06-10_20-31-22.jpg' : '/assets/photo_2026-06-10_20-31-24.jpg'} 
-                    alt={`Portrait of ${d.name}`} 
-                    className="w-full h-full object-cover"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
+            {/* Doctor 1: Dr. K. Sivakumar */}
+            <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                {/* Photo */}
+                <div className="w-full sm:w-44 h-60 sm:h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50">
+                  <img
+                    src="/assets/dr-sivakumar.jpg"
+                    alt="Dr. K. Sivakumar, M.B.B.S, M.D."
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
+
+                {/* Details */}
                 <div className="flex flex-col flex-grow">
-                  <h3 className="text-[22px] font-extrabold text-on-surface mb-1">{d.name}</h3>
-                  <div className="text-[13px] font-bold text-primary tracking-wide uppercase mb-3">{d.role}</div>
-                  <p className="text-[15px] text-on-surface-variant leading-relaxed mb-4">{d.blurb}</p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {d.specialties.map(s => (
-                      <span key={s} className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#fff1de] text-[#c8731f] border border-[#e8d8bf]">{s}</span>
-                    ))}
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                    Consultant Physician &amp; Diabetologist
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1">
+                    Dr. K. Sivakumar, M.B.B.S, M.D.,
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                    20+ years overall clinical experience specializing in Diabetology, Internal Medicine, and evidence-based metabolic management.
+                  </p>
+
+                  {/* Specialties Chips */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#fff1de] text-[#c8731f]">
+                      Diabetology
+                    </span>
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#e8f4f1] text-[#0D5C75]">
+                      Internal Medicine
+                    </span>
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#f0e9dc] text-gray-700">
+                      20+ Yrs Exp
+                    </span>
                   </div>
                 </div>
               </div>
-            ))}
+
+              {/* Schedule & Contact Strip */}
+              <div className="mt-6 pt-5 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
+                  <div className="font-bold text-[#0D5C75] flex items-center gap-1.5 mb-1.5">
+                    <span className="material-symbols-outlined text-[16px]">schedule</span>
+                    <span>Consulting &amp; Video Hours</span>
+                  </div>
+                  <div className="text-gray-700 font-medium space-y-1">
+                    <div><span className="font-semibold">Clinic:</span> Mon–Fri 9 AM – 4 PM</div>
+                    <div><span className="font-semibold text-[#F59E0B]">Saturday:</span> 9 AM – 6 PM</div>
+                    <div><span className="font-semibold text-green-700">Online Video:</span> 9 AM – 9 PM</div>
+                    <div className="text-[11px] font-bold text-red-600">No Consultation On Sunday</div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100 flex flex-col justify-center space-y-2.5">
+                  <a
+                    href="tel:+919994360912"
+                    className="flex items-center gap-2 font-bold text-[#0F172A] hover:text-[#0D5C75] transition-colors"
+                  >
+                    <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">call</span>
+                    <span>(+91) 9994360912</span>
+                  </a>
+                  <a
+                    href="mailto:drksincere@gmail.com"
+                    className="flex items-center gap-2 font-medium text-gray-600 hover:text-[#0D5C75] transition-colors break-all"
+                  >
+                    <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">mail</span>
+                    <span>drksincere@gmail.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Doctor 2: Dr. B. Lakshmi */}
+            <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                {/* Photo */}
+                <div className="w-full sm:w-44 h-60 sm:h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50">
+                  <img
+                    src="/assets/dr-lakshmi.jpg"
+                    alt="Dr. B. Lakshmi, M.B.B.S, D. Diab."
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                {/* Details */}
+                <div className="flex flex-col flex-grow">
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                    Consultant Diabetologist
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1">
+                    Dr. B. Lakshmi, M.B.B.S, D. Diab.,
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                    Specialist in gestational diabetes, comprehensive insulin therapy, preventive diabetic foot care, and holistic patient-first care.
+                  </p>
+
+                  {/* Specialties Chips */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#fff1de] text-[#c8731f]">
+                      Diabetology
+                    </span>
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#e8f4f1] text-[#0D5C75]">
+                      Gestational Care
+                    </span>
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#f0e9dc] text-gray-700">
+                      Preventive Foot Care
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Schedule & Contact Strip */}
+              <div className="mt-6 pt-5 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
+                  <div className="font-bold text-[#0D5C75] flex items-center gap-1.5 mb-1.5">
+                    <span className="material-symbols-outlined text-[16px]">schedule</span>
+                    <span>Consulting &amp; Video Hours</span>
+                  </div>
+                  <div className="text-gray-700 font-medium space-y-1">
+                    <div><span className="font-semibold">Mon–Sat:</span> 10 AM – 2 PM</div>
+                    <div><span className="font-semibold">Evening:</span> 6 PM – 8 PM</div>
+                    <div><span className="font-semibold text-green-700">Online Video:</span> 11 AM – 8 PM</div>
+                    <div className="text-[11px] font-bold text-red-600">No Consultation On Sunday</div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100 flex flex-col justify-center space-y-2.5">
+                  <a
+                    href="tel:+919791906781"
+                    className="flex items-center gap-2 font-bold text-[#0F172A] hover:text-[#0D5C75] transition-colors"
+                  >
+                    <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">call</span>
+                    <span>(+91) 9791906781</span>
+                  </a>
+                  <a
+                    href="mailto:lakshmi@karunyasugalaya.co.in"
+                    className="flex items-center gap-2 font-medium text-gray-600 hover:text-[#0D5C75] transition-colors break-all"
+                  >
+                    <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">mail</span>
+                    <span>lakshmi@karunyasugalaya.co.in</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center">
-            <Link href="/team" className="inline-flex items-center justify-center gap-2 bg-white text-primary font-bold text-[16px] sm:text-[18px] hover:-translate-y-1 transition-transform px-8 py-4 rounded-full shadow-md border border-[#e8d8bf] group">
-              View full team profiles
+            <Link
+              href="/team"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary font-bold text-[16px] sm:text-[18px] hover:-translate-y-1 transition-transform px-8 py-4 rounded-full shadow-md border border-[#e8d8bf] group"
+            >
+              View full team profiles &amp; detailed schedules
               <span className="material-symbols-outlined nudge-caret">arrow_forward</span>
             </Link>
           </div>

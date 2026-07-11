@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import EmergencyButton from '@/components/EmergencyButton';
+import FloatingContactButtons from '@/components/FloatingContactButtons';
 
 export const metadata: Metadata = {
   title: 'Karunya Sugalaya — Diabetes Care & Research Centre, Kumbakonam',
   description: "Kumbakonam's specialist diabetes centre since 2008. 50,000+ patients, AI-assisted diagnosis, CMC Vellore certified lab. Expert care by Dr. K. Sivakumar. Book online.",
   icons: {
-    icon: '/assets/logo.png',
+    icon: '/assets/logo.svg',
   },
 };
 
@@ -29,7 +29,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <EmergencyButton />
+        <FloatingContactButtons />
       </body>
     </html>
   );

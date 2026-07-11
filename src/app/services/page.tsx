@@ -33,8 +33,70 @@ const HIGHLIGHTS = [
   { icon: 'memory', label: 'AI-assisted clinical decisions' },
 ];
 
+const DEFAULT_SERVICES: Service[] = [
+  {
+    id: 1,
+    name: 'Diabetes Speciality Outpatient Clinic',
+    description: 'Comprehensive evaluation, risk stratification, personalized glycemic control, and evidence-based metabolic therapy led by senior consultant diabetologists.',
+    icon: 'medical_services',
+    image: '/assets/photo_2026-06-10_20-48-52.jpg',
+  },
+  {
+    id: 2,
+    name: 'Continuous Glucose Monitoring (CGM) & Insulin Pump Center',
+    description: 'Real-time ambulatory 14-day continuous glucose monitoring combined with sensor-augmented insulin pump fitting and continuous patient training.',
+    icon: 'devices_wearables',
+    image: '',
+  },
+  {
+    id: 3,
+    name: 'Teleconsultation & Remote Diabetes Management (DiaX.AI)',
+    description: 'Virtual consultations with our multidisciplinary team of diabetologists, diabetes educators, nutritionists, and clinical pharmacists across Tamil Nadu.',
+    icon: 'video_chat',
+    image: '',
+  },
+  {
+    id: 4,
+    name: 'Diabetic Foot Salvage & Neuropathy Clinic',
+    description: 'Advanced biothesiometry, Doppler vascular profiling, podiatry assessments, customized footwear prescription, and wound salvage.',
+    icon: 'footprint',
+    image: '',
+  },
+  {
+    id: 5,
+    name: 'CMC Vellore EQAS Certified Diagnostic Laboratory',
+    description: 'Gold-standard HPLC HbA1c testing, complete renal profile, microalbuminuria screening, lipid panel, and automated digital reporting.',
+    icon: 'biotech',
+    image: '',
+  },
+  {
+    id: 6,
+    name: 'Diabetic Retinopathy & Fundus Screening',
+    description: 'High-resolution retinal photography and early detection of microvascular eye changes to prevent vision loss.',
+    icon: 'visibility',
+    image: '',
+  },
+  {
+    id: 7,
+    name: 'Obesity & Metabolic Health Clinic',
+    description: 'Body composition analysis, precision metabolic profiling, personalized weight reduction programs, and medical nutrition therapy.',
+    icon: 'monitor_weight',
+    image: '',
+  },
+  {
+    id: 8,
+    name: 'Inpatient 12-Bed Specialist Day-Care Unit',
+    description: 'Air-conditioned individual rooms with continuous glucose monitoring, intravenous insulin infusion protocols, and multidisciplinary nursing support.',
+    icon: 'bed',
+    image: '',
+  },
+];
+
 export default async function ServicesPage() {
-  const services = await getServices();
+  let services = await getServices();
+  if (!services || services.length === 0) {
+    services = DEFAULT_SERVICES;
+  }
 
   return (
     <>
@@ -71,16 +133,7 @@ export default async function ServicesPage() {
 
       {/* ===== Service rows ===== */}
       <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
-        {services.length === 0 ? (
-          <div className="flex flex-col items-center justify-center text-center py-20 rounded-[28px] border-2 border-dashed border-[#e8d8bf] bg-[#fbf7f1]">
-            <span className="material-symbols-outlined text-[48px] text-[#c8a878] mb-3">medical_services</span>
-            <h3 className="text-[20px] font-bold text-on-surface">No services listed yet</h3>
-            <p className="text-[15px] text-on-surface-variant mt-1 max-w-sm">
-              Services added in the admin dashboard will appear here.
-            </p>
-          </div>
-        ) : (
-          <div className="flex flex-col gap-16 md:gap-24">
+        <div className="flex flex-col gap-16 md:gap-24">
             {services.map((service, idx) => {
               const flipped = idx % 2 === 1;
               return (
@@ -132,7 +185,6 @@ export default async function ServicesPage() {
               );
             })}
           </div>
-        )}
       </section>
 
       {/* ===== CTA ===== */}

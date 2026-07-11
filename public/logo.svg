@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Karunya Sugalaya Logo</title>
+  <!-- Top Orange Polygon -->
+  <path d="M13 16 L75 31 L13 31 Z" fill="#FF5B1B" />
+  <!-- Left Purple/Indigo Polygon -->
+  <path d="M13 31 L27 84 L42 73 Z" fill="#422884" />
+  <!-- Right Emerald Green Polygon -->
+  <path d="M42 73 L75 31 L87 38 Z" fill="#1AA862" />
+</svg>

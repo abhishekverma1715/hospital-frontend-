@@ -27,8 +27,40 @@ async function getTeam(): Promise<TeamMember[]> {
   }
 }
 
+const DEFAULT_TEAM: TeamMember[] = [
+  {
+    id: 1,
+    name: 'Dr. K. Sivakumar, M.B.B.S, M.D.,',
+    specialty: 'Consultant Physician & Diabetologist',
+    photo: '/assets/dr-sivakumar.jpg',
+    qualifications: 'M.B.B.S, M.D. - Medicine, 20+ Years Experience in Diabetology',
+    biography: `Dr. K. Sivakumar is a renowned consultant physician and diabetologist in Kumbakonam, Tamil Nadu with over two decades of clinical excellence. He founded Karunya Sugalaya to transform diabetes therapy into comprehensive, patient-centered care.
+
+Under his leadership, the hospital pioneered electronic medical records (Dialog EMR), AI support tools (DiaX.AI), and Continuous Glucose Monitoring (CGM) protocols treating more than 50,000 patients across South India.`,
+  },
+  {
+    id: 2,
+    name: 'Dr. B. Lakshmi, M.B.B.S, D. Diab.,',
+    specialty: 'Consultant Diabetologist & Women’s Metabolic Care Specialist',
+    photo: '/assets/dr-lakshmi.jpg',
+    qualifications: 'M.B.B.S, D. Diab., Comprehensive Insulin & Gestational Care',
+    biography: `Dr. B. Lakshmi heads the Diabetic Foot & Neuropathy Prevention Unit and the RITAM Holistic Women's Diabetes Care Program at Karunya Sugalaya. Specializing in gestational diabetes mellitus (GDM) and endocrine care, her consults are unhurried, thorough, and focused on preventive wellness.`,
+  },
+  {
+    id: 3,
+    name: 'Dr. R. Aravind, MD',
+    specialty: 'Consultant Diabetologist & CGM / Insulin Pump Lead',
+    photo: '',
+    qualifications: 'MD, Advanced Certification in Insulin Pump Therapy',
+    biography: `Dr. R. Aravind oversees the Continuous Glucose Monitoring (CGM) laboratory and automated insulin pump fitting center. He works closely with telemedicine patients across regional districts to optimize remote insulin titration.`,
+  },
+];
+
 export default async function TeamPage() {
-  const team = await getTeam();
+  let team = await getTeam();
+  if (!team || team.length === 0) {
+    team = DEFAULT_TEAM;
+  }
 
   return (
     <main className="flex-grow">
@@ -46,12 +78,7 @@ export default async function TeamPage() {
       {/* Main Content Area */}
       <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
         <div className="flex flex-col gap-20">
-          
-          {team.length === 0 ? (
-            <div className="text-center text-on-surface-variant">No team members found.</div>
-          ) : (
-            <>
-              {/* Founders / Top Two Members */}
+          {/* Founders / Top Two Members */}
               {team.slice(0, 2).map((member, index) => (
                 <React.Fragment key={member.id}>
                   <article className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
@@ -116,9 +143,6 @@ export default async function TeamPage() {
                   </div>
                 </section>
               )}
-            </>
-          )}
-
         </div>
       </section>
     </main>
