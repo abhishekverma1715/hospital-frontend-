@@ -76,8 +76,8 @@ export default async function TeamPage() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
-        <div className="flex flex-col gap-20">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto">
+        <div className="flex flex-col gap-12 md:gap-14">
           {/* Founders / Top Two Members */}
               {team.slice(0, 2).map((member, index) => (
                 <React.Fragment key={member.id}>

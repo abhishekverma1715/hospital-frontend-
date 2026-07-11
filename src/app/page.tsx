@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import QuickBoxes from '@/components/QuickBoxes';
+import FinalCTA from '@/components/FinalCTA';
 
 export default function HomePage() {
   const [calculatorStep, setCalculatorStep] = useState(1);
@@ -89,40 +90,49 @@ export default function HomePage() {
       <Hero />
 
       {/* ===== Jothydev Style Accreditations Banner ===== */}
-      <section className="py-10 bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0D5C75] text-white border-b border-white/10">
+      <section className="py-14 bg-smoke3 border-b border-gray-200">
         <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             
-            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-[#06B6D4]/20 border border-[#06B6D4]/40 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[#06B6D4] text-[28px]">verified_user</span>
+            <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-[#0084FF]/10 border border-[#0084FF]/20 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-[#0084FF] text-[32px]">verified_user</span>
               </div>
-              <div>
-                <span className="text-[10px] font-bold tracking-widest uppercase text-cyan-300">IDF Standard Protocol</span>
-                <h3 className="text-base font-bold text-white mt-0.5">IDF Accredited Care Equivalent</h3>
-                <p className="text-xs text-gray-300 mt-1">International Diabetes Federation guidelines strictly applied across clinical management.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-[#E07A5F]/20 border border-[#E07A5F]/40 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[#E07A5F] text-[28px]">local_hospital</span>
-              </div>
-              <div>
-                <span className="text-[10px] font-bold tracking-widest uppercase text-orange-300">Quality Assured</span>
-                <h3 className="text-base font-bold text-white mt-0.5">NABH Hospital Safety Standards</h3>
-                <p className="text-xs text-gray-300 mt-1">National Accreditation Board safety protocols followed for outpatient &amp; inpatient care.</p>
+              <div className="flex flex-col">
+                <h3 className="text-lg font-bold text-[#0F172A]">IDF Accredited Care Equivalent</h3>
+                <p className="text-sm text-gray-600 mt-1 leading-relaxed">International Diabetes Federation guidelines strictly applied across clinical management.</p>
+                <Link href="/about" className="line-btn mt-3 text-sm">
+                  <span>Know More</span>
+                  <span className="text-base">→</span>
+                </Link>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-emerald-400 text-[28px]">biotech</span>
+            <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-[#E07A5F]/10 border border-[#E07A5F]/20 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-[#E07A5F] text-[32px]">local_hospital</span>
               </div>
-              <div>
-                <span className="text-[10px] font-bold tracking-widest uppercase text-emerald-300">Diagnostic Gold Standard</span>
-                <h3 className="text-base font-bold text-white mt-0.5">CMC Vellore EQAS Certified</h3>
-                <p className="text-xs text-gray-300 mt-1">External Quality Assurance Scheme verified laboratory ensuring 99.4% assay accuracy.</p>
+              <div className="flex flex-col">
+                <h3 className="text-lg font-bold text-[#0F172A]">NABH Hospital Safety Standards</h3>
+                <p className="text-sm text-gray-600 mt-1 leading-relaxed">National Accreditation Board safety protocols followed for outpatient &amp; inpatient care.</p>
+                <Link href="/about" className="line-btn mt-3 text-sm">
+                  <span>Know More</span>
+                  <span className="text-base">→</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-emerald-600 text-[32px]">biotech</span>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="text-lg font-bold text-[#0F172A]">CMC Vellore EQAS Certified</h3>
+                <p className="text-sm text-gray-600 mt-1 leading-relaxed">External Quality Assurance Scheme verified laboratory ensuring 99.4% assay accuracy.</p>
+                <Link href="/research" className="line-btn mt-3 text-sm">
+                  <span>Know More</span>
+                  <span className="text-base">→</span>
+                </Link>
               </div>
             </div>
 
@@ -205,57 +215,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Why — asymmetric grid ===== */}
-      <section className="py-24 px-margin-mobile md:px-margin-desktop animate-fade-in-up relative overflow-hidden warm-mesh-soft">
-        <div className="max-w-container-max-width mx-auto relative z-10">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Why Karunya Sugalaya</span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">What makes us different.</h2>
-            <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
+      {/* ===== Why Karunya Sugalaya ===== */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200">
+        <div className="max-w-container-max-width mx-auto">
+          <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
+            <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-widest mb-4">
+              Why Karunya Sugalaya
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0F172A] leading-tight mb-5">
+              What makes us different.
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Six things we do here that you won&apos;t find at most diabetes clinics — not gimmicks, but practices that genuinely improve outcomes.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-            {/* Hero feature card spans 2 cols + 2 rows on lg */}
-            <div className="lg:col-span-3 lg:row-span-2 relative p-10 rounded-[32px] overflow-hidden bg-gradient-to-br from-[#fff1de] via-white to-[#e8f4f1] border border-[#e8d8bf] group hover:-translate-y-2 transition-transform duration-500 shadow-[0_8px_30px_rgba(120,90,50,0.08)]">
-              <div className="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="icon-chip bg-primary text-white mb-6 w-16 h-16 rounded-2xl">
-                  <span className="material-symbols-outlined text-[34px]">memory</span>
-                </div>
-                <h3 className="text-[28px] font-extrabold text-on-surface mb-4 leading-tight">AI-Assisted Decisions, every visit.</h3>
-                <p className="text-[16px] text-on-surface-variant leading-relaxed mb-6 max-w-md">
-                  Diabrain analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. We use data, not just intuition.
-                </p>
-                <div className="mt-auto pt-6 border-t border-[#e8d8bf]">
-                  <div className="w-full aspect-[5/3] rounded-2xl overflow-hidden shadow-lg">
-                    <img 
-                      src="/assets/photo_2026-06-10_20-31-03.jpg" 
-                      alt="Doctor using Dialog EMR system" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            {/* Hero feature card spans 3 cols + 2 rows on lg */}
+            <div className="lg:col-span-3 lg:row-span-2 relative p-6 sm:p-8 lg:p-10 rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md group transition-all duration-300 flex flex-col">
+              <div className="w-14 h-14 rounded-2xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center mb-6">
+                <span className="material-symbols-outlined text-[32px]">memory</span>
+              </div>
+              <h3 className="text-2xl sm:text-[28px] font-extrabold text-[#0F172A] mb-4 leading-tight">
+                AI-Assisted Decisions, every visit.
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed mb-6">
+                Diabrain analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. We use data, not just intuition.
+              </p>
+              <div className="mt-auto pt-6 border-t border-gray-100">
+                <div className="w-full aspect-[5/3] rounded-2xl overflow-hidden shadow-sm">
+                  <img 
+                    src="/assets/photo_2026-06-10_20-31-03.jpg" 
+                    alt="Doctor using Dialog EMR system" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
               </div>
             </div>
 
             {[
-              { icon: 'folder_special', title: 'Complete EMR', body: 'Every consultation, investigation, and prescription since your first visit — stored permanently in Dialog EMR.', chip: 'bg-[#fff1de] text-[#c8731f]' },
-              { icon: 'smartphone', title: 'Remote Diary App', body: 'Patients log blood sugar, weight, and lifestyle data between visits. A complete picture, not a snapshot.', chip: 'bg-[#e8f4f1] text-primary' },
-              { icon: 'elderly', title: 'Priority for Elderly', body: 'We prioritise elderly patients with the least waiting time. Remote care and home visits where needed.', chip: 'bg-[#fde8e2] text-[#b04a2a]' },
-              { icon: 'science', title: 'Research-Backed', body: 'Decisions backed by research from our 50,000-patient database — reflecting South Indian metabolic patterns.', chip: 'bg-[#f0e9dc] text-[#8a6d4a]' },
-              { icon: 'emergency', title: '24×7 Emergency', body: 'Staffed and equipped for acute diabetes emergencies around the clock. Call +91 9976379697 immediately.', chip: 'bg-[#fde8e2] text-[#b91c1c]', accent: true },
+              { icon: 'folder_special', title: 'Complete EMR', body: 'Every consultation, investigation, and prescription since your first visit — stored permanently in Dialog EMR.' },
+              { icon: 'smartphone', title: 'Remote Diary App', body: 'Patients log blood sugar, weight, and lifestyle data between visits. A complete picture, not a snapshot.' },
+              { icon: 'elderly', title: 'Priority for Elderly', body: 'We prioritise elderly patients with the least waiting time. Remote care and home visits where needed.' },
+              { icon: 'science', title: 'Research-Backed', body: 'Decisions backed by research from our 50,000-patient database — reflecting South Indian metabolic patterns.' },
+              { icon: 'emergency', title: '24×7 Emergency Care', body: 'Staffed and equipped for acute diabetes emergencies around the clock. Call +91 9976379697 immediately.', accent: true },
             ].map((c, i) => (
-              <div key={i} className={`lg:col-span-3 ${i >= 2 ? 'lg:col-span-3' : ''} ${c.accent ? 'border-2 border-[#b91c1c]/20' : ''} soft-card p-7 group flex flex-col`}>
-                <div className={`icon-chip ${c.chip} mb-5`}>
+              <div
+                key={i}
+                className={`lg:col-span-3 bg-white p-6 sm:p-7 rounded-3xl border ${
+                  c.accent ? 'border-red-200 bg-red-50/30' : 'border-gray-200'
+                } shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col`}
+              >
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${
+                  c.accent ? 'bg-red-500/10 text-red-600' : 'bg-[#0D5C75]/10 text-[#0D5C75]'
+                }`}>
                   <span className="material-symbols-outlined text-[26px]">{c.icon}</span>
                 </div>
-                <h3 className="text-[18px] font-bold text-on-surface mb-3">{c.title}</h3>
-                <p className="text-[15px] text-on-surface-variant leading-relaxed flex-grow">{c.body}</p>
-                <div className="mt-4 flex items-center gap-2 text-primary text-[13px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                  Learn more
-                  <span className="material-symbols-outlined text-[16px] nudge-caret">arrow_forward</span>
+                <h3 className="text-lg font-bold text-[#0F172A] mb-2.5">{c.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">{c.body}</p>
+                <div className="mt-4 flex items-center gap-1.5 text-[#0D5C75] text-xs font-bold opacity-80 group-hover:opacity-100 transition-opacity">
+                  <span>Learn more</span>
+                  <span className="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
                 </div>
               </div>
             ))}
@@ -264,7 +284,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== Risk Calculator ===== */}
-      <section id="calculator" className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+      <section id="calculator" className="py-14 sm:py-16 bg-[#F8FAFC] border-b border-gray-200 px-4 sm:px-6 lg:px-8 animate-fade-in-up">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#fff1de] text-[#c8731f] font-bold rounded-full text-[12px] tracking-widest uppercase mb-4 border border-[#e8d8bf]">Free Health Tool</span>
@@ -352,9 +372,9 @@ export default function HomePage() {
       </section>
 
       {/* ===== Community Outreach & Events ===== */}
-      <section className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+      <section className="py-14 sm:py-16 bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 animate-fade-in-up">
         <div className="max-w-container-max-width mx-auto">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Community Outreach</span>
             <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Serving the Community Beyond Clinic Walls</h2>
             <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
@@ -403,9 +423,9 @@ export default function HomePage() {
       </section>
 
       {/* ===== Hospital Tour & Videos ===== */}
-      <section className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+      <section className="py-14 sm:py-16 bg-[#F8FAFC] border-b border-gray-200 px-4 sm:px-6 lg:px-8 animate-fade-in-up">
         <div className="max-w-container-max-width mx-auto">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Hospital Tour</span>
             <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Experience Karunya Sugalaya</h2>
             <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
@@ -448,9 +468,9 @@ export default function HomePage() {
       </section>
 
       {/* ===== Meet Our Leadership & Specialists ===== */}
-      <section className="py-24 warm-mesh-soft px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+      <section className="py-14 sm:py-16 bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 animate-fade-in-up">
         <div className="max-w-container-max-width mx-auto">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">
               Our Leadership &amp; Clinical Specialists
             </span>
@@ -623,9 +643,9 @@ export default function HomePage() {
       </section>
 
       {/* ===== Testimonials ===== */}
-      <section className="py-24 bg-surface px-margin-mobile md:px-margin-desktop animate-fade-in-up">
+      <section className="py-14 sm:py-16 bg-[#F8FAFC] border-b border-gray-200 px-4 sm:px-6 lg:px-8 animate-fade-in-up">
         <div className="max-w-container-max-width mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-12">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Patient Stories</span>
             <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">What our patients say.</h2>
           </div>
@@ -662,34 +682,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Final CTA ===== */}
-      <section className="py-24 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#005049] to-[#003a35]" />
-        <div className="blob w-[500px] h-[500px] -top-32 -right-32 bg-[#ffd5a9] opacity-20" />
-        <div className="blob blob-2 w-[400px] h-[400px] -bottom-24 -left-24 bg-[#ade8de] opacity-25" />
-
-        <div className="max-w-3xl mx-auto relative z-10 flex flex-col items-center text-center">
-          <span className="inline-block px-4 py-1.5 bg-white/15 backdrop-blur-sm text-white font-bold rounded-full text-[12px] tracking-widest uppercase mb-6 border border-white/20">
-            Ready when you are
-          </span>
-          <h2 className="font-headline-lg text-[32px] sm:text-[40px] lg:text-[48px] font-extrabold text-white mb-8 leading-tight">
-            Ready to take control of your diabetes?
-          </h2>
-          <p className="text-white/80 text-[17px] sm:text-[18px] max-w-xl mb-10 leading-relaxed">
-            Book a consultation today, or call us directly. We&apos;re available 24/7 for emergencies.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <Link href="/book" className="bg-white text-primary px-8 py-4 rounded-full text-[16px] sm:text-[18px] font-bold shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group">
-              Book an Appointment
-              <span className="material-symbols-outlined nudge-caret">arrow_forward</span>
-            </Link>
-            <a href="tel:+919976379697" className="text-white text-[16px] sm:text-[18px] font-bold bg-white/10 hover:bg-white/15 px-8 py-4 rounded-full backdrop-blur-sm border border-white/20 flex items-center gap-2 transition-all">
-              <span className="material-symbols-outlined">call</span>
-              +91 99763 79697
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* ===== Final CTA Section with Doctor Consultation Background ===== */}
+      <FinalCTA />
     </>
   );
 }

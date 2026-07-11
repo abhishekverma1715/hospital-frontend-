@@ -53,7 +53,7 @@ export default function ConditionsPage() {
       <div className="flex-1 px-margin-mobile md:px-margin-desktop py-12 md:py-16">
         
         {/* Hero Section */}
-        <section className="mb-16 md:mb-24 max-w-3xl">
+        <section className="mb-10 sm:mb-12 max-w-3xl">
           <div className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[12px] font-bold mb-4 uppercase tracking-wider">
             What We Treat
           </div>

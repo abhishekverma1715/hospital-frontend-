@@ -77,31 +77,31 @@ export default function Header() {
 
       {/* 2. Main White Brand Header Strip exactly inspired by reference navbar */}
       <div className={`transition-all duration-300 ${scrolled ? 'py-3' : 'py-4 sm:py-5'}`}>
-        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center gap-4">
+        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center gap-2 sm:gap-4">
 
           {/* Brand Identity Block */}
-          <Link href="/" className="flex items-center gap-3 sm:gap-4 shrink-0 group">
-            <LogoIcon className="h-12 sm:h-14 w-12 sm:w-14 transition-transform duration-300 group-hover:scale-105 shrink-0" />
-            <div className="flex flex-col">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 md:gap-4 min-w-0 group">
+            <LogoIcon className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 transition-transform duration-300 group-hover:scale-105 shrink-0" />
+            <div className="flex flex-col min-w-0">
               {/* Elegant script/serif styled title */}
-              <span className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#0F172A] font-serif italic leading-none group-hover:text-[#0088CC] transition-colors">
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#0F172A] font-serif italic leading-none group-hover:text-[#0088CC] transition-colors truncate">
                 Karunya Sugalaya&apos;s
               </span>
               {/* Bold red hospital title + cyan bottom accent line */}
-              <span className="text-xs sm:text-sm lg:text-base font-extrabold tracking-wide text-[#DC2626] uppercase mt-1 leading-tight">
+              <span className="text-[11px] sm:text-xs md:text-sm lg:text-base font-extrabold tracking-wide text-[#DC2626] uppercase mt-1 leading-tight truncate">
                 DIABETES HOSPITAL
               </span>
               <div className="flex items-center gap-1 mt-0.5">
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#0F172A]">
+                <span className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-[#0F172A] truncate">
                   &amp; RESEARCH CENTRE
                 </span>
-                <span className="h-1 w-8 sm:w-12 bg-[#00A8E8] rounded-full inline-block ml-1" />
+                <span className="h-1 w-6 sm:w-8 md:w-12 bg-[#00A8E8] rounded-full inline-block ml-1 shrink-0" />
               </div>
             </div>
           </Link>
 
           {/* Right Side Activities & Search Circle Button */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6 shrink-0">
             {/* Research & DiaX.AI Emblem Badge */}
             <div className="flex items-center gap-3 pr-6 border-r border-gray-200">
               <ResearchBadgeIcon className="w-10 h-10 shrink-0" />
@@ -119,7 +119,7 @@ export default function Header() {
             <button
               type="button"
               aria-label="Search website"
-              className="w-11 h-11 rounded-full border border-[#0084FF] text-[#0084FF] hover:bg-[#0084FF] hover:text-white transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md focus:outline-none"
+              className="w-11 h-11 rounded-full border border-[#422884] text-[#422884] hover:bg-[#422884] hover:text-white transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md focus:outline-none"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -127,7 +127,7 @@ export default function Header() {
             {/* Book Appointment CTA Button */}
             <Link
               href="/book"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#0084FF] hover:bg-[#006bd6] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#422884] hover:bg-[#331e67] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <span>Book Appointment</span>
               <ArrowRight className="w-4 h-4" />
@@ -135,10 +135,10 @@ export default function Header() {
           </div>
 
           {/* Mobile Right Controls */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-2 sm:gap-3 shrink-0">
             <Link
               href="/book"
-              className="px-4 py-2 rounded-full bg-[#0084FF] text-white font-bold text-xs shadow-sm"
+              className="hidden sm:inline-flex px-4 py-2 rounded-full bg-[#422884] text-white font-bold text-xs shadow-sm"
             >
               Book
             </Link>

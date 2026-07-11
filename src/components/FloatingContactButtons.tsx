@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Phone, Calendar, ArrowUp } from 'lucide-react';
+import { Phone, Calendar } from 'lucide-react';
 
 function WhatsAppLogo({ className = 'w-6 h-6' }: { className?: string }) {
   return (
@@ -14,10 +14,6 @@ function WhatsAppLogo({ className = 'w-6 h-6' }: { className?: string }) {
 
 export default function FloatingContactButtons() {
   const [hoveredBtn, setHoveredBtn] = useState<string | null>(null);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <div className="fixed bottom-6 right-5 sm:right-6 z-50 flex flex-col items-end gap-3.5">
@@ -54,7 +50,7 @@ export default function FloatingContactButtons() {
           href="tel:+919976379697"
           onMouseEnter={() => setHoveredBtn('phone')}
           onMouseLeave={() => setHoveredBtn(null)}
-          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0084FF] hover:bg-[#0073e6] text-white flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#422884] hover:bg-[#331e67] text-white flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
           aria-label="Call Hospital Helpline"
         >
           <Phone className="w-6 h-6 sm:w-7 sm:h-7 fill-white" />
@@ -73,7 +69,7 @@ export default function FloatingContactButtons() {
           href="/book"
           onMouseEnter={() => setHoveredBtn('book')}
           onMouseLeave={() => setHoveredBtn(null)}
-          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#F59E0B] hover:bg-[#d98b09] text-white flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#422884] hover:bg-[#331e67] text-white flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
           aria-label="Book Appointment Online"
         >
           <Calendar className="w-6 h-6 sm:w-7 sm:h-7" />

@@ -43,27 +43,33 @@ export default async function EducationPage() {
 
   return (
     <>
-      {/* ===== Header ===== */}
-      <section className="relative overflow-hidden warm-mesh pt-20 md:pt-28 pb-24 px-margin-mobile md:px-margin-desktop text-center">
-        <div className="blob w-[400px] h-[400px] -top-28 -left-24 bg-[#ffd5a9]" />
-        <div className="blob blob-2 w-[440px] h-[440px] top-6 -right-28 bg-[#ade8de]" />
+      {/* ===== Hero with Patient Education Background Image ===== */}
+      <section
+        className="relative overflow-hidden py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
+        style={{ backgroundImage: "url('/images/education-hero-bg.png')" }}
+      >
+        {/* Dark Teal Gradient Overlay for optimal readability on left without obscuring scene on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-transparent to-transparent" />
 
-        <div className="max-w-3xl mx-auto relative z-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/70 backdrop-blur-sm text-primary font-bold rounded-full text-[12px] tracking-widest uppercase mb-6 border border-[#e8d8bf] shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Patient Education
-          </span>
-          <h1 className="font-display-lg text-[40px] sm:text-[52px] lg:text-[56px] leading-[1.05] font-extrabold tracking-tight text-on-surface mb-6">
-            Learn to manage your diabetes better.
-          </h1>
-          <p className="font-body-lg text-[18px] text-on-surface-variant leading-relaxed">
-            Practical, evidence-based articles in Tamil and English — written by Dr. Sivakumar and the Karunya Sugalaya team.
-          </p>
+        <div className="max-w-container-max-width mx-auto relative z-10">
+          <div className="max-w-2xl text-left">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-xs tracking-widest uppercase mb-4 border border-white/15 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />
+              Patient Education
+            </span>
+            <h1 className="font-display-lg text-3xl sm:text-4xl lg:text-[44px] leading-[1.15] font-extrabold tracking-tight text-white mb-4 drop-shadow-sm">
+              Learn to manage your diabetes better.
+            </h1>
+            <p className="font-body-lg text-base sm:text-lg text-gray-200 leading-relaxed">
+              Practical, evidence-based articles in Tamil and English — written by Dr. Sivakumar and the Karunya Sugalaya team.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ===== Article grid ===== */}
-      <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto">
         <h2 className="font-headline-md text-[24px] font-bold text-on-surface mb-8 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">article</span>
           Latest Articles

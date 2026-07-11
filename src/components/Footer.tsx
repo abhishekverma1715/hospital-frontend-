@@ -334,19 +334,19 @@ export default function Footer() {
 
         {/* Bottom Horizontal Policy Links Strip */}
         <div className="py-6 border-t border-white/10 text-center text-xs sm:text-sm text-gray-300 flex flex-wrap items-center justify-center gap-2 sm:gap-4">
-          <Link href="/terms" className="hover:text-white transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             Terms &amp; Conditions
           </Link>
           <span className="text-gray-600">|</span>
-          <Link href="/privacy" className="hover:text-white transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             Privacy Policy
           </Link>
           <span className="text-gray-600">|</span>
-          <Link href="/patient-rights" className="hover:text-white transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             Cancellation &amp; Refund
           </Link>
           <span className="text-gray-600">|</span>
-          <Link href="/contact" className="hover:text-white transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             Shipping &amp; Exchange
           </Link>
           <span className="text-gray-600">|</span>
@@ -357,7 +357,7 @@ export default function Footer() {
       </div>
 
       {/* Full-Width Bright Cyan Bottom Bar exactly matching reference screenshot */}
-      <div className="w-full bg-[#1D9BF0] text-white py-4 px-4 sm:px-8 relative z-10 shadow-inner">
+      <div className="w-full bg-[#422884] text-white py-4 px-4 sm:px-8 relative z-10 shadow-inner">
         <div className="max-w-container-max-width mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[13px] sm:text-[14px] font-normal text-center sm:text-left leading-relaxed">
             Copyright © 2008 – {new Date().getFullYear()} Karunya Sugalaya Diabetes Care &amp; Research Centre. All Rights Reserved.
@@ -365,7 +365,7 @@ export default function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-white text-[#1D9BF0] hover:bg-gray-100 flex items-center justify-center shadow-lg transition-transform hover:scale-110 focus:outline-none shrink-0"
+            className="w-10 h-10 rounded-full bg-white text-[#422884] hover:bg-gray-100 flex items-center justify-center shadow-lg transition-transform hover:scale-110 focus:outline-none shrink-0"
             aria-label="Scroll to top"
           >
             <ArrowUp className="w-5 h-5 font-bold" />

@@ -21,7 +21,7 @@ export default function BookPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="bg-surface-container-lowest p-8 md:p-12 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
             <h3 className="text-[24px] font-bold text-on-surface mb-8 flex items-center gap-3">
@@ -72,7 +72,7 @@ export default function BookPage() {
               </div>
 
               <div className="mt-4 pt-6 border-t border-outline-variant/30">
-                <button type="button" className="w-full bg-primary hover:bg-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-[16px] transition-all duration-300 shadow-lg hover:-translate-y-1">
+                <button type="button" className="w-full bg-[#422884] hover:bg-[#331e67] text-white px-8 py-4 rounded-full font-bold text-[16px] transition-all duration-300 shadow-lg hover:-translate-y-1">
                   Proceed to Book
                 </button>
                 <p className="text-center text-[12px] text-on-surface-variant mt-4 flex items-center justify-center gap-1">

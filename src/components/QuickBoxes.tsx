@@ -68,11 +68,11 @@ const quickServices = [
 
 export default function QuickBoxes() {
   return (
-    <section className="py-16 bg-white border-y border-gray-100 relative z-20">
+    <section className="py-12 sm:py-14 bg-smoke4 border-y border-gray-200 relative z-20">
       <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
           <div>
             <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
               Comprehensive Facilities
@@ -120,10 +120,10 @@ export default function QuickBoxes() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-gray-200/60 flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#0D5C75] group-hover:underline">
+                  <span className="text-xs font-bold text-[#422884] group-hover:underline">
                     Explore Service
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center group-hover:bg-[#0D5C75] group-hover:text-white group-hover:border-transparent transition-all">
+                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center group-hover:bg-[#422884] group-hover:text-white group-hover:border-transparent transition-all">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>

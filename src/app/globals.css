@@ -12,6 +12,10 @@
     font-family: var(--font-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
@@ -20,6 +24,22 @@
     font-size: clamp(1rem, 0.4vw + 0.9rem, 1.125rem); /* 16px–18px */
     line-height: 1.65;
     color: #1E293B;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Universal Media & Element Responsiveness */
+  img, svg, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   h1, .typography-h1 {
@@ -80,6 +100,52 @@
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(226, 232, 240, 0.8);
       box-shadow: 0px 4px 20px rgba(30, 41, 59, 0.05);
+  }
+
+  /* ===== Jothydev Reference Theme Utilities ===== */
+  .bg-smoke3 {
+      background-color: #F8FAFC;
+  }
+  .bg-smoke4 {
+      background-color: #F1F5F9;
+  }
+  .line-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      color: #422884;
+      text-decoration: none;
+      transition: all 0.3s ease;
+  }
+  .line-btn:hover {
+      color: #331e67;
+      transform: translateX(4px);
+  }
+  .th-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background-color: #422884;
+      color: #FFFFFF !important;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(66, 40, 132, 0.35);
+      transition: all 0.3s ease;
+  }
+  .th-btn:hover {
+      background-color: #331e67;
+      box-shadow: 0 6px 20px rgba(66, 40, 132, 0.5);
+      transform: translateY(-2px);
+  }
+
+  .bg-primary {
+      background-color: #422884 !important;
+  }
+  .bg-primary:hover {
+      background-color: #331e67 !important;
   }
   
   .cyan-glow:hover {
@@ -425,4 +491,18 @@
   border: 1px solid #e8d8bf;
   max-width: 100%;
   height: auto;
+}
+
+/* Universal Responsive Layout & Safe Area Safeguards */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+  .px-margin-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

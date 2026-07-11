@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import containerQueries from '@tailwindcss/container-queries';
 
 const config: Config = {
   darkMode: 'class',
@@ -16,7 +17,7 @@ const config: Config = {
         "on-primary-fixed": "#00201d",
         "surface-container-high": "#e4e9e7",
         "on-tertiary-container": "#f8fdff",
-        "primary": "#00685f",
+        "primary": "#422884",
         "on-tertiary": "#ffffff",
         "error-container": "#ffdad6",
         "on-primary-fixed-variant": "#005049",
@@ -96,7 +97,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require('@tailwindcss/container-queries')
+    containerQueries
   ],
 };
 export default config;

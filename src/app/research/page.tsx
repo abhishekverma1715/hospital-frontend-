@@ -9,14 +9,27 @@ export const metadata = {
 export default function ResearchPage() {
   return (
     <main className="flex-grow">
-      {/* Hero Section */}
-      <section className="bg-surface-container-low py-16 md:py-24 px-margin-mobile md:px-margin-desktop text-center border-b border-outline-variant/30">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[12px] font-bold text-primary tracking-widest uppercase mb-4">Research</p>
-          <h1 className="text-[48px] leading-[56px] font-bold text-on-surface mb-6">Clinical research at Karunya Sugalaya.</h1>
-          <p className="text-[18px] text-on-surface-variant leading-relaxed">
-            Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 17 years of focused practice. Research here is not separate from care. It informs every consultation.
-          </p>
+      {/* Hero Section with Research Background Image */}
+      <section
+        className="relative overflow-hidden py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
+        style={{ backgroundImage: "url('/images/research-hero-bg.jpg')" }}
+      >
+        {/* Dark Teal Gradient Overlay for optimal text readability on the left while preserving scene on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-transparent to-transparent" />
+
+        <div className="max-w-container-max-width mx-auto relative z-10">
+          <div className="max-w-2xl text-left">
+            <span className="inline-block px-3.5 py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-xs tracking-widest uppercase mb-4 border border-white/15 shadow-sm">
+              Research
+            </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-[44px] leading-[1.15] font-extrabold tracking-tight text-white mb-4 drop-shadow-sm">
+              Clinical research at Karunya Sugalaya.
+            </h1>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
+              Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 17 years of focused practice. Research here is not separate from care. It informs every consultation.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -41,7 +54,7 @@ export default function ResearchPage() {
       </section>
 
       {/* Research Projects */}
-      <section className="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+      <section className="py-12 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto">
         <div className="flex flex-col gap-12">
           
           {/* Research 1 */}

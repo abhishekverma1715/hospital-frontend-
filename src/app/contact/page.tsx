@@ -9,19 +9,32 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="flex-grow">
-      {/* Page Header */}
-      <section className="bg-surface-container-low py-16 md:py-24 px-margin-mobile md:px-margin-desktop text-center border-b border-outline-variant/30">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs sm:text-sm font-bold text-primary tracking-widest uppercase mb-4">Find Us</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-[54px] leading-[1.15] font-extrabold text-on-surface mb-6">Visit Karunya Sugalaya.</h1>
-          <p className="text-base sm:text-lg text-on-surface-variant leading-relaxed font-normal">
-            Located in the heart of Kumbakonam — easily accessible from Thanjavur, Nagapattinam, and the surrounding districts of the Cauvery delta.
-          </p>
+      {/* Page Header with Reception Background Image */}
+      <section
+        className="relative overflow-hidden py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
+        style={{ backgroundImage: "url('/images/contact-hero-bg.jpg')" }}
+      >
+        {/* Dark Teal Gradient Overlay for optimal readability on left without obscuring reception scene on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-transparent to-transparent" />
+
+        <div className="max-w-container-max-width mx-auto relative z-10">
+          <div className="max-w-2xl text-left">
+            <span className="inline-block px-3.5 py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-xs tracking-widest uppercase mb-4 border border-white/15 shadow-sm">
+              Find Us
+            </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-[44px] leading-[1.15] font-extrabold tracking-tight text-white mb-4 drop-shadow-sm">
+              Visit Karunya Sugalaya.
+            </h1>
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-normal">
+              Located in the heart of Kumbakonam — easily accessible from Thanjavur, Nagapattinam, and the surrounding districts of the Cauvery delta.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Content Area */}
-      <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         
         {/* Contact Info & Details */}
         <div className="flex flex-col gap-12">
@@ -80,7 +93,7 @@ export default function ContactPage() {
              <span className="material-symbols-outlined text-[48px] mb-4">calendar_month</span>
              <h2 className="text-[24px] font-bold mb-2">Book an Appointment</h2>
              <p className="text-[16px] opacity-90 mb-6">Booking an appointment guarantees your time slot and avoids waiting time.</p>
-             <Link href="/book" className="bg-on-primary-container text-primary-container px-8 py-3 rounded-full font-bold shadow-lg hover:-translate-y-1 transition-transform">
+             <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-8 py-3 rounded-full font-bold shadow-lg hover:-translate-y-1 transition-transform">
                Book Online Now
              </Link>
           </div>
