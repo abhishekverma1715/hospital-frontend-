@@ -105,7 +105,7 @@ export default async function EducationPage() {
                       </div>
                     )}
 
-                    <div className="p-7 flex flex-col flex-grow">
+                    <div className="p-5 sm:p-7 flex flex-col flex-grow">
                       <div className="flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-wider mb-3">
                         <span className="text-primary">Article</span>
                         {date && (

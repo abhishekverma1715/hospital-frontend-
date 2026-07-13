@@ -5,9 +5,16 @@
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --heading-weight: 700;
   --body-weight: 400;
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
 }
 
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   html {
     font-family: var(--font-primary);
     -webkit-font-smoothing: antialiased;
@@ -27,8 +34,18 @@
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
+    padding-bottom: var(--safe-area-inset-bottom);
+  }
+
+  /* Prevent background scrolling when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    inset: 0;
   }
 
   /* Universal Media & Element Responsiveness */
@@ -505,4 +522,46 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .article-prose {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .article-prose h1 { font-size: 24px; }
+  .article-prose h2 { font-size: 22px; }
+  .article-prose h3 { font-size: 18px; }
 }
+
+/* Mobile menu overlay backdrop */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile menu slide animation */
+.mobile-nav-drawer {
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+}
+.mobile-nav-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Safe area bottom padding for floating elements */
+.safe-bottom {
+  padding-bottom: max(1.5rem, var(--safe-area-inset-bottom));
+}
+

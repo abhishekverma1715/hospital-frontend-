@@ -29,12 +29,12 @@ export default function AboutDoctor() {
         </div>
 
         {/* 4-Column / Responsive Paired Grid exactly matching reference photo layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
 
           {/* ========================================================= */}
           {/* COLUMN 1 (Span 3): Dr. K. Sivakumar Consulting Hours Card */}
           {/* ========================================================= */}
-          <div className="lg:col-span-3 bg-white rounded-3xl p-6 sm:p-7 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
             <div>
               {/* Consulting Hours Header */}
               <div className="flex items-center gap-2.5 mb-5 pb-4 border-b border-gray-100">
@@ -95,9 +95,9 @@ export default function AboutDoctor() {
           {/* ========================================================= */}
           {/* COLUMN 2 (Span 3): Dr. K. Sivakumar Profile Card */}
           {/* ========================================================= */}
-          <div className="lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center sm:items-stretch group">
             {/* Doctor Photo */}
-            <div className="relative h-72 sm:h-80 w-full bg-gradient-to-t from-amber-100 via-amber-50 to-white overflow-hidden">
+            <div className="relative w-[220px] h-[260px] sm:w-full sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-amber-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
               <Image
                 src="/assets/dr-sivakumar.jpg"
                 alt="Dr. K. Sivakumar"
@@ -113,7 +113,7 @@ export default function AboutDoctor() {
             </div>
 
             {/* Doctor Info */}
-            <div className="p-6 flex-1 flex flex-col justify-between">
+            <div className="p-6 flex-1 flex flex-col justify-between w-full text-center sm:text-left">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
                   Consultant Physician &amp; Diabetologist
@@ -131,7 +131,7 @@ export default function AboutDoctor() {
               <div className="mt-6 pt-4 border-t border-gray-100 space-y-2.5">
                 <a
                   href="tel:+919994360912"
-                  className="flex items-center gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
                 >
                   <span className="w-7 h-7 rounded-lg bg-gray-100 group-hover:bg-[#0D5C75]/10 flex items-center justify-center text-[#0D5C75] shrink-0">
                     <Phone className="w-3.5 h-3.5" />
@@ -140,7 +140,7 @@ export default function AboutDoctor() {
                 </a>
                 <a
                   href="mailto:drksincere@gmail.com"
-                  className="flex items-center gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
                 >
                   <span className="w-7 h-7 rounded-lg bg-gray-100 group-hover:bg-[#0D5C75]/10 flex items-center justify-center text-[#0D5C75] shrink-0">
                     <Mail className="w-3.5 h-3.5" />
@@ -154,9 +154,9 @@ export default function AboutDoctor() {
           {/* ========================================================= */}
           {/* COLUMN 3 (Span 3): Dr. B. Lakshmi Profile Card */}
           {/* ========================================================= */}
-          <div className="lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center sm:items-stretch group">
             {/* Doctor Photo */}
-            <div className="relative h-72 sm:h-80 w-full bg-gradient-to-t from-yellow-100 via-amber-50 to-white overflow-hidden">
+            <div className="relative w-[220px] h-[260px] sm:w-full sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-yellow-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
               <Image
                 src="/assets/dr-lakshmi.jpg"
                 alt="Dr. B. Lakshmi"
@@ -172,7 +172,7 @@ export default function AboutDoctor() {
             </div>
 
             {/* Doctor Info */}
-            <div className="p-6 flex-1 flex flex-col justify-between">
+            <div className="p-6 flex-1 flex flex-col justify-between w-full text-center sm:text-left">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
                   Consultant Diabetologist
@@ -190,7 +190,7 @@ export default function AboutDoctor() {
               <div className="mt-6 pt-4 border-t border-gray-100 space-y-2.5">
                 <a
                   href="tel:+919791906781"
-                  className="flex items-center gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
                 >
                   <span className="w-7 h-7 rounded-lg bg-gray-100 group-hover:bg-[#0D5C75]/10 flex items-center justify-center text-[#0D5C75] shrink-0">
                     <Phone className="w-3.5 h-3.5" />
@@ -199,7 +199,7 @@ export default function AboutDoctor() {
                 </a>
                 <a
                   href="mailto:lakshmi@karunyasugalaya.co.in"
-                  className="flex items-center gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2.5 text-xs font-semibold text-gray-700 hover:text-[#0D5C75] transition-colors"
                 >
                   <span className="w-7 h-7 rounded-lg bg-gray-100 group-hover:bg-[#0D5C75]/10 flex items-center justify-center text-[#0D5C75] shrink-0">
                     <Mail className="w-3.5 h-3.5" />
@@ -213,7 +213,7 @@ export default function AboutDoctor() {
           {/* ========================================================= */}
           {/* COLUMN 4 (Span 3): Dr. B. Lakshmi Consulting Hours Card */}
           {/* ========================================================= */}
-          <div className="lg:col-span-3 bg-white rounded-3xl p-6 sm:p-7 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
             <div>
               {/* Consulting Hours Header */}
               <div className="flex items-center gap-2.5 mb-5 pb-4 border-b border-gray-100">
@@ -292,7 +292,7 @@ export default function AboutDoctor() {
         </div>
 
         {/* Bottom Excellence Strip */}
-        <div className="mt-14 bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm flex flex-wrap items-center justify-between gap-6">
+        <div className="mt-10 sm:mt-14 bg-white rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-100 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-[#0D5C75]/10 flex items-center justify-center text-[#0D5C75] shrink-0">
               <ShieldCheck className="w-6 h-6" />

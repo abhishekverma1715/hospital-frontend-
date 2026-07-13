@@ -39,7 +39,7 @@ export default function ContactPage() {
         {/* Contact Info & Details */}
         <div className="flex flex-col gap-12">
           
-          <div className="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
+          <div className="bg-surface-container-lowest p-5 sm:p-8 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
             <h2 className="text-[24px] font-bold text-on-surface mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-3xl">info</span>
               Contact Details
@@ -89,11 +89,11 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-primary-container text-on-primary-container p-8 rounded-2xl flex flex-col items-center text-center">
+          <div className="bg-primary-container text-on-primary-container p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center">
              <span className="material-symbols-outlined text-[48px] mb-4">calendar_month</span>
              <h2 className="text-[24px] font-bold mb-2">Book an Appointment</h2>
              <p className="text-[16px] opacity-90 mb-6">Booking an appointment guarantees your time slot and avoids waiting time.</p>
-             <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-8 py-3 rounded-full font-bold shadow-lg hover:-translate-y-1 transition-transform">
+             <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
                Book Online Now
              </Link>
           </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
         {/* Map & Clinic Hours */}
         <div className="flex flex-col gap-12">
           
-          <div className="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
+          <div className="bg-surface-container-lowest p-5 sm:p-8 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
             <h2 className="text-[24px] font-bold text-on-surface mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-3xl">schedule</span>
               Clinic Hours

@@ -34,19 +34,19 @@ export default function ResearchPage() {
       </section>
 
       {/* Stats Highlight */}
-      <section className="py-12 bg-surface px-margin-mobile md:px-margin-desktop">
+      <section className="py-10 sm:py-12 bg-surface px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-surface-container-highest p-8 rounded-2xl text-center border border-outline-variant/30 hover-elevation transition-all">
-              <div className="text-[40px] font-extrabold text-primary mb-2">258</div>
+              <div className="text-[28px] sm:text-[34px] lg:text-[40px] font-extrabold text-primary mb-2">258</div>
               <div className="text-[14px] font-bold text-on-surface-variant uppercase tracking-wide">Records Analysed</div>
             </div>
             <div className="bg-surface-container-highest p-8 rounded-2xl text-center border border-outline-variant/30 hover-elevation transition-all">
-              <div className="text-[40px] font-extrabold text-primary mb-2">137</div>
+              <div className="text-[28px] sm:text-[34px] lg:text-[40px] font-extrabold text-primary mb-2">137</div>
               <div className="text-[14px] font-bold text-on-surface-variant uppercase tracking-wide">Patients with paired HbA1c</div>
             </div>
             <div className="bg-surface-container-highest p-8 rounded-2xl text-center border border-outline-variant/30 hover-elevation transition-all">
-              <div className="text-[40px] font-extrabold text-primary mb-2">86%</div>
+              <div className="text-[28px] sm:text-[34px] lg:text-[40px] font-extrabold text-primary mb-2">86%</div>
               <div className="text-[14px] font-bold text-on-surface-variant uppercase tracking-wide">Worsening control on oral therapy</div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function ResearchPage() {
           <article className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant/30 hover-elevation transition-all relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-2 h-full bg-primary/80 group-hover:bg-primary transition-colors"></div>
             <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-4">Ongoing Study</span>
-            <h3 className="text-[28px] font-bold text-on-surface mb-4">Glycaemic Control Patterns in Patients on Maximum-Intensity Oral Therapy</h3>
+            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-on-surface mb-4">Glycaemic Control Patterns in Patients on Maximum-Intensity Oral Therapy</h3>
             <p className="text-[16px] text-on-surface-variant leading-relaxed">
               A longitudinal analysis of 137 patients with paired HbA1c readings at this clinic revealed that 86% showed worsening glycaemic control despite being on maximum-intensity oral therapy — with mean HbA1c rising from 8.9% to 11.0%. These findings are directly informing structured protocols for earlier, more confident insulin escalation at Karunya Sugalaya — and represent a significant contribution to the understanding of oral therapy limitations in the South Indian patient population.
             </p>
@@ -71,7 +71,7 @@ export default function ResearchPage() {
           <article className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant/30 hover-elevation transition-all relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-2 h-full bg-primary/60 group-hover:bg-primary transition-colors"></div>
             <span className="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-4">Conference Presentation</span>
-            <h3 className="text-[28px] font-bold text-on-surface mb-4">Patterns of Insulin Use in Diabetes Patients</h3>
+            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-on-surface mb-4">Patterns of Insulin Use in Diabetes Patients</h3>
             <div className="flex items-center gap-2 text-sm text-primary font-bold mb-4">
               <span className="material-symbols-outlined text-[18px]">campaign</span> Poster Presentation, IDF World Congress, Bangkok, 2025
             </div>
@@ -84,7 +84,7 @@ export default function ResearchPage() {
           <article className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant/30 hover-elevation transition-all relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-2 h-full bg-primary/40 group-hover:bg-primary transition-colors"></div>
             <span className="inline-block px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-4">Clinical Trial Participation</span>
-            <h3 className="text-[28px] font-bold text-on-surface mb-4">LANDMARC Trial — Sanofi</h3>
+            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-on-surface mb-4">LANDMARC Trial — Sanofi</h3>
             <p className="text-[16px] text-on-surface-variant leading-relaxed">
               Karunya Sugalaya has participated as a site in the LANDMARC clinical trial by Sanofi, contributing real-world patient data to a landmark multinational study.
             </p>
@@ -96,7 +96,7 @@ export default function ResearchPage() {
       <div className="w-full h-px bg-outline-variant/30 max-w-container-max-width mx-auto"></div>
 
       {/* Publications & Collaboration */}
-      <section className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
         <div>
           <h2 className="text-[32px] font-bold text-on-surface mb-6 flex items-center gap-3">
             <span className="material-symbols-outlined text-primary text-3xl">menu_book</span>

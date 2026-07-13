@@ -65,10 +65,10 @@ export default async function TeamPage() {
   return (
     <main className="flex-grow">
       {/* Page Header */}
-      <section className="bg-surface-container-low py-16 md:py-24 px-margin-mobile md:px-margin-desktop text-center border-b border-outline-variant/30">
+      <section className="bg-surface-container-low py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center border-b border-outline-variant/30">
         <div className="max-w-3xl mx-auto">
           <p className="text-[12px] font-bold text-primary tracking-widest uppercase mb-4">Our Doctors</p>
-          <h1 className="text-[48px] leading-[56px] font-bold text-on-surface mb-6">Meet the team.</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[56px] font-bold text-on-surface mb-6">Meet the team.</h1>
           <p className="text-[18px] text-on-surface-variant leading-relaxed">
             Dedicated specialists bringing expert, personalised diabetes care to Kumbakonam and the Cauvery delta region.
           </p>
@@ -81,11 +81,11 @@ export default async function TeamPage() {
           {/* Founders / Top Two Members */}
               {team.slice(0, 2).map((member, index) => (
                 <React.Fragment key={member.id}>
-                  <article className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-                    <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start sticky top-28">
-                      <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-surface-container-high overflow-hidden shadow-lg border border-outline-variant/30 relative">
+                  <article className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-center lg:items-start">
+                    <div className="w-full sm:w-auto lg:w-1/3 flex flex-col items-center lg:items-start lg:sticky lg:top-28">
+                      <div className="w-[260px] h-[300px] sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-2xl bg-surface-container-high overflow-hidden shadow-xl border border-outline-variant/30 relative">
                         {member.photo ? (
-                          <img src={member.photo} alt={member.name} className="absolute inset-0 w-full h-full object-cover" />
+                          <img src={member.photo} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-top" />
                         ) : (
                           <>
                             <div className="absolute inset-0 pattern-bg opacity-30"></div>
@@ -101,7 +101,7 @@ export default async function TeamPage() {
                       <div className="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-6">
                         {member.qualifications || 'Consultant'}
                       </div>
-                      <h2 className="text-[40px] leading-[48px] font-bold text-on-surface mb-2">{member.name}</h2>
+                      <h2 className="text-2xl sm:text-3xl lg:text-[40px] leading-tight lg:leading-[48px] font-bold text-on-surface mb-2">{member.name}</h2>
                       <p className="text-[18px] text-primary font-medium mb-10 pb-6 border-b border-outline-variant/30">
                         {member.specialty}
                       </p>
@@ -121,10 +121,10 @@ export default async function TeamPage() {
                   <h2 className="text-[32px] font-bold text-on-surface mb-8">Junior Consultants</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {team.slice(2).map(junior => (
-                      <div key={junior.id} className="bg-surface-container-lowest border border-outline-variant/30 p-6 rounded-2xl flex items-center gap-6 hover-elevation transition-all">
-                        <div className="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 overflow-hidden relative">
+                      <div key={junior.id} className="bg-surface-container-lowest border border-outline-variant/30 p-4 sm:p-6 rounded-2xl flex items-center gap-4 sm:gap-6 hover-elevation transition-all">
+                        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 overflow-hidden relative">
                           {junior.photo ? (
-                             <img src={junior.photo} alt={junior.name} className="absolute inset-0 w-full h-full object-cover" />
+                             <img src={junior.photo} alt={junior.name} className="absolute inset-0 w-full h-full object-cover object-top" />
                           ) : (
                             <span className="material-symbols-outlined text-3xl">stethoscope</span>
                           )}

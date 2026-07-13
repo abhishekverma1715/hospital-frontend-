@@ -197,7 +197,7 @@ export default function HomePage() {
 
             {/* Right Visual Image & Stats */}
             <div className="lg:col-span-5 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[1/1] relative">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] relative">
                 <img 
                   src="/assets/photo_2026-06-10_20-48-52.jpg" 
                   alt="Karunya Sugalaya Hospital Leadership" 
@@ -288,18 +288,18 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#fff1de] text-[#c8731f] font-bold rounded-full text-[12px] tracking-widest uppercase mb-4 border border-[#e8d8bf]">Free Health Tool</span>
-            <h2 className="font-headline-md text-[32px] sm:text-[40px] font-bold text-on-surface mb-4">Check your diabetes risk.</h2>
-            <p className="text-[17px] sm:text-[18px] text-on-surface-variant max-w-2xl mx-auto">Answer 5 quick questions. Get your personal risk level instantly — no registration, no data collected.</p>
+            <h2 className="font-headline-md text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mb-4">Check your diabetes risk.</h2>
+            <p className="text-sm sm:text-[17px] lg:text-[18px] text-on-surface-variant max-w-2xl mx-auto">Answer 5 quick questions. Get your personal risk level instantly — no registration, no data collected.</p>
           </div>
 
-          <div className="bg-white p-6 sm:p-10 md:p-12 rounded-[32px] shadow-[0_12px_40px_rgba(120,90,50,0.1)] border border-[#e8d8bf]/60 relative overflow-hidden">
+          <div className="bg-white p-4 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-[32px] shadow-[0_12px_40px_rgba(120,90,50,0.1)] border border-[#e8d8bf]/60 relative overflow-hidden">
             {calculatorStep <= 5 && (
               <div className="absolute top-0 left-0 w-full h-2 bg-[#f0e9dc]">
                 <div className="h-full bg-gradient-to-r from-[#c8731f] to-primary transition-all duration-500 ease-out" style={{ width: `${(calculatorStep / 5) * 100}%` }} />
               </div>
             )}
 
-            <div className="min-h-[400px] flex flex-col justify-center">
+            <div className="min-h-[300px] sm:min-h-[400px] flex flex-col justify-center">
               {[
                 { step: 1, q: 'What is your age?', opts: [
                   { label: 'Below 30', icon: 'child_care', score: 0 },
@@ -331,17 +331,17 @@ export default function HomePage() {
                 <div key={s.step} className="animate-fade-in-up visible">
                   <div className="flex items-center justify-center mb-8 gap-3 flex-wrap">
                     <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-[20px] shadow-lg shadow-primary/30">{s.step}</div>
-                    <h3 className="font-headline-sm text-[22px] sm:text-[28px] font-bold text-on-surface text-center">{s.q}</h3>
+                    <h3 className="font-headline-sm text-lg sm:text-[22px] md:text-[28px] font-bold text-on-surface text-center">{s.q}</h3>
                   </div>
                   <div className={`grid grid-cols-1 ${s.cols} gap-4 max-w-4xl mx-auto`}>
                     {s.opts.map((option, idx) => (
                       <button
                         key={idx}
                         onClick={() => handleCalcAnswer(option.score)}
-                        className="bg-[#fbf7f1] border-2 border-[#e8d8bf] hover:border-primary hover:bg-white p-6 rounded-2xl flex flex-col items-center gap-4 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 min-h-[140px] justify-center"
+                        className="bg-[#fbf7f1] border-2 border-[#e8d8bf] hover:border-primary hover:bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl flex flex-col items-center gap-3 sm:gap-4 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 min-h-[100px] sm:min-h-[140px] justify-center"
                       >
-                        <span className="material-symbols-outlined text-[40px] text-[#c8731f] group-hover:text-primary group-hover:scale-110 transition-all">{option.icon}</span>
-                        <span className="text-[16px] sm:text-[18px] font-bold text-on-surface text-center">{option.label}</span>
+                        <span className="material-symbols-outlined text-[32px] sm:text-[40px] text-[#c8731f] group-hover:text-primary group-hover:scale-110 transition-all">{option.icon}</span>
+                        <span className="text-sm sm:text-[16px] md:text-[18px] font-bold text-on-surface text-center">{option.label}</span>
                       </button>
                     ))}
                   </div>
@@ -353,15 +353,15 @@ export default function HomePage() {
                   <div className={`w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-6 shadow-xl ${riskResult.class === 'text-error' ? 'bg-[#fde8e2] text-[#b91c1c]' : riskResult.class === 'text-tertiary-container' ? 'bg-[#fff1de] text-[#c8731f]' : 'bg-[#e8f4f1] text-primary'}`}>
                     <span className="material-symbols-outlined text-[48px]">health_and_safety</span>
                   </div>
-                  <h3 className="font-headline-lg text-[28px] sm:text-[32px] font-bold text-on-surface mb-4">Your Risk Level: <span className={riskResult.class}>{riskResult.level}</span></h3>
-                  <p className="font-body-md text-[16px] sm:text-[18px] text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed p-6 bg-[#fbf7f1] rounded-2xl border border-[#e8d8bf]">{riskResult.message}</p>
-                  <div className="flex flex-wrap justify-center gap-4">
-                    <Link href="/book" className="bg-primary hover:bg-primary-container text-on-primary px-8 py-4 rounded-full text-[16px] font-bold shadow-lg shadow-primary/30 flex items-center gap-2 hover:-translate-y-1 transition-all">
+                  <h3 className="font-headline-lg text-xl sm:text-[28px] lg:text-[32px] font-bold text-on-surface mb-4">Your Risk Level: <span className={riskResult.class}>{riskResult.level}</span></h3>
+                  <p className="font-body-md text-sm sm:text-[16px] lg:text-[18px] text-on-surface-variant mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed p-4 sm:p-6 bg-[#fbf7f1] rounded-xl sm:rounded-2xl border border-[#e8d8bf]">{riskResult.message}</p>
+                  <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                    <Link href="/book" className="bg-primary hover:bg-primary-container text-on-primary px-5 sm:px-8 py-2.5 sm:py-4 rounded-full text-xs sm:text-[16px] font-bold shadow-lg shadow-primary/30 inline-flex items-center gap-2 hover:-translate-y-1 transition-all">
                       Book Appointment
-                      <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+                      <span className="material-symbols-outlined text-[16px] sm:text-[20px]">arrow_forward</span>
                     </Link>
-                    <button onClick={retakeCalc} className="border border-[#e8d8bf] bg-white text-primary px-8 py-4 rounded-full text-[16px] font-bold hover:bg-[#fbf7f1] transition-all flex items-center gap-2">
-                      <span className="material-symbols-outlined text-[20px]">refresh</span> Retake Assessment
+                    <button onClick={retakeCalc} className="border border-[#e8d8bf] bg-white text-primary px-5 sm:px-8 py-2.5 sm:py-4 rounded-full text-xs sm:text-[16px] font-bold hover:bg-[#fbf7f1] transition-all inline-flex items-center gap-2">
+                      <span className="material-symbols-outlined text-[16px] sm:text-[20px]">refresh</span> Retake Assessment
                     </button>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ export default function HomePage() {
         <div className="max-w-container-max-width mx-auto">
           <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Community Outreach</span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Serving the Community Beyond Clinic Walls</h2>
+            <h2 className="font-headline-lg text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mt-4 mb-6">Serving the Community Beyond Clinic Walls</h2>
             <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
               From diabetes awareness camps to corporate health initiatives, we actively engage with our community to promote health education and early detection.
             </p>
@@ -427,7 +427,7 @@ export default function HomePage() {
         <div className="max-w-container-max-width mx-auto">
           <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Hospital Tour</span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">Experience Karunya Sugalaya</h2>
+            <h2 className="font-headline-lg text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mt-4 mb-6">Experience Karunya Sugalaya</h2>
             <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
               Take a virtual tour of our facilities and see our commitment to patient care in action.
             </p>
@@ -474,7 +474,7 @@ export default function HomePage() {
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">
               Our Leadership &amp; Clinical Specialists
             </span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">
+            <h2 className="font-headline-lg text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mt-4 mb-6">
               Meet Our Expert Diabetologists
             </h2>
             <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
@@ -485,9 +485,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
             {/* Doctor 1: Dr. K. Sivakumar */}
             <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex flex-col sm:flex-row gap-6 items-start">
+              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 {/* Photo */}
-                <div className="w-full sm:w-44 h-60 sm:h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50">
+                <div className="w-[220px] h-[260px] sm:w-40 sm:h-56 md:w-44 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50">
                   <img
                     src="/assets/dr-sivakumar.jpg"
                     alt="Dr. K. Sivakumar, M.B.B.S, M.D."
@@ -496,7 +496,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Details */}
-                <div className="flex flex-col flex-grow">
+                <div className="flex flex-col flex-grow text-center sm:text-left">
                   <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
                     Consultant Physician &amp; Diabetologist
                   </span>
@@ -508,7 +508,7 @@ export default function HomePage() {
                   </p>
 
                   {/* Specialties Chips */}
-                  <div className="flex flex-wrap gap-2 mt-4">
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
                     <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#fff1de] text-[#c8731f]">
                       Diabetology
                     </span>
@@ -525,11 +525,11 @@ export default function HomePage() {
               {/* Schedule & Contact Strip */}
               <div className="mt-6 pt-5 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
-                  <div className="font-bold text-[#0D5C75] flex items-center gap-1.5 mb-1.5">
+                  <div className="font-bold text-[#0D5C75] flex items-center justify-center sm:justify-start gap-1.5 mb-1.5">
                     <span className="material-symbols-outlined text-[16px]">schedule</span>
                     <span>Consulting &amp; Video Hours</span>
                   </div>
-                  <div className="text-gray-700 font-medium space-y-1">
+                  <div className="text-gray-700 font-medium space-y-1 text-center sm:text-left">
                     <div><span className="font-semibold">Clinic:</span> Mon–Fri 9 AM – 4 PM</div>
                     <div><span className="font-semibold text-[#F59E0B]">Saturday:</span> 9 AM – 6 PM</div>
                     <div><span className="font-semibold text-green-700">Online Video:</span> 9 AM – 9 PM</div>
@@ -540,14 +540,14 @@ export default function HomePage() {
                 <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100 flex flex-col justify-center space-y-2.5">
                   <a
                     href="tel:+919994360912"
-                    className="flex items-center gap-2 font-bold text-[#0F172A] hover:text-[#0D5C75] transition-colors"
+                    className="flex items-center justify-center sm:justify-start gap-2 font-bold text-[#0F172A] hover:text-[#0D5C75] transition-colors"
                   >
                     <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">call</span>
                     <span>(+91) 9994360912</span>
                   </a>
                   <a
                     href="mailto:drksincere@gmail.com"
-                    className="flex items-center gap-2 font-medium text-gray-600 hover:text-[#0D5C75] transition-colors break-all"
+                    className="flex items-center justify-center sm:justify-start gap-2 font-medium text-gray-600 hover:text-[#0D5C75] transition-colors break-all"
                   >
                     <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">mail</span>
                     <span>drksincere@gmail.com</span>
@@ -558,9 +558,9 @@ export default function HomePage() {
 
             {/* Doctor 2: Dr. B. Lakshmi */}
             <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex flex-col sm:flex-row gap-6 items-start">
+              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 {/* Photo */}
-                <div className="w-full sm:w-44 h-60 sm:h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50">
+                <div className="w-[220px] h-[260px] sm:w-40 sm:h-56 md:w-44 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50">
                   <img
                     src="/assets/dr-lakshmi.jpg"
                     alt="Dr. B. Lakshmi, M.B.B.S, D. Diab."
@@ -569,7 +569,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Details */}
-                <div className="flex flex-col flex-grow">
+                <div className="flex flex-col flex-grow text-center sm:text-left">
                   <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
                     Consultant Diabetologist
                   </span>
@@ -581,7 +581,7 @@ export default function HomePage() {
                   </p>
 
                   {/* Specialties Chips */}
-                  <div className="flex flex-wrap gap-2 mt-4">
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
                     <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#fff1de] text-[#c8731f]">
                       Diabetology
                     </span>
@@ -598,11 +598,11 @@ export default function HomePage() {
               {/* Schedule & Contact Strip */}
               <div className="mt-6 pt-5 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100">
-                  <div className="font-bold text-[#0D5C75] flex items-center gap-1.5 mb-1.5">
+                  <div className="font-bold text-[#0D5C75] flex items-center justify-center sm:justify-start gap-1.5 mb-1.5">
                     <span className="material-symbols-outlined text-[16px]">schedule</span>
                     <span>Consulting &amp; Video Hours</span>
                   </div>
-                  <div className="text-gray-700 font-medium space-y-1">
+                  <div className="text-gray-700 font-medium space-y-1 text-center sm:text-left">
                     <div><span className="font-semibold">Mon–Sat:</span> 10 AM – 2 PM</div>
                     <div><span className="font-semibold">Evening:</span> 6 PM – 8 PM</div>
                     <div><span className="font-semibold text-green-700">Online Video:</span> 11 AM – 8 PM</div>
@@ -613,14 +613,14 @@ export default function HomePage() {
                 <div className="bg-gray-50 p-3.5 rounded-2xl border border-gray-100 flex flex-col justify-center space-y-2.5">
                   <a
                     href="tel:+919791906781"
-                    className="flex items-center gap-2 font-bold text-[#0F172A] hover:text-[#0D5C75] transition-colors"
+                    className="flex items-center justify-center sm:justify-start gap-2 font-bold text-[#0F172A] hover:text-[#0D5C75] transition-colors"
                   >
                     <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">call</span>
                     <span>(+91) 9791906781</span>
                   </a>
                   <a
                     href="mailto:lakshmi@karunyasugalaya.co.in"
-                    className="flex items-center gap-2 font-medium text-gray-600 hover:text-[#0D5C75] transition-colors break-all"
+                    className="flex items-center justify-center sm:justify-start gap-2 font-medium text-gray-600 hover:text-[#0D5C75] transition-colors break-all"
                   >
                     <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">mail</span>
                     <span>lakshmi@karunyasugalaya.co.in</span>
@@ -647,7 +647,7 @@ export default function HomePage() {
         <div className="max-w-container-max-width mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Patient Stories</span>
-            <h2 className="font-headline-lg text-[32px] sm:text-[40px] font-bold text-on-surface mt-4 mb-6">What our patients say.</h2>
+            <h2 className="font-headline-lg text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mt-4 mb-6">What our patients say.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -656,8 +656,8 @@ export default function HomePage() {
               { quote: 'இந்த மருத்துவமனையில் தமிழில் முழுமையாக பேசி புரிந்துகொள்ள முடிகிறது. டாக்டர் லட்சுமி என்னோட சர்க்கரை மட்டுமில்லாம என்னோட மொத்த உடல்நலத்தையும் கவனிக்கிறாங்க. RITAM program என் வாழ்க்கையை மாத்துச்சு.', name: 'Vijayalakshmi S.', meta: 'Patient since 2021 · Papanasam' },
               { quote: 'I came in for a routine review and the doctor flagged early kidney changes I had no symptoms of. That early detection changed my treatment completely. The digital records meant every doctor I saw had my full history.', name: 'Karthikeyan P.', meta: 'Patient since 2023 · Thanjavur' },
             ].map((t, i) => (
-              <div key={i} className={`soft-card p-8 sm:p-10 flex flex-col ${i === 1 ? 'md:translate-y-6' : ''}`}>
-                <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden mb-6 relative">
+              <div key={i} className={`soft-card p-6 sm:p-8 md:p-10 flex flex-col ${i === 1 ? 'lg:translate-y-6' : ''}`}>
+                <div className="aspect-[4/3] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden mb-5 sm:mb-6 relative">
                   <img 
                     src={i === 0 ? '/assets/photo_2026-06-10_20-48-51.jpg' : i === 1 ? '/assets/photo_2026-06-10_20-48-52.jpg' : '/assets/photo_2026-06-10_20-49-08.jpg'}
                     alt={`Patient ${t.name}`}
@@ -666,7 +666,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>
                 <div className="quote-mark mb-2">&ldquo;</div>
-                <p className="text-[16px] text-on-surface italic mb-6 flex-grow leading-relaxed">{t.quote}</p>
+                <p className="text-sm sm:text-[16px] text-on-surface italic mb-5 sm:mb-6 flex-grow leading-relaxed">{t.quote}</p>
                 <div className="border-t border-[#e8d8bf] pt-6 flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#fff1de] flex items-center justify-center text-[#c8731f] font-extrabold text-[18px]">
                     {t.name.charAt(0)}

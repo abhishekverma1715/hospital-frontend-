@@ -58,7 +58,7 @@ export default function Footer() {
 
       <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* 5-Column Main Grid exactly matching reference layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-12">
           
           {/* Column 1: Brand Logo & Mission Statement (Span 3) */}
           <div className="lg:col-span-3 space-y-6 pr-0 lg:pr-4">
@@ -289,7 +289,7 @@ export default function Footer() {
               <span className="h-0.5 w-5 bg-[#EAD038]" />
             </div>
 
-            <div className="flex flex-col gap-3 mt-2">
+            <div className="flex flex-row sm:flex-col gap-3 mt-2 flex-wrap">
               <a
                 href="#"
                 className="w-11 h-11 rounded-xl bg-white/10 hover:bg-[#0088CC] text-white flex items-center justify-center transition-all duration-300 shadow-md hover:scale-105"
@@ -333,7 +333,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Horizontal Policy Links Strip */}
-        <div className="py-6 border-t border-white/10 text-center text-xs sm:text-sm text-gray-300 flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+        <div className="py-6 border-t border-white/10 text-center text-[11px] sm:text-xs md:text-sm text-gray-300 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-4">
           <Link href="#" className="hover:text-white transition-colors">
             Terms &amp; Conditions
           </Link>
@@ -359,7 +359,7 @@ export default function Footer() {
       {/* Full-Width Bright Cyan Bottom Bar exactly matching reference screenshot */}
       <div className="w-full bg-[#422884] text-white py-4 px-4 sm:px-8 relative z-10 shadow-inner">
         <div className="max-w-container-max-width mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[13px] sm:text-[14px] font-normal text-center sm:text-left leading-relaxed">
+          <p className="text-[12px] sm:text-[13px] md:text-[14px] font-normal text-center sm:text-left leading-relaxed">
             Copyright © 2008 – {new Date().getFullYear()} Karunya Sugalaya Diabetes Care &amp; Research Centre. All Rights Reserved.
           </p>
           <button

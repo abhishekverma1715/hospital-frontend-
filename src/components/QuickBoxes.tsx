@@ -98,7 +98,7 @@ export default function QuickBoxes() {
               <Link
                 key={idx}
                 href={item.href}
-                className="group bg-[#F8FAFC] hover:bg-white p-7 rounded-2xl border border-gray-200/80 hover:border-[#0D5C75]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1"
+                className="group bg-[#F8FAFC] hover:bg-white p-5 sm:p-7 rounded-2xl border border-gray-200/80 hover:border-[#0D5C75]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">

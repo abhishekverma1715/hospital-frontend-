@@ -10,10 +10,10 @@ export default function BookPage() {
   return (
     <main className="flex-grow">
       {/* Page Header */}
-      <section className="bg-surface-container-low py-16 md:py-24 px-margin-mobile md:px-margin-desktop text-center border-b border-outline-variant/30">
+      <section className="bg-surface-container-low py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center border-b border-outline-variant/30">
         <div className="max-w-3xl mx-auto">
           <p className="text-[12px] font-bold text-primary tracking-widest uppercase mb-4">Book Appointment</p>
-          <h1 className="text-[48px] leading-[56px] font-bold text-on-surface mb-6">Schedule your visit.</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-[48px] leading-tight lg:leading-[56px] font-bold text-on-surface mb-6">Schedule your visit.</h1>
           <p className="text-[18px] text-on-surface-variant leading-relaxed">
             Book online to guarantee your slot and avoid waiting time at the clinic.
           </p>
@@ -23,7 +23,7 @@ export default function BookPage() {
       {/* Form Section */}
       <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-surface-container-lowest p-8 md:p-12 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
+          <div className="bg-surface-container-lowest p-5 sm:p-8 md:p-10 lg:p-12 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
             <h3 className="text-[24px] font-bold text-on-surface mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary">edit_calendar</span>
               Appointment Details
@@ -72,7 +72,7 @@ export default function BookPage() {
               </div>
 
               <div className="mt-4 pt-6 border-t border-outline-variant/30">
-                <button type="button" className="w-full bg-[#422884] hover:bg-[#331e67] text-white px-8 py-4 rounded-full font-bold text-[16px] transition-all duration-300 shadow-lg hover:-translate-y-1">
+                <button type="button" className="w-full bg-[#422884] hover:bg-[#331e67] text-white px-5 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-[16px] transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
                   Proceed to Book
                 </button>
                 <p className="text-center text-[12px] text-on-surface-variant mt-4 flex items-center justify-center gap-1">

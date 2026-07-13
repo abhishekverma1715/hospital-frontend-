@@ -150,10 +150,10 @@ export default async function ServicesPage() {
                   {service.image ? (
                     <div className="relative rounded-[28px] overflow-hidden border border-[#e8d8bf] shadow-[0_16px_48px_rgba(120,90,50,0.14)]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={service.image} alt={service.name} className="w-full h-[280px] md:h-[380px] object-cover" />
+                      <img src={service.image} alt={service.name} className="w-full h-[220px] sm:h-[260px] md:h-[320px] lg:h-[380px] object-cover" />
                     </div>
                   ) : (
-                    <div className="relative rounded-[28px] h-[280px] md:h-[380px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#fff1de] via-[#fbf7f1] to-[#e8f4f1] border border-[#e8d8bf]">
+                    <div className="relative rounded-[28px] h-[220px] sm:h-[260px] md:h-[320px] lg:h-[380px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#fff1de] via-[#fbf7f1] to-[#e8f4f1] border border-[#e8d8bf]">
                       <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-primary/10 blur-3xl" />
                       <span className="material-symbols-outlined text-[110px] text-primary/70 relative z-10">
                         {service.icon || 'medical_services'}
@@ -173,7 +173,7 @@ export default async function ServicesPage() {
                     </span>
                   </div>
 
-                  <h2 className="font-headline-lg text-[28px] sm:text-[34px] font-bold text-on-surface mb-4 leading-tight">
+                  <h2 className="font-headline-lg text-xl sm:text-2xl md:text-[28px] lg:text-[34px] font-bold text-on-surface mb-4 leading-tight">
                     {service.name}
                   </h2>
                   <p className="font-body-lg text-[17px] text-on-surface-variant leading-relaxed whitespace-pre-line">

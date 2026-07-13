@@ -43,20 +43,20 @@ export default function FinalCTA({
           <p className="text-white/85 text-base sm:text-lg mb-8 leading-relaxed">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+          <div className="grid grid-cols-2 sm:flex sm:flex-row items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
             <Link
               href={primaryBtnHref}
-              className="bg-[#422884] hover:bg-[#331e67] text-white px-8 py-4 rounded-full text-base sm:text-lg font-bold shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="bg-[#422884] hover:bg-[#331e67] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full text-xs sm:text-lg font-bold shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 group w-full"
             >
-              {primaryBtnText}
-              <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+              <span className="truncate">{primaryBtnText}</span>
+              <span className="material-symbols-outlined text-[16px] sm:text-[24px] shrink-0 transition-transform group-hover:translate-x-1">arrow_forward</span>
             </Link>
             <a
               href={`tel:${phoneNumber}`}
-              className="text-white text-base sm:text-lg font-bold bg-white/10 hover:bg-white/20 px-8 py-4 rounded-full backdrop-blur-md border border-white/25 flex items-center justify-center gap-2.5 transition-all"
+              className="text-white text-xs sm:text-lg font-bold bg-white/10 hover:bg-white/20 px-3 sm:px-8 py-3 sm:py-4 rounded-full backdrop-blur-md border border-white/25 flex items-center justify-center gap-1.5 sm:gap-2.5 transition-all w-full"
             >
-              <span className="material-symbols-outlined text-cyan-300">call</span>
-              {phoneText}
+              <span className="material-symbols-outlined text-[16px] sm:text-[24px] text-cyan-300 shrink-0">call</span>
+              <span className="truncate">{phoneText}</span>
             </a>
           </div>
         </div>
