@@ -103,27 +103,27 @@ export default async function ServicesPage() {
     <>
       {/* ===== Hero with Doctor Consultation Background ===== */}
       <section
-        className="relative overflow-hidden py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
+        className="relative w-full h-[260px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[650px] sm:h-[70svh] lg:h-[75svh] max-h-[800px] flex items-center overflow-hidden px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
         style={{ backgroundImage: "url('/images/services-hero-bg.jpg')" }}
       >
         {/* Gradient Overlays for optimal readability on left without obscuring doctor image on right */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-transparent to-transparent" />
 
-        <div className="max-w-container-max-width mx-auto relative z-10">
+        <div className="max-w-container-max-width mx-auto relative z-10 w-full">
           <div className="max-w-2xl text-left">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-xs tracking-widest uppercase mb-4 border border-white/15 shadow-sm">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3.5 sm:py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-[10px] sm:text-xs tracking-widest uppercase mb-2 sm:mb-4 border border-white/15 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />
               Our Services
             </span>
-            <h1 className="font-display-lg text-3xl sm:text-4xl lg:text-[44px] leading-[1.15] font-extrabold tracking-tight text-white mb-4 drop-shadow-sm">
+            <h1 className="font-display-lg text-xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight sm:leading-[1.15] font-extrabold tracking-tight text-white mb-2 sm:mb-4 drop-shadow-sm">
               Comprehensive diabetes care, under one roof.
             </h1>
-            <p className="font-body-lg text-base sm:text-lg text-gray-200 leading-relaxed">
+            <p className="font-body-lg text-xs sm:text-base lg:text-lg text-gray-200 leading-relaxed line-clamp-2 sm:line-clamp-none">
               From routine outpatient consultations to specialised inpatient programmes and a CMC Vellore EQAS certified laboratory — every part of your care, coordinated in one place.
             </p>
 
-            <div className="flex flex-wrap justify-start gap-2.5 mt-6">
+            <div className="hidden sm:flex flex-wrap justify-start gap-2.5 mt-6">
               {HIGHLIGHTS.map((h) => (
                 <div
                   key={h.label}
@@ -173,16 +173,16 @@ export default async function ServicesPage() {
                     </span>
                   </div>
 
-                  <h2 className="font-headline-lg text-xl sm:text-2xl md:text-[28px] lg:text-[34px] font-bold text-on-surface mb-4 leading-tight">
+                  <h2 className="font-headline-lg text-xl sm:text-2xl md:text-[28px] lg:text-[34px] font-bold text-on-surface mb-4 leading-tight break-words">
                     {service.name}
                   </h2>
-                  <p className="font-body-lg text-[17px] text-on-surface-variant leading-relaxed whitespace-pre-line">
+                  <p className="font-body-lg text-[17px] text-on-surface-variant leading-relaxed whitespace-pre-line text-justify sm:text-left break-words">
                     {service.description}
                   </p>
 
                   <Link
                     href="/book"
-                    className="group inline-flex items-center gap-2 mt-7 text-primary font-bold text-[15px] hover:-translate-y-0.5 transition-transform"
+                    className="group inline-flex items-center gap-2 py-2 mt-5 sm:mt-7 text-primary font-bold text-[15px] hover:-translate-y-0.5 transition-transform"
                   >
                     Enquire or book this service
                     <span className="material-symbols-outlined text-[18px] nudge-caret">arrow_forward</span>

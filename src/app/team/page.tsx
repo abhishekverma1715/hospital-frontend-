@@ -83,7 +83,7 @@ export default async function TeamPage() {
                 <React.Fragment key={member.id}>
                   <article className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-center lg:items-start">
                     <div className="w-full sm:w-auto lg:w-1/3 flex flex-col items-center lg:items-start lg:sticky lg:top-28">
-                      <div className="w-[260px] h-[300px] sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-2xl bg-surface-container-high overflow-hidden shadow-xl border border-outline-variant/30 relative">
+                      <div className="w-full max-w-[280px] sm:max-w-none sm:w-64 lg:w-80 h-72 sm:h-64 lg:h-80 rounded-2xl bg-surface-container-high overflow-hidden shadow-xl border border-outline-variant/30 relative">
                         {member.photo ? (
                           <img src={member.photo} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-top" />
                         ) : (
@@ -101,12 +101,12 @@ export default async function TeamPage() {
                       <div className="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-6">
                         {member.qualifications || 'Consultant'}
                       </div>
-                      <h2 className="text-2xl sm:text-3xl lg:text-[40px] leading-tight lg:leading-[48px] font-bold text-on-surface mb-2">{member.name}</h2>
-                      <p className="text-[18px] text-primary font-medium mb-10 pb-6 border-b border-outline-variant/30">
+                      <h2 className="text-2xl sm:text-3xl lg:text-[40px] leading-tight lg:leading-[48px] font-bold text-on-surface mb-2 break-words">{member.name}</h2>
+                      <p className="text-[18px] text-primary font-medium mb-10 pb-6 border-b border-outline-variant/30 break-words">
                         {member.specialty}
                       </p>
                       
-                      <div className="space-y-6 text-[16px] text-on-surface-variant leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{ __html: member.biography }} />
+                      <div className="space-y-6 text-[16px] text-on-surface-variant leading-relaxed whitespace-pre-line text-justify sm:text-left break-words" dangerouslySetInnerHTML={{ __html: member.biography }} />
                     </div>
                   </article>
                   

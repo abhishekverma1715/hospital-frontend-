@@ -12,87 +12,92 @@ export default function ConditionsPage() {
     <div className="min-h-screen bg-gradient-to-b from-[#F8FAFC] via-white to-[#F1F5F9] text-[#0F172A] overflow-x-hidden">
       {/* Top Banner Hero Header */}
       <section
-        className="relative overflow-hidden bg-[#0F172A] text-white py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8 border-b border-white/10 bg-cover bg-center"
+        className="relative w-full h-[260px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[650px] sm:h-[70svh] lg:h-[75svh] max-h-[800px] flex items-center overflow-hidden px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
         style={{ backgroundImage: "url('/images/services-hero-bg.jpg')" }}
       >
-        {/* Dark overlay for optimal contrast and readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/88 to-[#0F172A]/75 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-900/40 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#0D5C75]/20 rounded-full blur-3xl pointer-events-none" />
+        {/* Gradient Overlays for optimal readability on left without obscuring image on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-transparent to-transparent" />
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/25 text-cyan-300 text-xs font-bold tracking-wider uppercase mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            Comprehensive Clinical Care
-          </div>
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3">
-            Conditions We <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-teal-200">Specialise In</span>
-          </h1>
-          <p className="max-w-3xl text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
-            From early prevention and insulin resistance reversal to complex advanced metabolic management — delivering evidence-based diabetes medicine tailored for South Indian lifestyles since 2008.
-          </p>
+        {/* Decorative ambient background glows */}
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-          {/* Compact Quick Stats Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 pt-5 border-t border-white/10 max-w-2xl">
-            <div>
-              <div className="text-xl sm:text-2xl font-black text-cyan-300">50,000+</div>
-              <div className="text-xs text-gray-400 font-medium">Patients Treated</div>
-            </div>
-            <div>
-              <div className="text-xl sm:text-2xl font-black text-cyan-300">17+ Years</div>
-              <div className="text-xs text-gray-400 font-medium">Focused Clinical Excellence</div>
-            </div>
-            <div className="col-span-2 sm:col-span-1">
-              <div className="text-xl sm:text-2xl font-black text-cyan-300">&lt; 7.0%</div>
-              <div className="text-xs text-gray-400 font-medium">Routine Target HbA1c</div>
+        <div className="max-w-container-max-width mx-auto relative z-10 w-full">
+          <div className="max-w-2xl text-left">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3.5 sm:py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-[10px] sm:text-xs tracking-widest uppercase mb-2 sm:mb-4 border border-white/15 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />
+              Comprehensive Clinical Care
+            </span>
+            <h1 className="font-display-lg text-xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight sm:leading-[1.15] font-extrabold tracking-tight text-white mb-2 sm:mb-4 drop-shadow-sm">
+              Conditions We <span className="text-cyan-300">Specialise In</span>
+            </h1>
+            <p className="font-body-lg text-xs sm:text-base lg:text-lg text-gray-200 leading-relaxed line-clamp-2 sm:line-clamp-none">
+              From early prevention and insulin resistance reversal to complex advanced metabolic management — delivering evidence-based diabetes medicine tailored for South Indian lifestyles since 2008.
+            </p>
+
+            {/* Compact Quick Stats Strip */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-white/15 max-w-2xl">
+              <div>
+                <div className="text-lg sm:text-2xl font-black text-cyan-300">50,000+</div>
+                <div className="text-[11px] sm:text-xs text-gray-300 font-medium">Patients Treated</div>
+              </div>
+              <div>
+                <div className="text-lg sm:text-2xl font-black text-cyan-300">17+ Years</div>
+                <div className="text-[11px] sm:text-xs text-gray-300 font-medium">Focused Clinical Excellence</div>
+              </div>
+              <div className="col-span-2 sm:col-span-1">
+                <div className="text-lg sm:text-2xl font-black text-cyan-300">&lt; 7.0%</div>
+                <div className="text-[11px] sm:text-xs text-gray-300 font-medium">Routine Target HbA1c</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mobile & Tablet Horizontal Sticky Nav */}
-      <div className="lg:hidden sticky top-[68px] sm:top-[76px] z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm overflow-x-auto">
-        <div className="flex gap-2 px-4 py-3 min-w-max">
+      <div className="lg:hidden sticky top-[68px] sm:top-[76px] z-40 bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-sm overflow-x-auto py-2.5 px-4">
+        <div className="flex items-center gap-2 min-w-max">
           <a
             href="#type2"
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-[#0F172A] text-white font-bold rounded-full text-xs transition-all shadow-sm"
+            className="flex items-center gap-1.5 px-4 py-2 bg-[#422884] text-white font-bold rounded-full text-xs shadow-sm transition-all hover:bg-[#331e67]"
           >
             <span className="material-symbols-outlined text-[16px] text-cyan-300">biotech</span>
             <span>Type 2</span>
           </a>
           <a
             href="#type1"
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full text-xs transition-all"
+            className="flex items-center gap-1.5 px-4 py-2 bg-gray-100 hover:bg-[#422884] hover:text-white text-gray-800 font-bold rounded-full text-xs transition-all shadow-sm group"
           >
-            <span className="material-symbols-outlined text-[16px] text-[#0D5C75]">bloodtype</span>
+            <span className="material-symbols-outlined text-[16px] text-[#0D5C75] group-hover:text-cyan-300">bloodtype</span>
             <span>Type 1</span>
           </a>
           <a
             href="#prediabetes"
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full text-xs transition-all"
+            className="flex items-center gap-1.5 px-4 py-2 bg-gray-100 hover:bg-[#422884] hover:text-white text-gray-800 font-bold rounded-full text-xs transition-all shadow-sm group"
           >
-            <span className="material-symbols-outlined text-[16px] text-amber-600">trending_down</span>
+            <span className="material-symbols-outlined text-[16px] text-amber-600 group-hover:text-amber-300">trending_down</span>
             <span>Pre-Diabetes</span>
           </a>
           <a
             href="#gestational"
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full text-xs transition-all"
+            className="flex items-center gap-1.5 px-4 py-2 bg-gray-100 hover:bg-[#422884] hover:text-white text-gray-800 font-bold rounded-full text-xs transition-all shadow-sm group"
           >
-            <span className="material-symbols-outlined text-[16px] text-pink-600">pregnant_woman</span>
+            <span className="material-symbols-outlined text-[16px] text-pink-600 group-hover:text-pink-300">pregnant_woman</span>
             <span>Gestational</span>
           </a>
           <a
             href="#obesity"
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full text-xs transition-all"
+            className="flex items-center gap-1.5 px-4 py-2 bg-gray-100 hover:bg-[#422884] hover:text-white text-gray-800 font-bold rounded-full text-xs transition-all shadow-sm group"
           >
-            <span className="material-symbols-outlined text-[16px] text-emerald-600">monitor_weight</span>
+            <span className="material-symbols-outlined text-[16px] text-emerald-600 group-hover:text-emerald-300">monitor_weight</span>
             <span>Obesity</span>
           </a>
           <a
             href="#complications"
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full text-xs transition-all"
+            className="flex items-center gap-1.5 px-4 py-2 bg-gray-100 hover:bg-[#422884] hover:text-white text-gray-800 font-bold rounded-full text-xs transition-all shadow-sm group"
           >
-            <span className="material-symbols-outlined text-[16px] text-purple-600">emergency_home</span>
+            <span className="material-symbols-outlined text-[16px] text-purple-600 group-hover:text-purple-300">emergency_home</span>
             <span>Complications</span>
           </a>
         </div>
@@ -188,7 +193,7 @@ export default function ConditionsPage() {
             {/* ========================================= */}
             <div
               id="type2"
-              className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-200/80 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+              className="scroll-mt-36 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-200/80 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 group-hover:bg-cyan-500/10 transition-colors" />
 
@@ -244,7 +249,7 @@ export default function ConditionsPage() {
               {/* Type 1 Diabetes */}
               <div
                 id="type1"
-                className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="scroll-mt-36 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5">
@@ -269,7 +274,7 @@ export default function ConditionsPage() {
               {/* Pre-Diabetes & Reversal */}
               <div
                 id="prediabetes"
-                className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-amber-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+                className="scroll-mt-36 bg-white rounded-3xl p-6 sm:p-8 border border-amber-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl" />
                 <div>
@@ -305,7 +310,7 @@ export default function ConditionsPage() {
               {/* Gestational Diabetes */}
               <div
                 id="gestational"
-                className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="scroll-mt-36 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center mb-5">
@@ -330,7 +335,7 @@ export default function ConditionsPage() {
               {/* Obesity & Metabolic Syndrome */}
               <div
                 id="obesity"
-                className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="scroll-mt-36 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5">
@@ -358,7 +363,7 @@ export default function ConditionsPage() {
             {/* ========================================= */}
             <div
               id="complications"
-              className="scroll-mt-24 bg-[#0F172A] text-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden group"
+              className="scroll-mt-36 bg-[#0F172A] text-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
 

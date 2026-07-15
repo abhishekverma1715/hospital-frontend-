@@ -95,9 +95,9 @@ export default function AboutDoctor() {
           {/* ========================================================= */}
           {/* COLUMN 2 (Span 3): Dr. K. Sivakumar Profile Card */}
           {/* ========================================================= */}
-          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center sm:items-stretch group">
+          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center sm:items-stretch group h-full">
             {/* Doctor Photo */}
-            <div className="relative w-[220px] h-[260px] sm:w-full sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-amber-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
+            <div className="relative w-full max-w-[240px] sm:max-w-none h-[260px] sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-amber-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
               <Image
                 src="/assets/dr-sivakumar.jpg"
                 alt="Dr. K. Sivakumar"
@@ -118,10 +118,10 @@ export default function AboutDoctor() {
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
                   Consultant Physician &amp; Diabetologist
                 </p>
-                <h3 className="text-xl font-extrabold text-[#0F172A] mt-1 group-hover:text-[#0D5C75] transition-colors">
+                <h3 className="text-xl font-extrabold text-[#0F172A] mt-1 group-hover:text-[#0D5C75] transition-colors break-words">
                   Dr. K. Sivakumar, M.B.B.S, M.D.,
                 </h3>
-                <p className="mt-2 text-xs text-gray-500 leading-relaxed">
+                <p className="mt-2 text-xs text-gray-600 leading-relaxed text-justify sm:text-left break-words">
                   Over 20+ years of dedicated clinical experience specializing in Diabetology, Internal
                   Medicine, and evidence-based metabolic care.
                 </p>
@@ -154,9 +154,9 @@ export default function AboutDoctor() {
           {/* ========================================================= */}
           {/* COLUMN 3 (Span 3): Dr. B. Lakshmi Profile Card */}
           {/* ========================================================= */}
-          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center sm:items-stretch group">
+          <div className="md:col-span-1 lg:col-span-3 bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center sm:items-stretch group h-full">
             {/* Doctor Photo */}
-            <div className="relative w-[220px] h-[260px] sm:w-full sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-yellow-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
+            <div className="relative w-full max-w-[240px] sm:max-w-none h-[260px] sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-yellow-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
               <Image
                 src="/assets/dr-lakshmi.jpg"
                 alt="Dr. B. Lakshmi"
@@ -177,10 +177,10 @@ export default function AboutDoctor() {
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
                   Consultant Diabetologist
                 </p>
-                <h3 className="text-xl font-extrabold text-[#0F172A] mt-1 group-hover:text-[#0D5C75] transition-colors">
+                <h3 className="text-xl font-extrabold text-[#0F172A] mt-1 group-hover:text-[#0D5C75] transition-colors break-words">
                   Dr. B. Lakshmi, M.B.B.S, D. Diab.,
                 </h3>
-                <p className="mt-2 text-xs text-gray-500 leading-relaxed">
+                <p className="mt-2 text-xs text-gray-600 leading-relaxed text-justify sm:text-left break-words">
                   Specialist in gestational diabetes, comprehensive insulin management, preventive diabetic foot care,
                   and patient-centered wellness.
                 </p>
@@ -301,17 +301,17 @@ export default function AboutDoctor() {
               <h4 className="text-base sm:text-lg font-bold text-[#0F172A]">
                 CMC Vellore Certified Diagnostics &amp; Evidence-Based Care
               </h4>
-              <p className="text-xs sm:text-sm text-gray-500">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 All consultations are backed by state-of-the-art laboratory testing, continuous glucose monitoring, and AI-assisted analysis.
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 w-full sm:w-auto">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0D5C75] hover:bg-[#0B4A5E] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] w-full sm:w-auto rounded-full bg-[#0D5C75] hover:bg-[#0B4A5E] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4 shrink-0" />
               <span>Book Appointment Online</span>
             </a>
           </div>

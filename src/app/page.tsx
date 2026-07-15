@@ -93,7 +93,7 @@ export default function HomePage() {
       <section className="py-14 bg-smoke3 border-b border-gray-200">
         <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            
+
             <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-[#0084FF]/10 border border-[#0084FF]/20 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-[#0084FF] text-[32px]">verified_user</span>
@@ -147,7 +147,7 @@ export default function HomePage() {
       <section id="about" className="py-20 bg-[#F8FAFC] border-y border-gray-200">
         <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Story Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider">
@@ -179,15 +179,15 @@ export default function HomePage() {
               </div>
 
               <div className="pt-4 flex flex-wrap gap-4">
-                <Link 
-                  href="/about" 
+                <Link
+                  href="/about"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#0D5C75] hover:bg-[#094356] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
                 >
                   <span>Read Full Hospital Story</span>
                   <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </Link>
-                <Link 
-                  href="/services" 
+                <Link
+                  href="/services"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-gray-50 text-[#0F172A] border border-gray-300 font-bold text-sm transition-all"
                 >
                   <span>Explore All Departments</span>
@@ -198,10 +198,10 @@ export default function HomePage() {
             {/* Right Visual Image & Stats */}
             <div className="lg:col-span-5 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] relative">
-                <img 
-                  src="/assets/photo_2026-06-10_20-48-52.jpg" 
-                  alt="Karunya Sugalaya Hospital Leadership" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src="/assets/photo_2026-06-10_20-48-52.jpg"
+                  alt="Karunya Sugalaya Hospital Leadership"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -244,9 +244,9 @@ export default function HomePage() {
               </p>
               <div className="mt-auto pt-6 border-t border-gray-100">
                 <div className="w-full aspect-[5/3] rounded-2xl overflow-hidden shadow-sm">
-                  <img 
-                    src="/assets/photo_2026-06-10_20-31-03.jpg" 
-                    alt="Doctor using Dialog EMR system" 
+                  <img
+                    src="/assets/photo_2026-06-10_20-31-03.jpg"
+                    alt="Doctor using Dialog EMR system"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -262,13 +262,11 @@ export default function HomePage() {
             ].map((c, i) => (
               <div
                 key={i}
-                className={`lg:col-span-3 bg-white p-6 sm:p-7 rounded-3xl border ${
-                  c.accent ? 'border-red-200 bg-red-50/30' : 'border-gray-200'
-                } shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col`}
+                className={`lg:col-span-3 bg-white p-6 sm:p-7 rounded-3xl border ${c.accent ? 'border-red-200 bg-red-50/30' : 'border-gray-200'
+                  } shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col`}
               >
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${
-                  c.accent ? 'bg-red-500/10 text-red-600' : 'bg-[#0D5C75]/10 text-[#0D5C75]'
-                }`}>
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${c.accent ? 'bg-red-500/10 text-red-600' : 'bg-[#0D5C75]/10 text-[#0D5C75]'
+                  }`}>
                   <span className="material-symbols-outlined text-[26px]">{c.icon}</span>
                 </div>
                 <h3 className="text-lg font-bold text-[#0F172A] mb-2.5">{c.title}</h3>
@@ -301,32 +299,42 @@ export default function HomePage() {
 
             <div className="min-h-[300px] sm:min-h-[400px] flex flex-col justify-center">
               {[
-                { step: 1, q: 'What is your age?', opts: [
-                  { label: 'Below 30', icon: 'child_care', score: 0 },
-                  { label: '30 – 45', icon: 'person', score: 1 },
-                  { label: '45 – 60', icon: 'group', score: 2 },
-                  { label: 'Above 60', icon: 'elderly', score: 3 },
-                ], cols: 'sm:grid-cols-2' },
-                { step: 2, q: 'Does diabetes run in your family?', opts: [
-                  { label: 'No family history', icon: 'sentiment_satisfied', score: 0 },
-                  { label: 'One parent or sibling', icon: 'family_restroom', score: 1 },
-                  { label: 'Both parents', icon: 'diversity_3', score: 2 },
-                ], cols: 'sm:grid-cols-3' },
-                { step: 3, q: 'How would you describe your weight?', opts: [
-                  { label: 'Normal', icon: 'accessibility_new', score: 0 },
-                  { label: 'Slightly overweight', icon: 'fitness_center', score: 1 },
-                  { label: 'Overweight or obese', icon: 'monitor_weight', score: 2 },
-                ], cols: 'sm:grid-cols-3' },
-                { step: 4, q: 'How physically active are you?', opts: [
-                  { label: 'Exercise regularly', icon: 'directions_run', score: 0 },
-                  { label: 'Light activity', icon: 'directions_walk', score: 1 },
-                  { label: 'Mostly sedentary', icon: 'chair', score: 2 },
-                ], cols: 'sm:grid-cols-3' },
-                { step: 5, q: 'Any recent symptoms?', opts: [
-                  { label: 'None', icon: 'check_circle', score: 0 },
-                  { label: 'Fatigue or frequent thirst', icon: 'local_drink', score: 1 },
-                  { label: 'Multiple symptoms', icon: 'warning', score: 2 },
-                ], cols: 'sm:grid-cols-3' },
+                {
+                  step: 1, q: 'What is your age?', opts: [
+                    { label: 'Below 30', icon: 'child_care', score: 0 },
+                    { label: '30 – 45', icon: 'person', score: 1 },
+                    { label: '45 – 60', icon: 'group', score: 2 },
+                    { label: 'Above 60', icon: 'elderly', score: 3 },
+                  ], cols: 'sm:grid-cols-2'
+                },
+                {
+                  step: 2, q: 'Does diabetes run in your family?', opts: [
+                    { label: 'No family history', icon: 'sentiment_satisfied', score: 0 },
+                    { label: 'One parent or sibling', icon: 'family_restroom', score: 1 },
+                    { label: 'Both parents', icon: 'diversity_3', score: 2 },
+                  ], cols: 'sm:grid-cols-3'
+                },
+                {
+                  step: 3, q: 'How would you describe your weight?', opts: [
+                    { label: 'Normal', icon: 'accessibility_new', score: 0 },
+                    { label: 'Slightly overweight', icon: 'fitness_center', score: 1 },
+                    { label: 'Overweight or obese', icon: 'monitor_weight', score: 2 },
+                  ], cols: 'sm:grid-cols-3'
+                },
+                {
+                  step: 4, q: 'How physically active are you?', opts: [
+                    { label: 'Exercise regularly', icon: 'directions_run', score: 0 },
+                    { label: 'Light activity', icon: 'directions_walk', score: 1 },
+                    { label: 'Mostly sedentary', icon: 'chair', score: 2 },
+                  ], cols: 'sm:grid-cols-3'
+                },
+                {
+                  step: 5, q: 'Any recent symptoms?', opts: [
+                    { label: 'None', icon: 'check_circle', score: 0 },
+                    { label: 'Fatigue or frequent thirst', icon: 'local_drink', score: 1 },
+                    { label: 'Multiple symptoms', icon: 'warning', score: 2 },
+                  ], cols: 'sm:grid-cols-3'
+                },
               ].map(s => calculatorStep === s.step && (
                 <div key={s.step} className="animate-fade-in-up visible">
                   <div className="flex items-center justify-center mb-8 gap-3 flex-wrap">
@@ -405,9 +413,9 @@ export default function HomePage() {
             ].map((event, i) => (
               <div key={i} className="soft-card group overflow-hidden">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={event.image} 
-                    alt={event.title} 
+                  <img
+                    src={event.image}
+                    alt={event.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -436,8 +444,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="soft-card p-4">
               <div className="aspect-video rounded-2xl overflow-hidden bg-black mb-4">
-                <video 
-                  controls 
+                <video
+                  controls
                   className="w-full h-full object-cover"
                   poster="/assets/photo_2026-06-10_20-31-26.jpg"
                 >
@@ -451,8 +459,8 @@ export default function HomePage() {
 
             <div className="soft-card p-4">
               <div className="aspect-video rounded-2xl overflow-hidden bg-black mb-4">
-                <video 
-                  controls 
+                <video
+                  controls
                   className="w-full h-full object-cover"
                   poster="/assets/photo_2026-06-10_20-48-47.jpg"
                 >
@@ -484,10 +492,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
             {/* Doctor 1: Dr. K. Sivakumar */}
-            <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
               <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 {/* Photo */}
-                <div className="w-[220px] h-[260px] sm:w-40 sm:h-56 md:w-44 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50">
+                <div className="w-full max-w-[240px] sm:max-w-none sm:w-40 md:w-44 h-64 sm:h-56 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50">
                   <img
                     src="/assets/dr-sivakumar.jpg"
                     alt="Dr. K. Sivakumar, M.B.B.S, M.D."
@@ -500,10 +508,10 @@ export default function HomePage() {
                   <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
                     Consultant Physician &amp; Diabetologist
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1 break-words">
                     Dr. K. Sivakumar, M.B.B.S, M.D.,
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed text-justify sm:text-left break-words">
                     20+ years overall clinical experience specializing in Diabetology, Internal Medicine, and evidence-based metabolic management.
                   </p>
 
@@ -557,10 +565,10 @@ export default function HomePage() {
             </div>
 
             {/* Doctor 2: Dr. B. Lakshmi */}
-            <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
               <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 {/* Photo */}
-                <div className="w-[220px] h-[260px] sm:w-40 sm:h-56 md:w-44 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50">
+                <div className="w-full max-w-[240px] sm:max-w-none sm:w-40 md:w-44 h-64 sm:h-56 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50">
                   <img
                     src="/assets/dr-lakshmi.jpg"
                     alt="Dr. B. Lakshmi, M.B.B.S, D. Diab."
@@ -573,10 +581,10 @@ export default function HomePage() {
                   <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
                     Consultant Diabetologist
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1 break-words">
                     Dr. B. Lakshmi, M.B.B.S, D. Diab.,
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed text-justify sm:text-left break-words">
                     Specialist in gestational diabetes, comprehensive insulin therapy, preventive diabetic foot care, and holistic patient-first care.
                   </p>
 
@@ -658,7 +666,7 @@ export default function HomePage() {
             ].map((t, i) => (
               <div key={i} className={`soft-card p-6 sm:p-8 md:p-10 flex flex-col ${i === 1 ? 'lg:translate-y-6' : ''}`}>
                 <div className="aspect-[4/3] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden mb-5 sm:mb-6 relative">
-                  <img 
+                  <img
                     src={i === 0 ? '/assets/photo_2026-06-10_20-48-51.jpg' : i === 1 ? '/assets/photo_2026-06-10_20-48-52.jpg' : '/assets/photo_2026-06-10_20-49-08.jpg'}
                     alt={`Patient ${t.name}`}
                     className="w-full h-full object-cover"

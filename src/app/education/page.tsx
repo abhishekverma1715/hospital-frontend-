@@ -45,14 +45,14 @@ export default async function EducationPage() {
     <>
       {/* ===== Hero with Patient Education Background Image ===== */}
       <section
-        className="relative overflow-hidden py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
+        className="relative w-full min-h-[260px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[650px] sm:h-[70svh] lg:h-[75svh] max-h-[800px] py-12 sm:py-0 flex items-center overflow-hidden px-4 sm:px-6 lg:px-8 bg-cover bg-center md:bg-right text-white"
         style={{ backgroundImage: "url('/images/education-hero-bg.png')" }}
       >
         {/* Dark Teal Gradient Overlay for optimal readability on left without obscuring scene on right */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-transparent to-transparent" />
 
-        <div className="max-w-container-max-width mx-auto relative z-10">
+        <div className="max-w-container-max-width mx-auto relative z-10 w-full">
           <div className="max-w-2xl text-left">
             <span className="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 backdrop-blur-md text-cyan-300 font-bold rounded-full text-xs tracking-widest uppercase mb-4 border border-white/15 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />

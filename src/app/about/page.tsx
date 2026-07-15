@@ -15,7 +15,7 @@ export default function AboutPage() {
     <div className="bg-white text-[#0F172A] selection:bg-[#0D5C75] selection:text-white">
       {/* ===== About Hero Section with Doctor Consultation Background ===== */}
       <section
-        className="relative py-14 sm:py-16 lg:py-20 bg-cover bg-center md:bg-right text-white overflow-hidden"
+        className="relative w-full h-[260px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[650px] sm:h-[70svh] lg:h-[75svh] max-h-[800px] flex items-center bg-cover bg-center md:bg-right text-white overflow-hidden"
         style={{ backgroundImage: "url('/images/about-hero-bg.jpg')" }}
       >
         {/* Gradient Overlays for optimal text readability without obscuring doctor & patient on right */}
@@ -26,15 +26,15 @@ export default function AboutPage() {
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-2xl text-left">
-            <span className="inline-block px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md text-cyan-300 border border-white/15 text-xs font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full bg-white/10 backdrop-blur-md text-cyan-300 border border-white/15 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 sm:mb-4">
               About Karunya Sugalaya
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-white leading-[1.15] drop-shadow-sm">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[46px] font-extrabold tracking-tight text-white leading-tight sm:leading-[1.15] drop-shadow-sm mb-2 sm:mb-4">
               Revolutionizing Diabetes &amp; Metabolic Care Since <span className="text-cyan-300">2008</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-200 leading-relaxed">
+            <p className="text-xs sm:text-base lg:text-lg text-gray-200 leading-relaxed line-clamp-2 sm:line-clamp-none">
               We are Kumbakonam&apos;s premier specialist hospital dedicated to evidence-based diabetology, continuous glucose monitoring, foot salvage, and compassionate patient empowerment.
             </p>
           </div>

@@ -146,9 +146,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         )}
       </div>
 
-      {/* ===== Body ===== */}
-      <section className="py-16 md:py-20 px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto">
-        <div className="article-prose" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <div className="article-prose text-justify sm:text-left break-words leading-relaxed" dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
         <div className="mt-16 pt-8 border-t border-[#e8d8bf]">
           <Link

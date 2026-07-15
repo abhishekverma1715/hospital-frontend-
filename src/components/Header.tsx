@@ -161,18 +161,19 @@ export default function Header() {
             <div className="flex lg:hidden items-center gap-2 sm:gap-3 shrink-0">
               <Link
                 href="/book"
-                className="hidden sm:inline-flex px-4 py-2 rounded-full bg-[#422884] text-white font-bold text-xs shadow-sm"
+                className="inline-flex px-4 py-2 rounded-full bg-[#422884] hover:bg-[#331e67] text-white font-bold text-xs shadow-sm transition-all"
               >
                 Book
               </Link>
               <button
                 type="button"
-                className="w-11 h-11 rounded-xl text-[#0F172A] hover:bg-gray-100 transition-colors focus:outline-none flex items-center justify-center"
+                className="px-3 py-2 rounded-xl bg-gray-50/80 hover:bg-gray-100 border border-gray-200/80 text-[#0F172A] transition-all focus:outline-none flex items-center gap-1.5 shadow-sm"
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label="Toggle navigation menu"
                 aria-expanded={menuOpen}
               >
-                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                <span className="text-xs font-bold uppercase tracking-wider hidden sm:inline">Menu</span>
+                {menuOpen ? <X size={20} className="text-[#DC2626]" /> : <Menu size={20} className="text-[#0D5C75]" />}
               </button>
             </div>
 
@@ -180,7 +181,7 @@ export default function Header() {
         </div>
 
         {/* 3. Bright Cyan Horizontal Divider & Lower Menu Bar */}
-        <nav className="border-t-2 border-[#0088CC] bg-white shadow-sm">
+        <nav className="border-t-2 border-[#0088CC] bg-white shadow-sm relative">
           <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center justify-between py-3">
@@ -213,13 +214,13 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Mobile Navigation Drawer */}
+          {/* Mobile Navigation Drawer (Absolute Dropdown to prevent expanding sticky header & overlap) */}
           <div
-            className={`lg:hidden bg-white border-t border-gray-200 shadow-2xl mobile-nav-drawer ${menuOpen ? 'open' : ''}`}
+            className={`lg:hidden absolute top-full left-0 right-0 w-full bg-white border-b border-gray-200 shadow-2xl transition-all duration-300 ${menuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
             style={{ display: menuOpen ? 'block' : 'none' }}
           >
             <div className="px-4 sm:px-6 py-5 sm:py-6 space-y-3 max-h-[calc(100vh-140px)] max-h-[calc(100svh-140px)] overflow-y-auto overscroll-contain">
-              <div className="flex flex-col space-y-1">
+              <div className="flex flex-col space-y-1.5">
                 {navItems.map((item) => {
                   const isActive = pathname === item.href;
                   return (
@@ -227,34 +228,36 @@ export default function Header() {
                       key={item.href}
                       href={item.href}
                       onClick={closeMenu}
-                      className={`text-base font-semibold py-3.5 px-4 rounded-xl transition-colors min-h-[48px] flex items-center ${isActive
-                        ? 'bg-[#0084FF]/10 text-[#0084FF]'
-                        : 'text-[#0F172A] hover:bg-gray-50 hover:text-[#0084FF]'
+                      className={`text-base font-bold py-3.5 px-4 rounded-2xl transition-all min-h-[48px] flex items-center justify-between ${isActive
+                        ? 'bg-[#422884]/10 text-[#422884] border-l-4 border-[#422884]'
+                        : 'text-[#0F172A] hover:bg-gray-50 hover:text-[#422884]'
                         }`}
                     >
-                      {item.label}
+                      <span>{item.label}</span>
+                      <ArrowRight className={`w-4 h-4 transition-transform ${isActive ? 'text-[#422884] translate-x-1' : 'text-gray-300'}`} />
                     </Link>
                   );
                 })}
               </div>
 
-              <div className="pt-3 border-t border-gray-100 space-y-2.5">
+              <div className="pt-4 border-t border-gray-100 space-y-3">
                 <a
                   href="tel:+919976379697"
                   onClick={closeMenu}
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl border border-red-200 bg-red-50 text-red-700 font-bold text-xs sm:text-sm transition-all"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-2xl border border-red-200 bg-red-50 hover:bg-red-100 text-red-700 font-bold text-xs sm:text-sm transition-all shadow-sm"
                 >
-                  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  <span>Call Helpline: +91 99763 79697</span>
+                  <Phone className="w-4 h-4 text-red-600 animate-pulse" />
+                  <span>Call Emergency Helpline: +91 99763 79697</span>
                 </a>
 
                 <Link
                   href="/book"
                   onClick={closeMenu}
-                  className="flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-xl bg-[#0084FF] text-white font-bold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all"
+                  className="flex items-center justify-center gap-2.5 w-full px-5 py-3.5 rounded-2xl bg-[#422884] hover:bg-[#331e67] text-white font-extrabold text-sm tracking-wide shadow-md hover:shadow-xl transition-all transform hover:-translate-y-0.5"
                 >
+                  <Calendar className="w-4 h-4" />
                   <span>Book Appointment</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
