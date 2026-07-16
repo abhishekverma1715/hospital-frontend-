@@ -50,7 +50,7 @@ export default function AboutPage() {
                 <Award className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#0F172A]">17+ Years of Excellence</h3>
+                <h3 className="text-lg font-bold text-[#0F172A]"> 25+ Years of Excellence</h3>
                 <p className="text-sm text-gray-600 mt-1 leading-relaxed">
                   Serving thousands of families across Kumbakonam, Thanjavur, and the Cauvery delta region with uninterrupted clinical support.
                 </p>
@@ -62,9 +62,9 @@ export default function AboutPage() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#0F172A]">NABH &amp; IDF Standards</h3>
+                <h3 className="text-lg font-bold text-[#0F172A]">  Our Vision </h3>
                 <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                  Strictly aligned with International Diabetes Federation and national hospital safety standards for outpatient &amp; inpatient care.
+                  Helping people live long and healthy beyond 80 years.
                 </p>
               </div>
             </div>
@@ -74,9 +74,9 @@ export default function AboutPage() {
                 <Activity className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#0F172A]">Early Technology Adopters</h3>
+                <h3 className="text-lg font-bold text-[#0F172A]"> Our Mission </h3>
                 <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                  Pioneering Continuous Glucose Monitoring (CGM), Insulin Pump Therapy, and Diabetes Telemanagement Systems (DTMS®).
+                  To help people using the advanced Scientific and Technology to prevent chronic disease and complications with affordable Cost and Good Care to Achieve longer & Healthy Lives
                 </p>
               </div>
             </div>
