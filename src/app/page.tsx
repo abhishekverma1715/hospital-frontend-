@@ -5,6 +5,56 @@ import Hero from '@/components/Hero';
 import QuickBoxes from '@/components/QuickBoxes';
 import FinalCTA from '@/components/FinalCTA';
 
+function AutoPlayTourVideo({ src }: { src: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      const nextMuted = !videoRef.current.muted;
+      videoRef.current.muted = nextMuted;
+      setIsMuted(nextMuted);
+    }
+  };
+
+  return (
+    <div className="relative w-full max-w-[200px] sm:max-w-[220px] aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-950 shadow-2xl border-4 sm:border-[6px] border-gray-100 shrink-0 group">
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        className="w-full h-full object-cover bg-black"
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Floating Mute/Speaker Toggle Button */}
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+        className="absolute bottom-3 right-3 z-10 w-10 h-10 rounded-full bg-black/75 hover:bg-[#0D5C75] backdrop-blur-md text-white flex items-center justify-center border border-white/20 shadow-lg transition-all duration-300 group-hover:scale-110"
+      >
+        <span className="material-symbols-outlined text-[20px]">
+          {isMuted ? 'volume_off' : 'volume_up'}
+        </span>
+      </button>
+
+      {/* Subtle Live Badge */}
+      <div className="absolute top-3 left-3 z-10 pointer-events-none">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md text-white text-[10px] font-bold border border-white/15">
+          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+          Live Tour
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const [calculatorStep, setCalculatorStep] = useState(1);
   const [calculatorScore, setCalculatorScore] = useState(0);
@@ -146,16 +196,18 @@ export default function HomePage() {
       {/* ===== About Hospital Section (Jothydev Reference Layout) ===== */}
       <section id="about" className="py-20 bg-[#F8FAFC] border-y border-gray-200">
         <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
 
             {/* Left Story Content */}
-            <div className="lg:col-span-7 space-y-6">
-              <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider">
-                About Karunya Sugalaya
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight">
-                One of the Best Specialist Diabetes Care &amp; Research Hospitals in Kumbakonam, Tamil Nadu
-              </h2>
+            <div className="lg:col-span-7 space-y-6 flex flex-col justify-center">
+              <div>
+                <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider">
+                  About Karunya Sugalaya
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight mt-3">
+                  One of the Best Specialist Diabetes Care &amp; Research Hospitals in Kumbakonam, Tamil Nadu
+                </h2>
+              </div>
               <p className="text-base text-[#475569] leading-relaxed">
                 For nearly two decades, Karunya Sugalaya Diabetes Research Centre has stood as your trusted partner in diabetes care, offering uninterrupted support across Kumbakonam, Thanjavur, and the Cauvery delta region. Our commitment extends beyond mere treatment to elevating metabolic healthcare standards.
               </p>
@@ -196,17 +248,35 @@ export default function HomePage() {
             </div>
 
             {/* Right Visual Image & Stats */}
-            <div className="lg:col-span-5 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] relative">
+            <div className="lg:col-span-5 relative flex flex-col">
+              <div className="rounded-3xl sm:rounded-[32px] overflow-hidden shadow-2xl border-4 sm:border-[6px] border-white aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[380px] sm:min-h-[460px] relative group flex flex-col justify-end">
                 <img
-                  src="/assets/photo_2026-06-10_20-48-52.jpg"
+                  src="./assets/assets/hospital1.jpeg"
                   alt="Karunya Sugalaya Hospital Leadership"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <h4 className="text-xl font-extrabold mt-2">Dr. K. Sivakumar, MD</h4>
-                  <p className="text-xs text-gray-200 mt-0.5">Specialist Diabetologist &amp; Key Opinion Leader</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent" />
+
+                {/* Top Excellence Floating Badge */}
+                <div className="absolute top-6 right-6 hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/95 backdrop-blur-md text-[#0F172A] shadow-xl border border-white/60 z-10">
+                  <div className="w-8 h-8 rounded-xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center shrink-0">
+                    <span className="material-symbols-outlined text-[18px]">verified</span>
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-extrabold uppercase tracking-wider text-[#0D5C75] leading-none">Excellence</p>
+                    <p className="text-xs font-bold text-[#0F172A] mt-0.5 leading-none">20+ Years in Care</p>
+                  </div>
+                </div>
+
+                <div className="relative z-10 p-6 sm:p-8 text-white">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D5C75]/90 backdrop-blur-md text-white text-xs font-semibold mb-3 border border-white/15 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Medical Leadership &amp; Research
+                  </div>
+                  <h4 className="text-xl sm:text-2xl font-extrabold tracking-tight">Dr. K. Sivakumar, MD</h4>
+                  <p className="text-xs sm:text-sm text-gray-200 mt-1 font-medium leading-relaxed">
+                    Specialist Diabetologist &amp; Key Opinion Leader
+                  </p>
                 </div>
               </div>
             </div>
@@ -215,69 +285,132 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Why Karunya Sugalaya ===== */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200">
+      {/* ===== Why Karunya Sugalaya: Advanced Diagnostic Infrastructure ===== */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-[#F8FAFC] to-white border-b border-gray-200">
         <div className="max-w-container-max-width mx-auto">
-          <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
             <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-widest mb-4">
-              Why Karunya Sugalaya
+              Diagnostic Infrastructure &amp; Technology
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0F172A] leading-tight mb-5">
-              What makes us different.
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0F172A] leading-tight mb-5">
+              State-of-the-Art Medical Devices.
             </h2>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Six things we do here that you won&apos;t find at most diabetes clinics — not gimmicks, but practices that genuinely improve outcomes.
+              We equip our hospital and research center with world-class diagnostic equipment—ensuring every clinical decision is powered by rapid, high-precision laboratory and physiological data.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-            {/* Hero feature card spans 3 cols + 2 rows on lg */}
-            <div className="lg:col-span-3 lg:row-span-2 relative p-6 sm:p-8 lg:p-10 rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md group transition-all duration-300 flex flex-col">
-              <div className="w-14 h-14 rounded-2xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center mb-6">
-                <span className="material-symbols-outlined text-[32px]">memory</span>
-              </div>
-              <h3 className="text-2xl sm:text-[28px] font-extrabold text-[#0F172A] mb-4 leading-tight">
-                AI-Assisted Decisions, every visit.
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                Diabrain analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. We use data, not just intuition.
-              </p>
-              <div className="mt-auto pt-6 border-t border-gray-100">
-                <div className="w-full aspect-[5/3] rounded-2xl overflow-hidden shadow-sm">
-                  <img
-                    src="/assets/photo_2026-06-10_20-31-03.jpg"
-                    alt="Doctor using Dialog EMR system"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: 'folder_special', title: 'Complete EMR', body: 'Every consultation, investigation, and prescription since your first visit — stored permanently in Dialog EMR.' },
-              { icon: 'smartphone', title: 'Remote Diary App', body: 'Patients log blood sugar, weight, and lifestyle data between visits. A complete picture, not a snapshot.' },
-              { icon: 'elderly', title: 'Priority for Elderly', body: 'We prioritise elderly patients with the least waiting time. Remote care and home visits where needed.' },
-              { icon: 'science', title: 'Research-Backed', body: 'Decisions backed by research from our 50,000-patient database — reflecting South Indian metabolic patterns.' },
-              { icon: 'emergency', title: '24×7 Emergency Care', body: 'Staffed and equipped for acute diabetes emergencies around the clock. Call +91 9976379697 immediately.', accent: true },
-            ].map((c, i) => (
+              {
+                image: '/assets/assets/image11.png',
+                category: 'Gold Standard Diabetes Testing',
+                title: 'Bio-Rad D-10 HPLC System',
+                desc: 'International gold-standard High-Performance Liquid Chromatography (HPLC) system delivering unmatched precision and accuracy for HbA1c and hemoglobin monitoring.',
+                icon: 'science',
+              },
+              {
+                image: '/assets/assets/image9.png',
+                category: 'Biochemistry & Immunoassay',
+                title: 'TurboChem 100 & Finecare Suite',
+                desc: 'Fully automated biochemistry and fluorescence immunoassay system for rapid lipid profiling, kidney/liver function tests, and microalbuminuria screening.',
+                icon: 'biotech',
+              },
+              {
+                image: '/assets/assets/image17.png',
+                category: 'Ophthalmic Screening',
+                title: 'Forus Digital Retinal Camera',
+                desc: 'Non-mydriatic 3D digital fundus imaging system capturing crystal-clear retinal scans to detect and prevent early-stage diabetic retinopathy and vision loss.',
+                icon: 'visibility',
+              },
+              {
+                image: '/assets/assets/image16.png',
+                category: 'Diabetic Foot Salvage',
+                title: 'Vascular Doppler & Biothesiometer',
+                desc: 'Specialized neuro-vascular diagnostic unit testing peripheral vibration thresholds and arterial blood circulation to protect against diabetic foot ulcers.',
+                icon: 'footprint',
+              },
+              {
+                image: '/assets/assets/image13.png',
+                category: 'Cardiovascular Profiling',
+                title: 'Bionet CardioCare Digital ECG',
+                desc: 'Multi-channel computerized electrocardiograph providing real-time rhythm and waveform analysis to preemptively manage diabetic cardiovascular risks.',
+                icon: 'cardiology',
+              },
+              {
+                image: '/assets/assets/image8.png',
+                category: 'Hematology & Microscopy',
+                title: 'Swelab Alfa Hematology Unit',
+                desc: 'Automated cellular hematology analyzer paired with digital microscopy for comprehensive complete blood counts, infection screening, and cellular pathology.',
+                icon: 'bloodtype',
+              },
+              {
+                image: '/assets/assets/image10.png',
+                category: 'Electrolyte & Blood Gas',
+                title: 'Ion-Selective Electrolyte Analyzer',
+                desc: 'Precision electrolyte and metabolic profile monitor ensuring instant detection of sodium, potassium, and chloride balances during critical diabetic care.',
+                icon: 'monitor_heart',
+              },
+              {
+                image: '/assets/assets/image14.png',
+                category: 'Metabolic Composition',
+                title: 'Digital Body Composition Unit',
+                desc: 'Advanced multi-frequency segmental impedance system accurately mapping visceral fat, muscle mass, and cellular hydration to guide metabolic therapy.',
+                icon: 'scale',
+              },
+              {
+                image: '/assets/assets/image12.png',
+                category: 'Sample Processing',
+                title: 'High-Speed Precision Centrifuge',
+                desc: 'High-speed clinical centrifuge ensuring pristine serum and plasma separation for high-sensitivity laboratory investigations and research trials.',
+                icon: 'change_circle',
+              },
+            ].map((device, idx) => (
               <div
-                key={i}
-                className={`lg:col-span-3 bg-white p-6 sm:p-7 rounded-3xl border ${c.accent ? 'border-red-200 bg-red-50/30' : 'border-gray-200'
-                  } shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col`}
+                key={idx}
+                className="group bg-white rounded-3xl border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-[#0D5C75]/30 transition-all duration-500 overflow-hidden flex flex-col"
               >
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${c.accent ? 'bg-red-500/10 text-red-600' : 'bg-[#0D5C75]/10 text-[#0D5C75]'
-                  }`}>
-                  <span className="material-symbols-outlined text-[26px]">{c.icon}</span>
+                {/* Image Container */}
+                <div className="relative aspect-[16/11] w-full overflow-hidden bg-gray-900/5">
+                  <img
+                    src={device.image}
+                    alt={device.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+
+                  {/* Category Badge overlay on image */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#0D5C75] text-[11px] font-bold shadow-md border border-white/60">
+                      <span className="material-symbols-outlined text-[14px]">{device.icon}</span>
+                      {device.category}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-[#0F172A] mb-2.5">{c.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">{c.body}</p>
-                <div className="mt-4 flex items-center gap-1.5 text-[#0D5C75] text-xs font-bold opacity-80 group-hover:opacity-100 transition-opacity">
-                  <span>Learn more</span>
-                  <span className="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+
+                {/* Text Content */}
+                <div className="p-6 sm:p-7 flex flex-col flex-grow">
+                  <h3 className="text-xl font-extrabold text-[#0F172A] mb-2.5 group-hover:text-[#0D5C75] transition-colors duration-300">
+                    {device.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">
+                    {device.desc}
+                  </p>
+
+                  <div className="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Karunya Sugalaya Labs</span>
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-[#0D5C75] group-hover:translate-x-1 transition-transform">
+                      <span>Verified Precision</span>
+                      <span className="material-symbols-outlined text-[16px]">verified</span>
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Bottom Trust Banner */}
+
         </div>
       </section>
 
@@ -431,45 +564,61 @@ export default function HomePage() {
       </section>
 
       {/* ===== Hospital Tour & Videos ===== */}
-      <section className="py-14 sm:py-16 bg-[#F8FAFC] border-b border-gray-200 px-4 sm:px-6 lg:px-8 animate-fade-in-up">
+      <section id="tour" className="py-16 sm:py-24 bg-gradient-to-b from-[#F8FAFC] via-white to-[#F8FAFC] border-b border-gray-200 px-4 sm:px-6 lg:px-8">
         <div className="max-w-container-max-width mx-auto">
-          <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
-            <span className="text-primary font-label-overline text-[12px] font-bold tracking-widest uppercase">Hospital Tour</span>
-            <h2 className="font-headline-lg text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mt-4 mb-6">Experience Karunya Sugalaya</h2>
-            <p className="font-body-lg text-[17px] sm:text-[18px] text-on-surface-variant leading-relaxed">
-              Take a virtual tour of our facilities and see our commitment to patient care in action.
+          <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+            <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-widest mb-4">
+              Virtual Walkthrough
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0F172A] leading-tight mb-5">
+              Experience Karunya Sugalaya.
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              Take a virtual tour inside our Kumbakonam hospital. Witness our high-tech diagnostic laboratory, dedicated consultation suites, and patient-first clinical workflow.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="soft-card p-4">
-              <div className="aspect-video rounded-2xl overflow-hidden bg-black mb-4">
-                <video
-                  controls
-                  className="w-full h-full object-cover"
-                  poster="/assets/photo_2026-06-10_20-31-26.jpg"
-                >
-                  <source src="/assets/video_2026-06-10_20-48-54.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+            {/* Video Card 1 */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 group">
+              <div className="flex-grow">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold">
+                    <span className="material-symbols-outlined text-[16px]">play_circle</span>
+                    Facility &amp; Lab Tour
+                  </span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mb-2.5 group-hover:text-[#0D5C75] transition-colors">
+                  Hospital Walkthrough &amp; Diagnostic Center
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  Step inside Karunya Sugalaya Diabetes Research Centre. Experience our welcoming reception, specialized consultation rooms, EMR tracking, and automated diagnostics.
+                </p>
               </div>
-              <h3 className="text-[20px] font-bold text-on-surface mb-2">Facility Tour</h3>
-              <p className="text-[15px] text-on-surface-variant">Explore our modern facilities including consultation rooms, laboratory, and inpatient wards.</p>
+
+              {/* Compact AutoPlay Video Container */}
+              <AutoPlayTourVideo src="/assets/assets/WhatsApp%20Video%202026-07-16%20at%201.33.40%20PM.mp4" />
             </div>
 
-            <div className="soft-card p-4">
-              <div className="aspect-video rounded-2xl overflow-hidden bg-black mb-4">
-                <video
-                  controls
-                  className="w-full h-full object-cover"
-                  poster="/assets/photo_2026-06-10_20-48-47.jpg"
-                >
-                  <source src="/assets/video_2026-06-10_20-48-59.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+            {/* Video Card 2 */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 group">
+              <div className="flex-grow">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold">
+                    <span className="material-symbols-outlined text-[16px]">biotech</span>
+                    Clinical Workflow
+                  </span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] mb-2.5 group-hover:text-[#0D5C75] transition-colors">
+                  Clinical Care, Lab &amp; Patient Experience
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  See our dedicated clinical specialists in action—from precision sample collection and high-speed centrifugation (TurboChem 100) to non-invasive digital retinopathy (Forus Classic).
+                </p>
               </div>
-              <h3 className="text-[20px] font-bold text-on-surface mb-2">Patient Care Approach</h3>
-              <p className="text-[15px] text-on-surface-variant">Learn about our patient-centered approach and comprehensive diabetes management philosophy.</p>
+
+              {/* Compact AutoPlay Video Container */}
+              <AutoPlayTourVideo src="/assets/assets/WhatsApp%20Video%202026-07-16%20at%201.33.40%20PM%20(1).mp4" />
             </div>
           </div>
         </div>
