@@ -247,33 +247,33 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Visual Image & Stats */}
-            <div className="lg:col-span-5 relative flex flex-col">
-              <div className="rounded-3xl sm:rounded-[32px] overflow-hidden shadow-2xl border-4 sm:border-[6px] border-white aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[380px] sm:min-h-[460px] relative group flex flex-col justify-end">
+            {/* Right Visual Image & Stats (Fully Responsive across Mobile, Tablet, Laptop & Desktop) */}
+            <div className="lg:col-span-5 relative flex flex-col w-full">
+              <div className="w-full rounded-3xl sm:rounded-[32px] overflow-hidden shadow-2xl border-4 sm:border-[6px] border-white aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[340px] sm:min-h-[440px] lg:min-h-[480px] relative group flex flex-col justify-end">
                 <img
-                  src="./assets/assets/hospital1.jpeg"
+                  src="/assets/assets/hospital1.jpeg"
                   alt="Karunya Sugalaya Hospital Leadership"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent" />
 
-                {/* Top Excellence Floating Badge */}
-                <div className="absolute top-6 right-6 hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/95 backdrop-blur-md text-[#0F172A] shadow-xl border border-white/60 z-10">
-                  <div className="w-8 h-8 rounded-xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined text-[18px]">verified</span>
+                {/* Top Excellence Floating Badge (Responsive on Mobile, Tablet & Desktop) */}
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 sm:gap-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl bg-white/95 backdrop-blur-md text-[#0F172A] shadow-xl border border-white/60 z-10">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center shrink-0">
+                    <span className="material-symbols-outlined text-[16px] sm:text-[18px]">verified</span>
                   </div>
                   <div>
-                    <p className="text-[11px] font-extrabold uppercase tracking-wider text-[#0D5C75] leading-none">Excellence</p>
-                    <p className="text-xs font-bold text-[#0F172A] mt-0.5 leading-none">20+ Years in Care</p>
+                    <p className="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#0D5C75] leading-none">Excellence</p>
+                    <p className="text-[11px] sm:text-xs font-bold text-[#0F172A] mt-0.5 sm:mt-1 leading-none">20+ Years in Care</p>
                   </div>
                 </div>
 
-                <div className="relative z-10 p-6 sm:p-8 text-white">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D5C75]/90 backdrop-blur-md text-white text-xs font-semibold mb-3 border border-white/15 shadow-sm">
+                <div className="relative z-10 p-5 sm:p-8 text-white">
+                  <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-[#0D5C75]/90 backdrop-blur-md text-white text-[11px] sm:text-xs font-semibold mb-2.5 sm:mb-3 border border-white/15 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     Medical Leadership &amp; Research
                   </div>
-                  <h4 className="text-xl sm:text-2xl font-extrabold tracking-tight">Dr. K. Sivakumar, MD</h4>
+                  <h4 className="text-lg sm:text-2xl font-extrabold tracking-tight">Dr. K. Sivakumar, MD</h4>
                   <p className="text-xs sm:text-sm text-gray-200 mt-1 font-medium leading-relaxed">
                     Specialist Diabetologist &amp; Key Opinion Leader
                   </p>
