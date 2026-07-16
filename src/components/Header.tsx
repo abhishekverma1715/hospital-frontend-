@@ -41,7 +41,12 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      // Dual hysteresis threshold eliminates jitter/vibration loops when navbar height changes
+      if (window.scrollY > 80) {
+        setScrolled(true);
+      } else if (window.scrollY < 15) {
+        setScrolled(false);
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -68,38 +73,33 @@ export default function Header() {
         aria-hidden="true"
       />
 
-      <header className="sticky top-0 w-full z-50 font-sans transition-all duration-300 bg-white">
-        {/* 1. Top Reference Helpline & Appointment Bar - Hides smoothly on scroll */}
-        <div
-          className={`bg-[#0D1B2A] text-white text-xs sm:text-sm border-b border-white/10 transition-all duration-300 overflow-hidden ${
-            scrolled
-              ? 'max-h-0 py-0 opacity-0 pointer-events-none border-none'
-              : 'max-h-24 opacity-100 hidden md:block'
-          }`}
-        >
-          <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 min-h-[46px] flex justify-between items-center gap-4">
-            <div className="flex items-center gap-4 font-medium">
-              <span className="flex items-center gap-1.5 text-cyan-300 font-bold">
-                <Phone className="w-3.5 h-3.5 animate-pulse" />
-                <span>EMERGENCY HELPLINE:</span>
-              </span>
-              <a href="tel:+919976379697" className="hover:text-cyan-300 transition-colors font-semibold">
-                +91 99763 79697
-              </a>
-              <span className="text-white/30 hidden lg:inline">|</span>
-              <span className="text-gray-300 hidden lg:inline">Kumbakonam Main Hospital · 24/7 Diabetes &amp; Metabolic Care</span>
-            </div>
-            <div className="flex items-center gap-4 text-gray-300">
-              <Link href="/book" className="hover:text-white transition-colors flex items-center gap-1.5 font-semibold text-cyan-300">
-                <Calendar className="w-3.5 h-3.5" />
-                <span>Book Video Consultation</span>
-              </Link>
-            </div>
+      {/* 1. Top Reference Helpline & Appointment Bar - Sits cleanly above the sticky navigation in normal document flow */}
+      <div className="bg-[#0D1B2A] text-white text-xs sm:text-sm border-b border-white/10 hidden md:block">
+        <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 min-h-[46px] flex justify-between items-center gap-4">
+          <div className="flex items-center gap-4 font-medium">
+            <span className="flex items-center gap-1.5 text-cyan-300 font-bold">
+              <Phone className="w-3.5 h-3.5 animate-pulse" />
+              <span>EMERGENCY HELPLINE:</span>
+            </span>
+            <a href="tel:+919976379697" className="hover:text-cyan-300 transition-colors font-semibold">
+              +91 99763 79697
+            </a>
+            <span className="text-white/30 hidden lg:inline">|</span>
+            <span className="text-gray-300 hidden lg:inline">Kumbakonam Main Hospital · 24/7 Diabetes &amp; Metabolic Care</span>
+          </div>
+          <div className="flex items-center gap-4 text-gray-300">
+            <Link href="/book" className="hover:text-white transition-colors flex items-center gap-1.5 font-semibold text-cyan-300">
+              <Calendar className="w-3.5 h-3.5" />
+              <span>Book Video Consultation</span>
+            </Link>
           </div>
         </div>
+      </div>
 
-        {/* 2. Main White Brand Header Strip */}
-        <div className={`transition-all duration-300 ${scrolled ? 'py-2.5 sm:py-3' : 'py-3 sm:py-4 md:py-5'}`}>
+      {/* 2. Main Brand Header + Navigation Menu (Sticky) */}
+      <header className={`sticky top-0 w-full z-50 font-sans transition-all duration-300 bg-white ${scrolled ? 'shadow-md border-b border-gray-200' : 'shadow-sm border-b border-transparent'}`}>
+        {/* Main White Brand Header Strip (Constant height prevents layout shifting/vibrating on scroll) */}
+        <div className="py-3 sm:py-4 md:py-5 transition-colors duration-300">
           <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center gap-2 sm:gap-4">
 
             {/* Brand Identity Block */}

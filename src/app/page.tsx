@@ -807,30 +807,44 @@ export default function HomePage() {
             <h2 className="font-headline-lg text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mt-4 mb-6">What our patients say.</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {[
               { quote: 'My HbA1c was 11.4 when I first came. Six months later it was 6.8. Dr. Sivakumar explained every step — why we were changing the medicine, what the numbers meant, what I should eat. For the first time in years, I understood my own condition.', name: 'Murugesan R.', meta: 'Patient since 2022 · Kumbakonam' },
               { quote: 'இந்த மருத்துவமனையில் தமிழில் முழுமையாக பேசி புரிந்துகொள்ள முடிகிறது. டாக்டர் லட்சுமி என்னோட சர்க்கரை மட்டுமில்லாம என்னோட மொத்த உடல்நலத்தையும் கவனிக்கிறாங்க. RITAM program என் வாழ்க்கையை மாத்துச்சு.', name: 'Vijayalakshmi S.', meta: 'Patient since 2021 · Papanasam' },
               { quote: 'I came in for a routine review and the doctor flagged early kidney changes I had no symptoms of. That early detection changed my treatment completely. The digital records meant every doctor I saw had my full history.', name: 'Karthikeyan P.', meta: 'Patient since 2023 · Thanjavur' },
             ].map((t, i) => (
-              <div key={i} className={`soft-card p-6 sm:p-8 md:p-10 flex flex-col ${i === 1 ? 'lg:translate-y-6' : ''}`}>
-                <div className="aspect-[4/3] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden mb-5 sm:mb-6 relative">
-                  <img
-                    src={i === 0 ? '/assets/photo_2026-06-10_20-48-51.jpg' : i === 1 ? '/assets/photo_2026-06-10_20-48-52.jpg' : '/assets/photo_2026-06-10_20-49-08.jpg'}
-                    alt={`Patient ${t.name}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div key={i} className="soft-card p-6 sm:p-8 md:p-10 flex flex-col h-full justify-between">
+                <div>
+                  <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden mb-6 relative shrink-0">
+                    <img
+                      src={i === 0 ? '/assets/photo_2026-06-10_20-48-51.jpg' : i === 1 ? '/assets/photo_2026-06-10_20-48-52.jpg' : '/assets/photo_2026-06-10_20-49-08.jpg'}
+                      alt={`Patient ${t.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  </div>
+                  {/* Text Wrapper with Background Quote Symbol */}
+                  <div className="relative mb-6 pt-2">
+                    {/* Background Quote Symbol behind text (`z-0`) */}
+                    <div
+                      className="absolute -top-4 -left-2 text-[120px] sm:text-[140px] font-serif leading-none select-none pointer-events-none text-[#0D5C75] opacity-[0.09] z-0"
+                      aria-hidden="true"
+                    >
+                      &ldquo;
+                    </div>
+                    {/* Paragraph (`relative z-10`) */}
+                    <p className="relative z-10 text-sm sm:text-[16px] text-on-surface italic leading-relaxed font-medium">
+                      {t.quote}
+                    </p>
+                  </div>
                 </div>
-                <div className="quote-mark mb-2">&ldquo;</div>
-                <p className="text-sm sm:text-[16px] text-on-surface italic mb-5 sm:mb-6 flex-grow leading-relaxed">{t.quote}</p>
-                <div className="border-t border-[#e8d8bf] pt-6 flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-[#fff1de] flex items-center justify-center text-[#c8731f] font-extrabold text-[18px]">
+                <div className="border-t border-[#e8d8bf] pt-6 flex items-center gap-3 shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#fff1de] flex items-center justify-center text-[#c8731f] font-extrabold text-[18px] shrink-0">
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="text-[15px] font-bold text-on-surface">{t.name}</div>
-                    <div className="text-[11px] text-on-surface-variant tracking-wider uppercase font-bold">{t.meta}</div>
+                    <div className="text-[15px] font-bold text-on-surface leading-tight">{t.name}</div>
+                    <div className="text-[11px] text-on-surface-variant tracking-wider uppercase font-bold mt-0.5">{t.meta}</div>
                   </div>
                 </div>
               </div>
