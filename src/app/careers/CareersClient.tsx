@@ -200,7 +200,7 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 shadow-sm ${isSelected
-                  ? 'bg-[#0088CC] text-white shadow-md shadow-[#0088CC]/20 scale-105'
+                  ? 'bg-[#422884] text-white shadow-md shadow-[#422884]/20 scale-105'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                   }`}
               >
@@ -225,7 +225,7 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
                 setSelectedDept('All');
                 setSearchQuery('');
               }}
-              className="px-6 py-2.5 bg-[#0088CC] text-white font-bold rounded-xl text-sm hover:bg-[#0070A8] transition-colors shadow-md"
+              className="px-6 py-2.5 bg-[#422884] text-white font-bold rounded-xl text-sm hover:bg-[#331e67] transition-colors shadow-md"
             >
               Reset Filters
             </button>
@@ -331,7 +331,7 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
 
                   <button
                     onClick={() => handleApplyClick(job)}
-                    className="px-5 py-2.5 bg-[#0088CC] hover:bg-[#0070A8] text-white font-bold text-xs sm:text-sm rounded-2xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 shrink-0 transform group-hover:scale-102"
+                    className="px-5 py-2.5 bg-[#422884] hover:bg-[#331e67] text-white font-bold text-xs sm:text-sm rounded-2xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 shrink-0 transform group-hover:scale-102"
                   >
                     <span>Apply Now</span>
                     <ArrowRight className="w-4 h-4" />
@@ -430,7 +430,7 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
                   </div>
                   <button
                     onClick={handleModalClose}
-                    className="w-full py-3 bg-[#0088CC] text-white font-bold rounded-2xl text-sm shadow-md hover:bg-[#0070A8] transition-colors"
+                    className="w-full py-3 bg-[#422884] text-white font-bold rounded-2xl text-sm shadow-md hover:bg-[#331e67] transition-colors"
                   >
                     Done &amp; Return to Openings
                   </button>
@@ -557,7 +557,7 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
                     <button
                       type="submit"
                       disabled={applicationStatus.type === 'loading'}
-                      className="px-6 py-2.5 rounded-xl bg-[#0088CC] hover:bg-[#0070A8] text-white font-bold text-sm shadow-md transition-all flex items-center gap-2 disabled:opacity-50"
+                      className="px-6 py-2.5 rounded-xl bg-[#422884] hover:bg-[#331e67] text-white font-bold text-sm shadow-md transition-all flex items-center gap-2 disabled:opacity-50"
                     >
                       {applicationStatus.type === 'loading' ? 'Submitting...' : 'Submit Application'}
                     </button>

@@ -149,7 +149,7 @@ export default function HomePage() {
                 <span className="material-symbols-outlined text-[#0084FF] text-[32px]">verified_user</span>
               </div>
               <div className="flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">IDF Accredited Care Equivalent</h3>
+                <h3 className="text-lg font-bold text-[#0F172A]">IDF  Care Equivalent</h3>
                 <p className="text-sm text-gray-600 mt-1 leading-relaxed">International Diabetes Federation guidelines strictly applied across clinical management.</p>
                 <Link href="/about" className="line-btn mt-3 text-sm">
                   <span>Know More</span>

@@ -27,7 +27,7 @@ export default function ResearchPage() {
               Clinical research at Karunya Sugalaya.
             </h1>
             <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
-              Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 17 years of focused practice. Research here is not separate from care. It informs every consultation.
+              Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 25 years of focused practice. Research here is not separate from care. It informs every consultation.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ResearchPage() {
       {/* Research Projects */}
       <section className="py-12 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto">
         <div className="flex flex-col gap-12">
-          
+
           {/* Research 1 */}
           <article className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant/30 hover-elevation transition-all relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-2 h-full bg-primary/80 group-hover:bg-primary transition-colors"></div>
@@ -76,7 +76,7 @@ export default function ResearchPage() {
               <span className="material-symbols-outlined text-[18px]">campaign</span> Poster Presentation, IDF World Congress, Bangkok, 2025
             </div>
             <p className="text-[16px] text-on-surface-variant leading-relaxed">
-              Dr. K. Sivakumar presented original research on insulin use patterns in diabetes patients at the International Diabetes Federation (IDF) World Congress in Bangkok in 2025. 
+              Dr. K. Sivakumar presented original research on insulin use patterns in diabetes patients at the International Diabetes Federation (IDF) World Congress in Bangkok in 2025.
             </p>
           </article>
 
@@ -118,7 +118,7 @@ export default function ResearchPage() {
           <p className="text-[16px] text-on-surface-variant leading-relaxed mb-8">
             We are open to research collaborations with medical colleges, academic institutions, and pharmaceutical companies.
           </p>
-          
+
           <h4 className="text-[18px] font-bold text-on-surface mb-4">Areas of interest:</h4>
           <ul className="flex flex-col gap-3 mb-8">
             <li className="flex items-start gap-2 text-[16px] text-on-surface-variant">

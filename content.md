@@ -12,7 +12,7 @@
 | Founded | 2008 (formally incorporated 2012) |
 | Patients in Database | 50,000+ |
 | Prescriptions Recorded | 2 Lakh+ |
-| Clinical Experience | 17 Years |
+| Clinical Experience | 25 years |
 | Beds | 12 (5 common ward, 5 individual AC, 2 emergency) |
 | Emergency Line | +91 99763 79697 (24×7) |
 | Lab Certification | CMC Vellore EQAS Certified |
@@ -236,7 +236,7 @@ Beyond clinical practice, Dr. Lakshmi manages the administrative operations of K
 
 - **OVERLINE:** What We Treat
 - **HEADING:** Conditions we specialise in.
-- **INTRO:** From prevention to advanced management — we cover the full spectrum of diabetes and metabolic health, with expertise built from 17 years of focused practice and a 50,000-patient database.
+- **INTRO:** From prevention to advanced management — we cover the full spectrum of diabetes and metabolic health, with expertise built from 25 years of focused practice and a 50,000-patient database.
 
 ---
 
@@ -368,7 +368,7 @@ Our laboratory is certified under the CMC Vellore External Quality Assurance Sch
 
 - **OVERLINE:** Research
 - **HEADING:** Clinical research at Karunya Sugalaya.
-- **INTRO:** Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 17 years of focused practice. Research here is not separate from care. It informs every consultation.
+- **INTRO:** Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 25 years of focused practice. Research here is not separate from care. It informs every consultation.
 
 ---
 
@@ -484,7 +484,7 @@ Technology is how we serve patients better — not a product feature to boast ab
 
 - precise · evidence-based · data-driven · personalised · specialist
 - Tamil Nadu · Cauvery delta · South Indian patients · our own patient population
-- 17 years · 50,000 patients · 2 million prescriptions
+- 25 years · 50,000 patients · 2 million prescriptions
 - Metabolic Physician · Diabetologist · clinical intelligence
 
 ### Words to AVOID

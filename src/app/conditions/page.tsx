@@ -43,7 +43,7 @@ export default function ConditionsPage() {
                 <div className="text-[11px] sm:text-xs text-gray-300 font-medium">Patients Treated</div>
               </div>
               <div>
-                <div className="text-lg sm:text-2xl font-black text-cyan-300">17+ Years</div>
+                <div className="text-lg sm:text-2xl font-black text-cyan-300">25+ Years</div>
                 <div className="text-[11px] sm:text-xs text-gray-300 font-medium">Focused Clinical Excellence</div>
               </div>
               <div className="col-span-2 sm:col-span-1">
