@@ -61,6 +61,7 @@ export default function Header() {
     { label: 'Research', href: '/research' },
     { label: 'Academics', href: '/education', hasDropdown: true },
     { label: 'Conditions', href: '/conditions' },
+    { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -108,15 +109,15 @@ export default function Header() {
               <div className="flex flex-col min-w-0">
                 {/* Elegant script/serif styled title */}
                 <span className="text-base sm:text-lg md:text-2xl lg:text-3xl font-extrabold tracking-tight text-[#0F172A] font-serif italic leading-none group-hover:text-[#0088CC] transition-colors truncate">
-                  Karunya Sugalaya&apos;s
+                  Karunya Sugalaya
                 </span>
                 {/* Bold red hospital title + cyan bottom accent line */}
                 <span className="text-[10px] sm:text-xs md:text-sm lg:text-base font-extrabold tracking-wide text-[#DC2626] uppercase mt-0.5 sm:mt-1 leading-tight truncate">
-                  DIABETES HOSPITAL
+                  Diabetic Care
                 </span>
                 <div className="flex items-center gap-1 mt-0.5">
                   <span className="text-[8px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-[#0F172A] truncate">
-                    &amp; RESEARCH CENTRE
+                    &amp;  RESEARCH CENTRE
                   </span>
                   <span className="h-0.5 sm:h-1 w-4 sm:w-6 md:w-8 lg:w-12 bg-[#00A8E8] rounded-full inline-block ml-1 shrink-0" />
                 </div>

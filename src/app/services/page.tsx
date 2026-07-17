@@ -29,75 +29,50 @@ async function getServices(): Promise<Service[]> {
 }
 
 const HIGHLIGHTS = [
-  { icon: 'verified', label: 'CMC Vellore EQAS certified lab' },
-  { icon: 'bed', label: '12-bed specialist day care' },
-  { icon: 'memory', label: 'AI-assisted clinical decisions' },
+  { icon: 'clinical_notes', label: '24/7 Outpatient Care' },
+  { icon: 'bed', label: '24/7 Inpatient Ward & Day Care' },
+  { icon: 'biotech', label: 'CMC Vellore EQAS Hi-Tech Lab' },
+  { icon: 'local_pharmacy', label: '24/7 Pharmacy & Door Delivery' },
 ];
 
 const DEFAULT_SERVICES: Service[] = [
   {
     id: 1,
-    name: 'Diabetes Speciality Outpatient Clinic',
-    description: 'Comprehensive evaluation, risk stratification, personalized glycemic control, and evidence-based metabolic therapy led by senior consultant diabetologists.',
-    icon: 'medical_services',
-    image: '/assets/photo_2026-06-10_20-48-52.jpg',
+    name: '24/7 Outpatient Care',
+    description:
+      'Our outpatient department operates round-the-clock, providing prompt, high-quality consultations with senior diabetologists and specialist physicians whenever you need them. From rapid check-ins at our welcoming reception to thorough clinical assessments and personalized glycemic management protocols, our outpatient services are structured for clinical excellence without prolonged waiting hours.',
+    icon: 'clinical_notes',
+    image: '/images/outpatient-care.jpg',
   },
   {
     id: 2,
-    name: 'Continuous Glucose Monitoring (CGM) & Insulin Pump Center',
-    description: 'Real-time ambulatory 14-day continuous glucose monitoring combined with sensor-augmented insulin pump fitting and continuous patient training.',
-    icon: 'devices_wearables',
-    image: './images/continuous-glucose-monitor.jpeg',
+    name: '24/7 Inpatient Care & Specialist Wards',
+    description:
+      'Our dedicated 24-hour inpatient facility and 12-bed specialty day-care unit offer continuous multidisciplinary care in a calm, hygienic environment. Staffed round-the-clock by trained specialty nurses and resident doctors, we provide bedside diagnostic profiling (including biothesiometry and vascular Doppler assessments), continuous glucose monitoring, and intravenous insulin protocols for acute metabolic stabilization and expedited recovery.',
+    icon: 'bed',
+    image: '/images/inpatient-care.jpg',
   },
   {
     id: 3,
-    name: 'Teleconsultation & Remote Diabetes Management (DiaX.AI)',
-    description: 'Virtual consultations with our multidisciplinary team of diabetologists, diabetes educators, nutritionists, and clinical pharmacists across Tamil Nadu.',
-    icon: 'video_chat',
-    image: './images/Remotediabetes.jpeg',
+    name: 'Hi-Tech Lab & Diagnostics',
+    description:
+      'Operating inside the hospital facility, our CMC Vellore EQAS-certified "ACCURA DIAGNOSTICS" laboratory delivers state-of-the-art precision and rapid reporting. Equipped with fully automated hematology analyzers, advanced clinical chemistry systems, and gold-standard HPLC HbA1c testing equipment, our experienced technologists ensure accurate diagnostic profiling to guide evidence-based treatment decisions and early diabetic complication screening.',
+    icon: 'biotech',
+    image: '/images/hitech-lab.jpg',
   },
   {
     id: 4,
-    name: 'Diabetic Foot Salvage & Neuropathy Clinic',
-    description: 'Advanced biothesiometry, Doppler vascular profiling, podiatry assessments, customized footwear prescription, and wound salvage.',
-    icon: 'footprint',
-    image: './images/DiabeticFootCare-640w.webp',
-  },
-  {
-    id: 5,
-    name: 'CMC Vellore EQAS Certified Diagnostic Laboratory',
-    description: 'Gold-standard HPLC HbA1c testing, complete renal profile, microalbuminuria screening, lipid panel, and automated digital reporting.',
-    icon: 'biotech',
-    image: './images/images.jpeg',
-  },
-  {
-    id: 6,
-    name: 'Diabetic Retinopathy & Fundus Screening',
-    description: 'High-resolution retinal photography and early detection of microvascular eye changes to prevent vision loss.',
-    icon: 'visibility',
-    image: './images/Optomed_edited-withhospitalbg-lights.webp',
-  },
-  {
-    id: 7,
-    name: 'Obesity & Metabolic Health Clinic',
-    description: 'Body composition analysis, precision metabolic profiling, personalized weight reduction programs, and medical nutrition therapy.',
-    icon: 'monitor_weight',
-    image: './images/ObesityProfileTest.webp',
-  },
-  {
-    id: 8,
-    name: 'Inpatient 12-Bed Specialist Day-Care Unit',
-    description: 'Air-conditioned individual rooms with continuous glucose monitoring, intravenous insulin infusion protocols, and multidisciplinary nursing support.',
-    icon: 'bed',
-    image: './images/types-of-bed-accommodation.jpg',
+    name: '24/7 Pharmacy Service & Door Delivery',
+    description:
+      'Our well-stocked in-house "KARUNYA PHARMACY" is open 24 hours a day, 7 days a week, dispensing genuine, temperature-controlled insulin, specialty diabetic medications, and daily healthcare essentials. To ensure uninterrupted treatment, we offer a dedicated Doorstep Medicine Delivery service across the region—patients can effortlessly order monthly prescription refills via call or WhatsApp (+91 99763 79697 / +91 97974 3280) and receive authentic medicines right at their doorstep.',
+    icon: 'local_pharmacy',
+    image: '/images/pharmacy-service.jpg',
   },
 ];
 
 export default async function ServicesPage() {
-  let services = await getServices();
-  if (!services || services.length === 0) {
-    services = DEFAULT_SERVICES;
-  }
+  // Use our curated services list derived from real hospital capabilities & photo analysis
+  const services = DEFAULT_SERVICES;
 
   return (
     <>
