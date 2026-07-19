@@ -130,9 +130,9 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans overflow-x-hidden">
-      {/* ===== 1. OFFICIAL RECRUITMENT POSTER HERO SECTION (Full Breadth & Height Edge-to-Edge) ===== */}
-      <section className="w-full relative overflow-hidden bg-[#0F172A] min-h-[55vh] sm:min-h-[75vh] lg:min-h-[85vh] flex items-center justify-center">
-        {/* Full-container hero banner covering 100% breadth and height edge-to-edge */}
+      {/* ===== 1. OFFICIAL RECRUITMENT POSTER HERO SECTION (Fully Responsive across Mobile, Tablet, Laptop & Desktop) ===== */}
+      <section className="w-full relative overflow-hidden bg-[#0F172A] aspect-[16/9] min-h-[220px] sm:min-h-[360px] md:min-h-[460px] lg:min-h-[580px] max-h-[85vh] flex items-center justify-center">
+        {/* Full-container hero banner covering 100% breadth and height across all breakpoints */}
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="/assets/assets/department.png"
@@ -141,11 +141,11 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
             priority
             fetchPriority="high"
             sizes="100vw"
-            className="object-cover object-center block"
+            className="object-cover object-center w-full h-full block"
           />
         </div>
         {/* Subtle gradient at bottom edge for smooth transition into content */}
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#F8FAFC] to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#F8FAFC] to-transparent pointer-events-none z-10" />
       </section>
 
       {/* ===== 3. FILTER & SEARCH SECTION (Dynamic Controls) ===== */}
