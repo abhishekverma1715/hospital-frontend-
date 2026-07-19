@@ -21,11 +21,13 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = useState(pathname);
 
-  // Close menu on route change
-  useEffect(() => {
+  // Close menu on route change cleanly without cascading useEffect
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setMenuOpen(false);
-  }, [pathname]);
+  }
 
   // Body scroll lock when menu is open
   useEffect(() => {
@@ -209,8 +211,8 @@ export default function Header() {
 
               {/* Helpline quick indicator inside bottom bar */}
               <div className="text-xs text-gray-500 font-medium flex items-center gap-2">
-                <span>Open Today:</span>
-                <span className="font-bold text-[#0F172A]">8:30 AM – 9:00 PM</span>
+                <span>Emergency Services Available 24/7</span>
+                <span className="font-bold text-[#0F172A]"></span>
               </div>
             </div>
           </div>

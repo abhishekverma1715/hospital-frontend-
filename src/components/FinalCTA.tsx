@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export interface FinalCTAProps {
@@ -23,10 +24,16 @@ export default function FinalCTA({
   phoneNumber = '+919976379697',
 }: FinalCTAProps) {
   return (
-    <section
-      className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-cover bg-center md:bg-right"
-      style={{ backgroundImage: "url('/images/final-cta-bg.png')" }}
-    >
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[#011c1d]">
+      {/* Background Image Optimized via Next.js Image */}
+      <Image
+        src="/images/final-cta-bg.png"
+        alt="Hospital Consultation Background"
+        fill
+        sizes="100vw"
+        loading="lazy"
+        className="object-cover object-center md:object-right pointer-events-none"
+      />
       {/* Dark Teal Gradient Overlay for perfect readability on the left while preserving doctor image on the right */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#011c1d]/95 via-[#011c1d]/85 md:via-[#011c1d]/75 to-[#011c1d]/30" />
 

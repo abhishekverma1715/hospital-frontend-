@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const dynamic = 'force-dynamic';
 
@@ -42,7 +43,7 @@ const DEFAULT_TEAM: TeamMember[] = [
     id: 1,
     name: 'Dr. K. Sivakumar, M.B.B.S, M.D.,',
     specialty: 'Consultant Physician & Diabetologist',
-    photo: '/assets/dr-sivakumar.jpg',
+    photo: '/assets/dr-sivakumar-updated.jpg',
     qualifications: 'M.B.B.S, M.D. - Medicine, 20+ Years Experience in Diabetology',
     biography: `Dr. K. Sivakumar is a renowned consultant physician and diabetologist in Kumbakonam, Tamil Nadu with over two decades of clinical excellence. He founded Karunya Sugalaya to transform diabetes therapy into comprehensive, patient-centered care.
 
@@ -58,17 +59,7 @@ Under his leadership, the hospital pioneered electronic medical records (Dialog 
   },
 ];
 
-const SENIOR_CONSULTANTS: SpecialistCard[] = [
-  {
-    id: 'c1',
-    name: 'Mr. R. Murugesan',
-    qualifications: 'Senior Diabetes Consultant',
-    role: 'Patient Education Coordinator',
-    department: 'Diabetic Education & Clinical Counseling',
-    badge: 'Senior Consultant',
-    icon: 'school',
-  },
-];
+const SENIOR_CONSULTANTS: SpecialistCard[] = [];
 
 const SPECIALIST_CONSULTANTS: SpecialistCard[] = [
   {
@@ -88,15 +79,6 @@ const SPECIALIST_CONSULTANTS: SpecialistCard[] = [
     department: 'Respiratory & Chest Medicine',
     badge: 'Visiting Specialist',
     icon: 'pulmonology',
-  },
-  {
-    id: 'sc3',
-    name: 'Mrs. S. Vijayalakshmi',
-    qualifications: 'Nutrition Specialist',
-    role: 'Diabetes Educator',
-    department: 'Medical Nutrition & Diet Therapy',
-    badge: 'Clinical Educator',
-    icon: 'restaurant_menu',
   },
 ];
 
@@ -152,7 +134,7 @@ export default async function TeamPage() {
       {/* Main Content Area */}
       <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto">
         <div className="flex flex-col gap-12 md:gap-16">
-          
+
           {/* Founders / Managing & Medical Directors */}
           {team.slice(0, 2).map((member, index) => (
             <React.Fragment key={member.id}>
@@ -160,7 +142,7 @@ export default async function TeamPage() {
                 <div className="w-full sm:w-auto lg:w-1/3 flex flex-col items-center lg:items-start lg:sticky lg:top-28">
                   <div className="w-full max-w-[280px] sm:max-w-none sm:w-64 lg:w-80 h-72 sm:h-64 lg:h-80 rounded-3xl bg-surface-container-high overflow-hidden shadow-2xl border-4 border-white relative">
                     {member.photo ? (
-                      <img src={member.photo} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-top" />
+                      <Image src={member.photo} alt={member.name} fill sizes="(max-width: 1024px) 280px, 320px" loading="lazy" className="object-cover object-top" />
                     ) : (
                       <>
                         <div className="absolute inset-0 pattern-bg opacity-30"></div>
@@ -171,7 +153,7 @@ export default async function TeamPage() {
                     )}
                   </div>
                 </div>
-                
+
                 <div className="w-full lg:w-2/3">
                   <div className="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-6 shadow-2xs">
                     {index === 0 ? 'Managing Director · Chief Physician' : 'Medical Director · Consultant Diabetologist'}
@@ -180,11 +162,11 @@ export default async function TeamPage() {
                   <p className="text-[18px] text-primary font-bold mb-8 pb-6 border-b border-outline-variant/30 break-words">
                     {member.specialty} · <span className="text-on-surface-variant font-medium text-[16px]">{member.qualifications}</span>
                   </p>
-                  
+
                   <div className="space-y-6 text-[16px] text-on-surface-variant leading-relaxed whitespace-pre-line text-justify sm:text-left break-words" dangerouslySetInnerHTML={{ __html: member.biography }} />
                 </div>
               </article>
-              
+
               {index === 0 && <div className="w-full h-px bg-outline-variant/30 my-2"></div>}
             </React.Fragment>
           ))}
@@ -192,35 +174,37 @@ export default async function TeamPage() {
           <div className="w-full h-px bg-outline-variant/40 my-4"></div>
 
           {/* Senior Consultants & Patient Education */}
-          <section>
-            <div className="mb-8">
-              <span className="text-primary font-bold text-xs tracking-widest uppercase block mb-1">Senior Leadership</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Senior Diabetes Consultants</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {SENIOR_CONSULTANTS.map(card => (
-                <div key={card.id} className="bg-white border border-gray-200 p-6 sm:p-7 rounded-3xl shadow-md hover:shadow-xl hover:border-[#0D5C75]/40 transition-all flex flex-col justify-between h-full">
-                  <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-2xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center shrink-0">
-                        <span className="material-symbols-outlined text-2xl">{card.icon}</span>
+          {SENIOR_CONSULTANTS.length > 0 && (
+            <section>
+              <div className="mb-8">
+                <span className="text-primary font-bold text-xs tracking-widest uppercase block mb-1">Senior Leadership</span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Senior Diabetes Consultants</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {SENIOR_CONSULTANTS.map(card => (
+                  <div key={card.id} className="bg-white border border-gray-200 p-6 sm:p-7 rounded-3xl shadow-md hover:shadow-xl hover:border-[#0D5C75]/40 transition-all flex flex-col justify-between h-full">
+                    <div>
+                      <div className="flex items-center justify-between mb-5">
+                        <div className="w-12 h-12 rounded-2xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center shrink-0">
+                          <span className="material-symbols-outlined text-2xl">{card.icon}</span>
+                        </div>
+                        <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#F8FAFC] border border-gray-200 text-[#0D5C75]">
+                          {card.badge}
+                        </span>
                       </div>
-                      <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#F8FAFC] border border-gray-200 text-[#0D5C75]">
-                        {card.badge}
-                      </span>
+                      <h4 className="text-xl font-extrabold text-[#0F172A] mb-1">{card.name}</h4>
+                      <p className="text-sm font-bold text-[#0D5C75] mb-2">{card.qualifications}</p>
+                      <p className="text-sm text-[#475569] font-medium leading-relaxed">{card.role}</p>
                     </div>
-                    <h4 className="text-xl font-extrabold text-[#0F172A] mb-1">{card.name}</h4>
-                    <p className="text-sm font-bold text-[#0D5C75] mb-2">{card.qualifications}</p>
-                    <p className="text-sm text-[#475569] font-medium leading-relaxed">{card.role}</p>
+                    <div className="pt-4 mt-5 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-gray-500">
+                      <span>{card.department}</span>
+                      <span className="material-symbols-outlined text-base text-[#0D5C75]">verified</span>
+                    </div>
                   </div>
-                  <div className="pt-4 mt-5 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-gray-500">
-                    <span>{card.department}</span>
-                    <span className="material-symbols-outlined text-base text-[#0D5C75]">verified</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Specialist & Visiting Consultants */}
           <section>

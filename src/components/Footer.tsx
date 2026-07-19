@@ -59,7 +59,7 @@ export default function Footer() {
       <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* 5-Column Main Grid exactly matching reference layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-12">
-          
+
           {/* Column 1: Brand Logo & Mission Statement (Span 3) */}
           <div className="lg:col-span-3 space-y-6 pr-0 lg:pr-4">
             <Link href="/" className="inline-block">
@@ -176,15 +176,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/team"
-                  className="hover:text-[#06B6D4] transition-colors flex items-center gap-2 group"
-                >
-                  <span className="text-xs text-[#06B6D4] group-hover:translate-x-0.5 transition-transform">↗</span>
-                  <span>Dr. K. Sivakumar</span>
-                </Link>
-              </li>
-              <li>
+
                 <Link
                   href="/conditions"
                   className="hover:text-[#06B6D4] transition-colors flex items-center gap-2 group"

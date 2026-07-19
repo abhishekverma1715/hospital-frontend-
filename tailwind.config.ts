@@ -97,7 +97,8 @@ const config: Config = {
     },
   },
   plugins: [
-    containerQueries
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    containerQueries as any
   ],
 };
 export default config;

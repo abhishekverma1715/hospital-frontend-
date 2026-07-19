@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import QuickBoxes from '@/components/QuickBoxes';
@@ -7,7 +8,31 @@ import FinalCTA from '@/components/FinalCTA';
 
 function AutoPlayTourVideo({ src }: { src: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '400px' }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (inView && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [inView]);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -18,17 +43,16 @@ function AutoPlayTourVideo({ src }: { src: string }) {
   };
 
   return (
-    <div className="relative w-full max-w-[200px] sm:max-w-[220px] aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-950 shadow-2xl border-4 sm:border-[6px] border-gray-100 shrink-0 group">
+    <div ref={containerRef} className="relative w-full max-w-[200px] sm:max-w-[220px] aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-950 shadow-2xl border-4 sm:border-[6px] border-gray-100 shrink-0 group">
       <video
         ref={videoRef}
-        autoPlay
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="none"
         className="w-full h-full object-cover bg-black"
       >
-        <source src={src} type="video/mp4" />
+        {inView && <source src={src} type="video/mp4" />}
         Your browser does not support the video tag.
       </video>
 
@@ -250,10 +274,13 @@ export default function HomePage() {
             {/* Right Visual Image & Stats (Fully Responsive across Mobile, Tablet, Laptop & Desktop) */}
             <div className="lg:col-span-5 relative flex flex-col w-full">
               <div className="w-full rounded-3xl sm:rounded-[32px] overflow-hidden shadow-2xl border-4 sm:border-[6px] border-white aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[340px] sm:min-h-[440px] lg:min-h-[480px] relative group flex flex-col justify-end">
-                <img
+                <Image
                   src="/assets/assets/hospital1.jpeg"
                   alt="Karunya Sugalaya Hospital Leadership"
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  loading="lazy"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/90 via-[#0F172A]/20 to-transparent" />
 
@@ -372,10 +399,13 @@ export default function HomePage() {
               >
                 {/* Image Container */}
                 <div className="relative aspect-[16/11] w-full overflow-hidden bg-gray-900/5">
-                  <img
+                  <Image
                     src={device.image}
                     alt={device.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
 
@@ -545,11 +575,14 @@ export default function HomePage() {
               }
             ].map((event, i) => (
               <div key={i} className="soft-card group overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <Image
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -644,11 +677,14 @@ export default function HomePage() {
             <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
               <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 {/* Photo */}
-                <div className="w-full max-w-[240px] sm:max-w-none sm:w-40 md:w-44 h-64 sm:h-56 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50">
-                  <img
-                    src="/assets/dr-sivakumar.jpg"
+                <div className="w-full max-w-[240px] sm:max-w-none sm:w-40 md:w-44 h-64 sm:h-56 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-amber-50 relative">
+                  <Image
+                    src="/assets/dr-sivakumar-updated.jpg"
                     alt="Dr. K. Sivakumar, M.B.B.S, M.D."
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="(max-width: 640px) 240px, 180px"
+                    loading="lazy"
+                    className="object-cover object-top"
                   />
                 </div>
 
@@ -717,11 +753,14 @@ export default function HomePage() {
             <div className="soft-card p-6 sm:p-8 flex flex-col justify-between border border-[#e8d8bf] bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
               <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 {/* Photo */}
-                <div className="w-full max-w-[240px] sm:max-w-none sm:w-40 md:w-44 h-64 sm:h-56 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50">
-                  <img
+                <div className="w-full max-w-[240px] sm:max-w-none sm:w-40 md:w-44 h-64 sm:h-56 mx-auto sm:mx-0 flex-shrink-0 rounded-2xl overflow-hidden shadow-md bg-yellow-50 relative">
+                  <Image
                     src="/assets/dr-lakshmi.jpg"
                     alt="Dr. B. Lakshmi, M.B.B.S, D. Diab."
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    sizes="(max-width: 640px) 240px, 180px"
+                    loading="lazy"
+                    className="object-cover object-top"
                   />
                 </div>
 
@@ -816,10 +855,13 @@ export default function HomePage() {
               <div key={i} className="soft-card p-6 sm:p-8 md:p-10 flex flex-col h-full justify-between">
                 <div>
                   <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden mb-6 relative shrink-0">
-                    <img
+                    <Image
                       src={i === 0 ? '/assets/photo_2026-06-10_20-48-51.jpg' : i === 1 ? '/assets/photo_2026-06-10_20-48-52.jpg' : '/assets/photo_2026-06-10_20-49-08.jpg'}
                       alt={`Patient ${t.name}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   </div>

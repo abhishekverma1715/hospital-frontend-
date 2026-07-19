@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Briefcase,
@@ -129,28 +130,22 @@ export default function CareersClient({ initialCareers }: CareersClientProps) {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans overflow-x-hidden">
-      {/* ===== 1. OFFICIAL RECRUITMENT POSTER 16:9 WIDESCREEN HERO SECTION ===== */}
-      <section className="w-full aspect-[16/9] max-h-[82vh] bg-[#0F172A] relative overflow-hidden flex items-center justify-center">
-        {/* Ambient Widescreen 16:9 Background Fill */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/careers-hiring-poster.jpg"
-            alt="ambient background"
-            className="w-full h-full object-cover blur-3xl opacity-45 scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/80 via-transparent to-[#0F172A]/80" />
-        </div>
-
-        {/* Uncropped Official Poster Centered Inside 16:9 Frame */}
-        <div className="relative z-10 w-full h-full flex items-center justify-center p-1 sm:p-4">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/careers-hiring-poster.jpg"
+      {/* ===== 1. OFFICIAL RECRUITMENT POSTER HERO SECTION (Full Breadth & Height Edge-to-Edge) ===== */}
+      <section className="w-full relative overflow-hidden bg-[#0F172A] min-h-[55vh] sm:min-h-[75vh] lg:min-h-[85vh] flex items-center justify-center">
+        {/* Full-container hero banner covering 100% breadth and height edge-to-edge */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/assets/assets/department.png"
             alt="Karunya Sugalaya Official Recruitment Notice - We Are Hiring!"
-            className="w-auto h-full max-w-full object-contain drop-shadow-[0_15px_40px_rgba(0,0,0,0.65)] block"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover object-center block"
           />
         </div>
+        {/* Subtle gradient at bottom edge for smooth transition into content */}
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#F8FAFC] to-transparent pointer-events-none" />
       </section>
 
       {/* ===== 3. FILTER & SEARCH SECTION (Dynamic Controls) ===== */}

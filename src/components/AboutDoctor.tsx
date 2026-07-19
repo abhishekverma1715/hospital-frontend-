@@ -99,7 +99,7 @@ export default function AboutDoctor() {
             {/* Doctor Photo */}
             <div className="relative w-full max-w-[240px] sm:max-w-none h-[260px] sm:h-64 md:h-72 lg:h-80 mx-auto sm:mx-0 mt-6 sm:mt-0 rounded-2xl sm:rounded-none bg-gradient-to-t from-amber-100 via-amber-50 to-white overflow-hidden shrink-0 shadow-md sm:shadow-none">
               <Image
-                src="/assets/dr-sivakumar.jpg"
+                src="/assets/dr-sivakumar-updated.jpg"
                 alt="Dr. K. Sivakumar"
                 fill
                 className="object-cover object-top transition-transform duration-500 group-hover:scale-105"

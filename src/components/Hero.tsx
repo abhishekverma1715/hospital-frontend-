@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight, PhoneCall, ShieldCheck, Award } from 'lucide-react';
 
@@ -22,24 +23,39 @@ const SLIDES: Slide[] = [
   },
   {
     id: 2,
-    image: '/assets/assets/image4.png',
+    image: '/assets/assets/slider2.png',
     //badge: 'Advanced Sensor Technology',
-    title: 'Continuous Glucose Monitoring (CGM) & Insulin Pump Center',
-    subtitle: 'Real-time ambulatory continuous glucose monitoring and precision insulin pump fitting to achieve optimal HbA1c control.',
+    title: 'Karunya Sugalaya - RITAM 360 ',
+    subtitle: 'RITAM 360 – Wellness That Lasts a Lifetime',
   },
+
   {
     id: 3,
-    image: '/assets/assets/image6.png',
+    image: '/assets/assets/slider3.jpeg',
     //badge: 'CMC Vellore EQAS  Lab',
-    title: 'World-Class Diagnostics & 12-Bed Specialist Day-Care',
-    subtitle: 'Gold-standard HPLC HbA1c laboratory testing, diabetic foot salvage, biothesiometry, and digital retinopathy screening under one roof.',
+    title: 'Karunya Sugalaya - Foot care services',
+    subtitle: 'Comprehensive Diabetic Foot Care & Wound Management.',
   },
   {
     id: 4,
-    image: '/assets/assets/image17.png',
+    image: '/assets/assets/slider4.jpeg',
     //badge: 'Trusted by 50,000+ Patients',
-    title: 'Empowering Diabetes Care Across South India',
-    subtitle: 'Pioneering remote tele-management (DiaX.AI) and diabetes nutrition education to support patients 365 days a year.',
+    title: 'Karunya Sugalaya - Obesity clinic',
+    subtitle: 'Obesity Clinic – Your Journey to a Healthier Life Starts Here',
+  },
+  {
+    id: 5,
+    image: '/assets/assets/slider5.jpeg',
+    //badge: 'Trusted by 50,000+ Patients',
+    title: 'Karunya Sugalaya - Lab facility',
+    subtitle: 'Advanced Laboratory Services with Accurate Diagnostics.',
+  },
+  {
+    id: 6,
+    image: '/assets/assets/slider6.jpeg',
+    //badge: 'Trusted by 50,000+ Patients',
+    title: 'Karunya Sugalaya - Pharmacy ',
+    subtitle: 'Your Health, Our Priority—Quality Medicines Every Time.',
   },
 ];
 
@@ -86,10 +102,15 @@ export default function Hero() {
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                 }`}
             >
-              {/* Background Image */}
-              <img
+              {/* Background Image (Optimized via Next.js Image for LCP & WebP) */}
+              <Image
                 src={slide.image}
                 alt={slide.title}
+                fill
+                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes="100vw"
                 className={`w-full h-full object-cover object-center transition-transform duration-[6000ms] ease-linear ${isActive ? 'scale-105' : 'scale-100'
                   }`}
               />

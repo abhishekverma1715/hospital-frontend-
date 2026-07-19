@@ -131,7 +131,7 @@ export default function ResearchPage() {
             </li>
             <li className="flex items-start gap-2 text-[16px] text-on-surface-variant">
               <span className="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-              Women's health and metabolic disease
+              Women&apos;s health and metabolic disease
             </li>
             <li className="flex items-start gap-2 text-[16px] text-on-surface-variant">
               <span className="material-symbols-outlined text-primary text-[20px]">check_circle</span>

@@ -29,7 +29,7 @@ export default function Expertise() {
               <Stethoscope size={32} />
             </div>
             <h3>Consultation</h3>
-            <p>This high blood sugar disorder develops during pregnancy. We provide specialised care to ensure your pregnancy and your baby's health.</p>
+            <p>This high blood sugar disorder develops during pregnancy. We provide specialised care to ensure your pregnancy and your baby&apos;s health.</p>
             <Link href="#" className="read-more-link">Read More</Link>
           </div>
           
