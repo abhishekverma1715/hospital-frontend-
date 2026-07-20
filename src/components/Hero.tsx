@@ -18,7 +18,7 @@ const SLIDES: Slide[] = [
     id: 1,
     image: '/assets/assets/abhi.jpg',
     //badge: 'Kumbakonam’s Premier Specialist Centre',
-    title: 'Karunya Sugalaya Diabetes Care & Research Centre',
+    title: 'Karunya Sugalaya Diabetes Care & Research Centre Pvt Ltd',
     subtitle: 'From Illness to Wellness — Combining 25+ years of clinical excellence under Dr. K. Sivakumar with advanced EMR and personalized endocrinology.',
   },
   {

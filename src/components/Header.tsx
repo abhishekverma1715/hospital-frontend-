@@ -118,8 +118,8 @@ export default function Header() {
                   Diabetic Care
                 </span>
                 <div className="flex items-center gap-1 mt-0.5">
-                  <span className="text-[8px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-[#0F172A] truncate">
-                    &amp;  RESEARCH CENTRE
+                  <span className="text-[8px] sm:text-[10px] md:text-xs font-bold  tracking-wider text-[#0F172A] truncate">
+                    &amp;  RESEARCH CENTRE Pvt Ltd
                   </span>
                   <span className="h-0.5 sm:h-1 w-4 sm:w-6 md:w-8 lg:w-12 bg-[#00A8E8] rounded-full inline-block ml-1 shrink-0" />
                 </div>

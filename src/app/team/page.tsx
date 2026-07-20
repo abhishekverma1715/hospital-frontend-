@@ -64,48 +64,48 @@ const SENIOR_CONSULTANTS: SpecialistCard[] = [];
 const SPECIALIST_CONSULTANTS: SpecialistCard[] = [
   {
     id: 'sc1',
-    name: 'Dr. Ananth MS., (General Surgeon)',
-    qualifications: 'MS (General Surgery)',
-    role: 'Consultant Surgeon',
-    department: 'Surgical & Diabetic Foot Care',
-    badge: 'Visiting Specialist',
-    icon: 'medical_services',
+    name: 'Mrs. L. Ramya',
+    qualifications: 'M.Sc., M.Phil.',
+    role: 'Clinical Dietician',
+    department: 'Nutrition & Dietetics',
+    badge: 'Dietician',
+    icon: 'local_hospital',
   },
   {
     id: 'sc2',
-    name: 'Dr. Alaguraja MD., (Pulmonary Medicine)',
-    qualifications: 'MD (Pulmonary Medicine)',
-    role: 'Consultant Pulmonologist',
-    department: 'Respiratory & Chest Medicine',
-    badge: 'Visiting Specialist',
-    icon: 'pulmonology',
+    name: 'Mrs. L. Ramya',
+    qualifications: 'M.Sc., M.Phil.',
+    role: 'Dietician',
+    department: 'Dietetics & Nutrition',
+    badge: 'Dietician',
+    icon: 'local_hospital',
   },
 ];
 
 const MEDICAL_OFFICERS: SpecialistCard[] = [
   {
     id: 'mo1',
-    name: 'Dr. Surendran M.B.B.S.,',
+    name: 'Dr. Surendran, M.B.B.S.,',
     qualifications: 'M.B.B.S.,',
-    role: 'Medical Officer',
+    role: 'Junior consultants',
     department: '24x7 Inpatient & Emergency Care',
     badge: '24x7 Resident Care',
     icon: 'local_hospital',
   },
   {
     id: 'mo2',
-    name: 'Dr. Sameer Ali M.B.B.S.,',
+    name: 'Dr. Sameer Ali, M.B.B.S.,',
     qualifications: 'M.B.B.S.,',
-    role: 'Medical Officer',
+    role: 'Junior consultants',
     department: '24x7 Inpatient & Emergency Care',
     badge: '24x7 Resident Care',
     icon: 'local_hospital',
   },
   {
     id: 'mo3',
-    name: 'Dr. Thambidurai M.B.B.S.,',
+    name: 'Dr. Thambidurai, M.B.B.S.,',
     qualifications: 'M.B.B.S.,',
-    role: 'Medical Officer',
+    role: 'Junior consultants',
     department: '24x7 Inpatient & Emergency Care',
     badge: '24x7 Resident Care',
     icon: 'local_hospital',
@@ -210,7 +210,7 @@ export default async function TeamPage() {
           <section>
             <div className="mb-8">
               <span className="text-primary font-bold text-xs tracking-widest uppercase block mb-1">Specialist Network</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Consultants &amp; Specialists</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Dieticians</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
               {SPECIALIST_CONSULTANTS.map(card => (
@@ -241,7 +241,7 @@ export default async function TeamPage() {
           <section className="pb-8">
             <div className="mb-8">
               <span className="text-emerald-600 font-bold text-xs tracking-widest uppercase block mb-1">Round-The-Clock Care</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Medical Officers (24 X 7)</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">Junior consultants</h2>
               <p className="text-sm text-[#475569] mt-1.5 font-medium">
                 Our resident medical officers provide continuous emergency, diagnostic, and inpatient supervision 365 days a year.
               </p>

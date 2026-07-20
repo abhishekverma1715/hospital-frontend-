@@ -6,8 +6,8 @@ import { Award, ShieldCheck, Activity, CheckCircle2 } from 'lucide-react';
 import FinalCTA from '@/components/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'About Us | Karunya Sugalaya Diabetes Care & Research Centre',
-  description: 'Learn about Karunya Sugalaya Diabetes Care & Research Centre in Kumbakonam — 25+ years of clinical excellence, leadership under Dr. K. Sivakumar, and advanced diabetes technologies.',
+  title: 'About Us | Karunya Sugalaya Diabetes Care & Research Centre Pvt Ltd ',
+  description: 'Karunya Sugalaya Diabetes Care & Research Centre Pvt Ltd in Kumbakonam — 25+ years of clinical excellence, leadership under Dr. K. Sivakumar, and advanced diabetes technologies.',
 };
 
 export default function AboutPage() {
