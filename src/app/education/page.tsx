@@ -62,7 +62,7 @@ export default async function EducationPage() {
               Learn to manage your diabetes better.
             </h1>
             <p className="font-body-lg text-base sm:text-lg text-gray-200 leading-relaxed">
-              Practical, evidence-based articles in Tamil and English — written by Dr. Sivakumar and the Karunya Sugalaya team.
+              Practical, evidence-based articles in Tamil and English written by Dr. Sivakumar and the Karunya Sugalaya team.
             </p>
           </div>
         </div>

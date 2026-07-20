@@ -27,7 +27,7 @@ export default function ContactPage() {
               Visit Karunya Sugalaya.
             </h1>
             <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-normal">
-              Located in the heart of Kumbakonam — easily accessible from Thanjavur, Nagapattinam, and the surrounding districts of the Cauvery delta.
+              Located in the heart of Kumbakonam easily accessible from Thanjavur, Nagapattinam, and the surrounding districts of the Cauvery delta.
             </p>
           </div>
         </div>
@@ -35,16 +35,16 @@ export default function ContactPage() {
 
       {/* Content Area */}
       <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-container-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
+
         {/* Contact Info & Details */}
         <div className="flex flex-col gap-12">
-          
+
           <div className="bg-surface-container-lowest p-5 sm:p-8 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
             <h2 className="text-[24px] font-bold text-on-surface mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-3xl">info</span>
               Contact Details
             </h2>
-            
+
             <div className="flex flex-col gap-6">
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-on-surface-variant mt-1">location_on</span>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                   <p className="text-[16px] text-on-surface leading-relaxed">9, Ramasami Kovil West Street, Kumbakonam – 612001, Tamil Nadu, India</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-on-surface-variant mt-1">phone</span>
                 <div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <a href="tel:+919976379697" className="block text-[18px] text-error font-extrabold hover:underline">+91 99763 79697</a>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-on-surface-variant mt-1">mail</span>
                 <div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                   <a href="mailto:contact@karunyasugalaya.co.in" className="text-[16px] text-primary font-bold hover:underline">contact@karunyasugalaya.co.in</a>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-[#25D366] mt-1">chat</span>
                 <div>
@@ -90,25 +90,25 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-primary-container text-on-primary-container p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center">
-             <span className="material-symbols-outlined text-[48px] mb-4">calendar_month</span>
-             <h2 className="text-[24px] font-bold mb-2">Book an Appointment</h2>
-             <p className="text-[16px] opacity-90 mb-6">Booking an appointment guarantees your time slot and avoids waiting time.</p>
-             <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
-               Book Online Now
-             </Link>
+            <span className="material-symbols-outlined text-[48px] mb-4">calendar_month</span>
+            <h2 className="text-[24px] font-bold mb-2">Book an Appointment</h2>
+            <p className="text-[16px] opacity-90 mb-6">Booking an appointment guarantees your time slot and avoids waiting time.</p>
+            <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              Book Online Now
+            </Link>
           </div>
 
         </div>
 
         {/* Map & Clinic Hours */}
         <div className="flex flex-col gap-12">
-          
+
           <div className="bg-surface-container-lowest p-5 sm:p-8 rounded-2xl border border-outline-variant/30 hover-elevation transition-all">
             <h2 className="text-[24px] font-bold text-on-surface mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-primary text-3xl">schedule</span>
               Clinic Hours
             </h2>
-            
+
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <tbody className="divide-y divide-outline-variant/50">

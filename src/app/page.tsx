@@ -323,7 +323,7 @@ export default function HomePage() {
               State-of-the-Art Medical Devices.
             </h2>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              We equip our hospital and research center with world-class diagnostic equipment—ensuring every clinical decision is powered by rapid, high-precision laboratory and physiological data.
+              We equip our hospital and research center with world-class diagnostic equipment ensuring every clinical decision is powered by rapid, high-precision laboratory and physiological data.
             </p>
           </div>
 
@@ -450,7 +450,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#fff1de] text-[#c8731f] font-bold rounded-full text-[12px] tracking-widest uppercase mb-4 border border-[#e8d8bf]">Free Health Tool</span>
             <h2 className="font-headline-md text-2xl sm:text-[32px] lg:text-[40px] font-bold text-on-surface mb-4">Check your diabetes risk.</h2>
-            <p className="text-sm sm:text-[17px] lg:text-[18px] text-on-surface-variant max-w-2xl mx-auto">Answer 5 quick questions. Get your personal risk level instantly — no registration, no data collected.</p>
+            <p className="text-sm sm:text-[17px] lg:text-[18px] text-on-surface-variant max-w-2xl mx-auto">Answer 5 quick questions. Get your personal risk level instantly no registration, no data collected.</p>
           </div>
 
           <div className="bg-white p-4 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-[32px] shadow-[0_12px_40px_rgba(120,90,50,0.1)] border border-[#e8d8bf]/60 relative overflow-hidden">
@@ -646,7 +646,7 @@ export default function HomePage() {
                   Clinical Care, Lab &amp; Patient Experience
                 </h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  See our dedicated clinical specialists in action—from precision sample collection and high-speed centrifugation (TurboChem 100) to non-invasive digital retinopathy (Forus Classic).
+                  See our dedicated clinical specialists in action from precision sample collection and high-speed centrifugation (TurboChem 100) to non-invasive digital retinopathy (Forus Classic).
                 </p>
               </div>
 
@@ -848,7 +848,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {[
-              { quote: 'My HbA1c was 11.4 when I first came. Six months later it was 6.8. Dr. Sivakumar explained every step — why we were changing the medicine, what the numbers meant, what I should eat. For the first time in years, I understood my own condition.', name: 'Murugesan R.', meta: 'Patient since 2022 · Kumbakonam' },
+              { quote: 'My HbA1c was 11.4 when I first came. Six months later it was 6.8. Dr. Sivakumar explained every step  why we were changing the medicine, what the numbers meant, what I should eat. For the first time in years, I understood my own condition.', name: 'Murugesan R.', meta: 'Patient since 2022 · Kumbakonam' },
               { quote: 'இந்த மருத்துவமனையில் தமிழில் முழுமையாக பேசி புரிந்துகொள்ள முடிகிறது. டாக்டர் லட்சுமி என்னோட சர்க்கரை மட்டுமில்லாம என்னோட மொத்த உடல்நலத்தையும் கவனிக்கிறாங்க. RITAM program என் வாழ்க்கையை மாத்துச்சு.', name: 'Vijayalakshmi S.', meta: 'Patient since 2021 · Papanasam' },
               { quote: 'I came in for a routine review and the doctor flagged early kidney changes I had no symptoms of. That early detection changed my treatment completely. The digital records meant every doctor I saw had my full history.', name: 'Karthikeyan P.', meta: 'Patient since 2023 · Thanjavur' },
             ].map((t, i) => (

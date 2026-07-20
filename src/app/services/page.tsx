@@ -64,7 +64,7 @@ const DEFAULT_SERVICES: Service[] = [
     id: 4,
     name: '24/7 Pharmacy Service & Door Delivery',
     description:
-      'Our well-stocked in-house "KARUNYA PHARMACY" is open 24 hours a day, 7 days a week, dispensing genuine, temperature-controlled insulin, specialty diabetic medications, and daily healthcare essentials. To ensure uninterrupted treatment, we offer a dedicated Doorstep Medicine Delivery service across the region—patients can effortlessly order monthly prescription refills via call or WhatsApp (+91 99763 79697 / +91 97974 3280) and receive authentic medicines right at their doorstep.',
+      'Our well-stocked in-house "KARUNYA PHARMACY" is open 24 hours a day, 7 days a week, dispensing genuine, temperature-controlled insulin, specialty diabetic medications, and daily healthcare essentials. To ensure uninterrupted treatment, we offer a dedicated Doorstep Medicine Delivery service across the region patients can effortlessly order monthly prescription refills via call or WhatsApp (+91 99763 79697 / +91 97974 3280) and receive authentic medicines right at their doorstep.',
     icon: 'local_pharmacy',
     image: '/images/pharmacy-service.jpg',
   },
@@ -95,7 +95,7 @@ export default async function ServicesPage() {
               Comprehensive diabetes care, under one roof.
             </h1>
             <p className="font-body-lg text-xs sm:text-base lg:text-lg text-gray-200 leading-relaxed line-clamp-2 sm:line-clamp-none">
-              From routine outpatient consultations to specialised inpatient programmes and a CMC Vellore EQAS certified laboratory — every part of your care, coordinated in one place.
+              From routine outpatient consultations to specialised inpatient programmes and a CMC Vellore EQAS certified laboratory  every part of your care, coordinated in one place.
             </p>
 
             <div className="hidden sm:flex flex-wrap justify-start gap-2.5 mt-6">

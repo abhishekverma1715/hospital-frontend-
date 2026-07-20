@@ -27,7 +27,7 @@ export default function ResearchPage() {
               Clinical research at Karunya Sugalaya.
             </h1>
             <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
-              Our clinical decisions are backed by data from our own patient population — a 50,000-patient database built over 25 years of focused practice. Research here is not separate from care. It informs every consultation.
+              Our clinical decisions are backed by data from our own patient population  a 50,000-patient database built over 25 years of focused practice. Research here is not separate from care. It informs every consultation.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function ResearchPage() {
             <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-4">Ongoing Study</span>
             <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-on-surface mb-4">Glycaemic Control Patterns in Patients on Maximum-Intensity Oral Therapy</h3>
             <p className="text-[16px] text-on-surface-variant leading-relaxed">
-              A longitudinal analysis of 137 patients with paired HbA1c readings at this clinic revealed that 86% showed worsening glycaemic control despite being on maximum-intensity oral therapy — with mean HbA1c rising from 8.9% to 11.0%. These findings are directly informing structured protocols for earlier, more confident insulin escalation at Karunya Sugalaya — and represent a significant contribution to the understanding of oral therapy limitations in the South Indian patient population.
+              A longitudinal analysis of 137 patients with paired HbA1c readings at this clinic revealed that 86% showed worsening glycaemic control despite being on maximum-intensity oral therapy  with mean HbA1c rising from 8.9% to 11.0%. These findings are directly informing structured protocols for earlier, more confident insulin escalation at Karunya Sugalaya and represent a significant contribution to the understanding of oral therapy limitations in the South Indian patient population.
             </p>
           </article>
 

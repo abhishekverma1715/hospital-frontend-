@@ -33,7 +33,7 @@ export default function ConditionsPage() {
               Conditions We <span className="text-cyan-300">Specialise In</span>
             </h1>
             <p className="font-body-lg text-xs sm:text-base lg:text-lg text-gray-200 leading-relaxed line-clamp-2 sm:line-clamp-none">
-              From early prevention and insulin resistance reversal to complex advanced metabolic management — delivering evidence-based diabetes medicine tailored for South Indian lifestyles since 2008.
+              From early prevention and insulin resistance reversal to complex advanced metabolic management delivering evidence-based diabetes medicine tailored for South Indian lifestyles since 2008.
             </p>
 
             {/* Compact Quick Stats Strip */}
@@ -209,7 +209,7 @@ export default function ConditionsPage() {
                     Type 2 Diabetes Management
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                    The most common form of diabetes, treated in thousands of patients across the Cauvery delta since 2008. We create personalised management plans that go far beyond standard prescriptions — combining medication optimisation, dietary guidance specific to South Indian food patterns, targeted activity regimens, and continuous digital tracking via our Diary app. Bringing an HbA1c above 12.0% down below 7.0% within six months is routine practice at Karunya Sugalaya.
+                    The most common form of diabetes, treated in thousands of patients across the Cauvery delta since 2008. We create personalised management plans that go far beyond standard prescriptions combining medication optimisation, dietary guidance specific to South Indian food patterns, targeted activity regimens, and continuous digital tracking via our Diary app. Bringing an HbA1c above 12.0% down below 7.0% within six months is routine practice at Karunya Sugalaya.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 bg-gray-50/80 p-4 rounded-2xl border border-gray-100">
@@ -290,7 +290,7 @@ export default function ConditionsPage() {
                     Pre-Diabetes &amp; IR Reversal
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                    A pre-diabetes diagnosis is not a life sentence — it is an actionable window of opportunity. Evidence-based dietary and lifestyle intervention, tailored to the specific dietary realities of Tamil Nadu, can reverse insulin resistance entirely before progression occurs.
+                    A pre-diabetes diagnosis is not a life sentence it is an actionable window of opportunity. Evidence-based dietary and lifestyle intervention, tailored to the specific dietary realities of Tamil Nadu, can reverse insulin resistance entirely before progression occurs.
                   </p>
                   <div className="bg-amber-50/70 p-3.5 rounded-xl mb-6 text-xs text-amber-900 leading-relaxed">
                     <strong>Early Intervention:</strong> Reversing impaired fasting glucose (IFG) and impaired glucose tolerance (IGT) with nutrition &amp; metabolic counseling.
@@ -320,7 +320,7 @@ export default function ConditionsPage() {
                     Gestational Diabetes Care
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                    Karunya Sugalaya is a regional referral centre for pregnancy-related hyperglycemia. We provide safe, evidence-based management to protect both mother and baby — with vigilant glucose monitoring, tailored insulin therapy if indicated, and comprehensive post-delivery screening.
+                    Karunya Sugalaya is a regional referral centre for pregnancy-related hyperglycemia. We provide safe, evidence-based management to protect both mother and baby with vigilant glucose monitoring, tailored insulin therapy if indicated, and comprehensive post-delivery screening.
                   </p>
                   <div className="bg-pink-50/70 p-3.5 rounded-xl mb-6 text-xs text-pink-950 leading-relaxed">
                     <strong>Maternal &amp; Fetal Protection:</strong> Non-teratogenic glucose control protocols closely coordinated with obstetric specialists.
@@ -345,7 +345,7 @@ export default function ConditionsPage() {
                     Obesity &amp; Metabolic Syndrome
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                    Our Obesity Clinic provides comprehensive metabolic assessment using Body Composition Analysis — measuring visceral fat and muscle mass distribution. Our <strong className="text-[#0F172A]">RITAM 360 programme</strong> integrates medical management with dietary coaching, yoga, and wellness support.
+                    Our Obesity Clinic provides comprehensive metabolic assessment using Body Composition Analysis measuring visceral fat and muscle mass distribution. Our <strong className="text-[#0F172A]">RITAM 360 programme</strong> integrates medical management with dietary coaching, yoga, and wellness support.
                   </p>
                   <div className="bg-emerald-50/70 p-3.5 rounded-xl mb-6 text-xs text-emerald-900 leading-relaxed">
                     <strong>Metabolic Profiling:</strong> Precision body composition scanning targeting abdominal adiposity &amp; insulin resistance.
@@ -383,7 +383,7 @@ export default function ConditionsPage() {
                 </div>
 
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 max-w-3xl">
-                  Our clinical decision support system actively flags early signs of complications at every consultation — neuropathy, nephropathy, retinopathy, and cardiovascular risk. We provide on-site digital fundus photography for early detection of diabetic retinopathy and a dedicated diabetic foot care department. Early detection here is not an aspiration — it is an automated clinical protocol.
+                  Our clinical decision support system actively flags early signs of complications at every consultation  neuropathy, nephropathy, retinopathy, and cardiovascular risk. We provide on-site digital fundus photography for early detection of diabetic retinopathy and a dedicated diabetic foot care department. Early detection here is not an aspiration it is an automated clinical protocol.
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-4 border-t border-white/10">
