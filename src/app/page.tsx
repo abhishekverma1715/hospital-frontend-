@@ -30,7 +30,7 @@ function AutoPlayTourVideo({ src }: { src: string }) {
 
   useEffect(() => {
     if (inView && videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
   }, [inView]);
 
@@ -291,7 +291,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#0D5C75] leading-none">Excellence</p>
-                    <p className="text-[11px] sm:text-xs font-bold text-[#0F172A] mt-0.5 sm:mt-1 leading-none">20+ Years in Care</p>
+                    <p className="text-[11px] sm:text-xs font-bold text-[#0F172A] mt-0.5 sm:mt-1 leading-none">25+ Years in Care</p>
                   </div>
                 </div>
 
