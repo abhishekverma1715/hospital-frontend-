@@ -352,7 +352,7 @@ export default function Footer() {
       <div className="w-full bg-[#422884] text-white py-4 px-4 sm:px-8 relative z-10 shadow-inner">
         <div className="max-w-container-max-width mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[12px] sm:text-[13px] md:text-[14px] font-normal text-center sm:text-left leading-relaxed">
-            Copyright © 2008 – {new Date().getFullYear()} Karunya Sugalaya Diabetes Care &amp; Research Centre. All Rights Reserved.
+            Copyright © 2008 – {new Date().getFullYear()}{' '}Karunya Sugalaya Diabetes Care &amp; Research Centre. All Rights Reserved.
           </p>
           <button
             type="button"

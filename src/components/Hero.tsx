@@ -33,7 +33,7 @@ const SLIDES: Slide[] = [
     id: 3,
     image: '/assets/assets/image02.png',
     //badge: 'CMC Vellore EQAS  Lab',
-    title: 'Karunya Sugalaya -Reception & Information Desk ',
+    title: 'Karunya Sugalaya - Reception & Information Desk',
     subtitle: 'Your Health, Our Highest Priority',
   },
   {

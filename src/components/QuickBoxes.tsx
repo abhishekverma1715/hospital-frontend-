@@ -75,7 +75,7 @@ const quickServices = [
     items: [
       'Master Health Check-Up Packages',
       'Scientific Obesity Management',
-      'Customized Orthopedic Footwear',
+      'Customised Diabetic Footwear',
       'RITAM 360° Holistic Care Program',
     ],
   },

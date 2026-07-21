@@ -166,7 +166,7 @@ export default function HomePage() {
       {/* ===== Jothydev Style Accreditations Banner ===== */}
       <section className="py-14 bg-smoke3 border-b border-gray-200">
         <div className="max-w-container-max-width mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
             <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="w-14 h-14 rounded-xl bg-[#0084FF]/10 border border-[#0084FF]/20 flex items-center justify-center shrink-0">
@@ -175,20 +175,6 @@ export default function HomePage() {
               <div className="flex flex-col">
                 <h3 className="text-lg font-bold text-[#0F172A]">IDF  Care Equivalent</h3>
                 <p className="text-sm text-gray-600 mt-1 leading-relaxed">International Diabetes Federation guidelines strictly applied across clinical management.</p>
-                <Link href="/about" className="line-btn mt-3 text-sm">
-                  <span>Know More</span>
-                  <span className="text-base">→</span>
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-start gap-5 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl bg-[#E07A5F]/10 border border-[#E07A5F]/20 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[#E07A5F] text-[32px]">local_hospital</span>
-              </div>
-              <div className="flex flex-col">
-                <h3 className="text-lg font-bold text-[#0F172A]">NABH Hospital Safety Standards</h3>
-                <p className="text-sm text-gray-600 mt-1 leading-relaxed">National Accreditation Board safety protocols followed for outpatient &amp; inpatient care.</p>
                 <Link href="/about" className="line-btn mt-3 text-sm">
                   <span>Know More</span>
                   <span className="text-base">→</span>
