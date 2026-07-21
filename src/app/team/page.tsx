@@ -63,15 +63,6 @@ const SENIOR_CONSULTANTS: SpecialistCard[] = [];
 
 const SPECIALIST_CONSULTANTS: SpecialistCard[] = [
   {
-    id: 'sc1',
-    name: 'Mrs. L. Ramya',
-    qualifications: 'M.Sc., M.Phil.',
-    role: 'Clinical Dietician',
-    department: 'Nutrition & Dietetics',
-    badge: 'Dietician',
-    icon: 'local_hospital',
-  },
-  {
     id: 'sc2',
     name: 'Mrs. L. Ramya',
     qualifications: 'M.Sc., M.Phil.',
