@@ -333,14 +333,14 @@
       #fbf7f1;
   }
 
-  /* Soft, layered card shadow — warmer than gray */
+  /* Pristine, layered card shadow */
   .soft-card {
     background: #ffffff;
     border-radius: 28px;
-    border: 1px solid rgba(217, 201, 179, 0.5);
+    border: 1px solid rgba(188, 201, 198, 0.5);
     box-shadow:
-      0 1px 2px rgba(120, 90, 50, 0.04),
-      0 8px 24px rgba(120, 90, 50, 0.06);
+      0 1px 2px rgba(17, 28, 45, 0.04),
+      0 8px 24px rgba(17, 28, 45, 0.06);
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
                 box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
                 border-color 0.4s ease;
@@ -349,8 +349,8 @@
     transform: translateY(-6px);
     border-color: rgba(0, 104, 95, 0.35);
     box-shadow:
-      0 4px 8px rgba(120, 90, 50, 0.06),
-      0 24px 48px rgba(120, 90, 50, 0.12);
+      0 4px 8px rgba(17, 28, 45, 0.06),
+      0 24px 48px rgba(17, 28, 45, 0.12);
   }
 
   /* Icon chip */
@@ -483,15 +483,16 @@
 }
 .article-prose blockquote {
   border-left: 4px solid #00685f;
-  background: #fbf7f1;
+  background: #f0f5f2;
   padding: 16px 24px;
   border-radius: 0 16px 16px 0;
   font-style: italic;
   color: #171d1c;
+  box-shadow: 0 2px 8px rgba(0, 104, 95, 0.04);
 }
 .article-prose code {
-  background: #f0e9dc;
-  color: #8a6d4a;
+  background: #eaefed;
+  color: #005049;
   padding: 2px 7px;
   border-radius: 6px;
   font-size: 0.9em;
@@ -500,14 +501,15 @@
 .article-prose hr {
   border: none;
   height: 1px;
-  background: #e8d8bf;
+  background: #bcc9c6;
   margin: 2.5em 0;
 }
 .article-prose img {
   border-radius: 16px;
-  border: 1px solid #e8d8bf;
+  border: 1px solid #bcc9c6;
   max-width: 100%;
   height: auto;
+  box-shadow: 0 4px 16px rgba(17, 28, 45, 0.06);
 }
 
 /* Universal Responsive Layout & Safe Area Safeguards */
