@@ -31,27 +31,34 @@ const SLIDES: Slide[] = [
 
   {
     id: 3,
+    image: '/assets/assets/image02.png',
+    //badge: 'CMC Vellore EQAS  Lab',
+    title: 'Karunya Sugalaya -Reception & Information Desk ',
+    subtitle: 'Your Health, Our Highest Priority',
+  },
+  {
+    id: 4,
     image: '/assets/assets/slider3.jpeg',
     //badge: 'CMC Vellore EQAS  Lab',
     title: 'Karunya Sugalaya - Foot care services',
     subtitle: 'Comprehensive Diabetic Foot Care & Wound Management.',
   },
   {
-    id: 4,
+    id: 5,
     image: '/assets/assets/slider4.jpeg',
     //badge: 'Trusted by 50,000+ Patients',
     title: 'Karunya Sugalaya - Obesity clinic',
     subtitle: 'Obesity Clinic – Your Journey to a Healthier Life Starts Here',
   },
   {
-    id: 5,
+    id: 6,
     image: '/assets/assets/slider5.jpeg',
     //badge: 'Trusted by 50,000+ Patients',
     title: 'Karunya Sugalaya - Lab facility',
     subtitle: 'Advanced Laboratory Services with Accurate Diagnostics.',
   },
   {
-    id: 6,
+    id: 7,
     image: '/assets/assets/slider6.jpeg',
     //badge: 'Trusted by 50,000+ Patients',
     title: 'Karunya Sugalaya - Pharmacy ',
