@@ -436,10 +436,10 @@ export default function HomePage() {
               Diagnostic Infrastructure &amp; Technology
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0F172A] leading-tight mb-5">
-              State-of-the-Art Medical Devices.
+              Advanced Clinical Medical Devices.
             </h2>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              We equip our hospital and research center with world-class diagnostic equipment ensuring every clinical decision is powered by rapid, high-precision laboratory and physiological data.
+              We equip our hospital and research center with certified, high-precision diagnostic equipment ensuring every clinical decision is powered by rapid, accurate laboratory and physiological data.
             </p>
           </div>
 
@@ -889,7 +889,7 @@ export default function HomePage() {
                     Dr. B. Lakshmi, M.B.B.S, D. Diab.,
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed text-justify sm:text-left break-words">
-                    Specialist in gestational diabetes, comprehensive insulin therapy, preventive diabetic foot care, and holistic patient-first care.
+                    Specialist in gestational diabetes, comprehensive insulin therapy, preventive diabetic foot care, and multidisciplinary patient-first care.
                   </p>
 
                   {/* Specialties Chips */}

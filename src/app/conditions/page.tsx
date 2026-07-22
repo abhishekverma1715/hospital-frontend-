@@ -353,7 +353,7 @@ export default function ConditionsPage() {
                 </div>
                 <div className="pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-700">
                   <span className="material-symbols-outlined text-base">fitness_center</span>
-                  RITAM 360 Holistic Wellness Protocol
+                  RITAM 360 Multidisciplinary Wellness Protocol
                 </div>
               </div>
             </div>

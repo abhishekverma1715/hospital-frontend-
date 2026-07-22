@@ -302,7 +302,7 @@ export default function AboutDoctor() {
                 CMC Vellore Certified Diagnostics &amp; Evidence-Based Care
               </h4>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                All consultations are backed by state-of-the-art laboratory testing, continuous glucose monitoring, and AI-assisted analysis.
+                All consultations are backed by CMC Vellore-certified laboratory testing, continuous glucose monitoring, and AI-assisted analysis.
               </p>
             </div>
           </div>

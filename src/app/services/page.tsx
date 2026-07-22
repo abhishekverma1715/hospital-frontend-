@@ -56,7 +56,7 @@ const DEFAULT_SERVICES: Service[] = [
     id: 3,
     name: 'Hi-Tech Lab & Diagnostics',
     description:
-      'Operating inside the hospital facility, our CMC Vellore EQAS-certified "ACCURA DIAGNOSTICS" laboratory delivers state-of-the-art precision and rapid reporting. Equipped with fully automated hematology analyzers, advanced clinical chemistry systems, and gold-standard HPLC HbA1c testing equipment, our experienced technologists ensure accurate diagnostic profiling to guide evidence-based treatment decisions and early diabetic complication screening.',
+      'Operating inside the hospital facility, our CMC Vellore EQAS-certified "ACCURA DIAGNOSTICS" laboratory delivers high-precision accuracy and rapid reporting. Equipped with fully automated hematology analyzers, advanced clinical chemistry systems, and gold-standard HPLC HbA1c testing equipment, our experienced technologists ensure accurate diagnostic profiling to guide evidence-based treatment decisions and early diabetic complication screening.',
     icon: 'biotech',
     image: '/images/hitech-lab.jpg',
   },

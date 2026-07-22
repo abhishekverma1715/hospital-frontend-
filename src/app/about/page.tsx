@@ -6,8 +6,9 @@ import { Award, ShieldCheck, Activity, CheckCircle2 } from 'lucide-react';
 import FinalCTA from '@/components/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'About Us | Karunya Sugalaya Diabetes Care & Research Centre Pvt Ltd ',
-  description: 'Karunya Sugalaya Diabetes Care & Research Centre Pvt Ltd in Kumbakonam — 25+ years of clinical excellence, leadership under Dr. K. Sivakumar, and advanced diabetes technologies.',
+  title: 'About Us — Karunya Sugalaya Diabetes Centre, Kumbakonam',
+  description:
+    'Karunya Sugalaya Diabetes Care & Research Centre in Kumbakonam — 25+ years of clinical excellence, leadership under Dr. K. Sivakumar, and advanced diabetes technologies.',
 };
 
 export default function AboutPage() {
@@ -76,7 +77,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-bold text-[#0F172A]"> Our Mission </h3>
                 <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                  To help people using the advanced Scientific and Technology to prevent chronic disease and complications with affordable Cost and Good Care to Achieve longer & Healthy Lives
+                  To help people using advanced science and technology to prevent chronic disease and complications with transparent pricing and high-precision clinical care to achieve longer, healthier lives.
                 </p>
               </div>
             </div>
@@ -95,7 +96,7 @@ export default function AboutPage() {
                 Our Heritage &amp; Vision
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight">
-                Empowering Patients Through Innovation, Education &amp; Holistic Care
+                Empowering Patients Through Innovation, Education &amp; Integrated Care
               </h2>
               <p className="text-base text-gray-600 leading-relaxed">
                 Founded with the vision of making international-standard diabetes therapy accessible to all, Karunya Sugalaya Diabetes Care &amp; Research Centre has transformed metabolic healthcare in Tamil Nadu. We understand that poorly controlled diabetes leads to preventable complications and financial stress.

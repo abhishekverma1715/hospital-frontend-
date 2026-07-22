@@ -4,8 +4,8 @@ import Image from 'next/image';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Our Doctors & Medical Team — Karunya Sugalaya Diabetes Centre, Kumbakonam',
-  description: 'Meet Dr. K. Sivakumar (Managing Director), Dr. B. Lakshmi (Medical Director), Specialist Consultants, and 24x7 Medical Officers in Kumbakonam.',
+  title: 'Our Doctors — Karunya Sugalaya Diabetes Centre, Kumbakonam',
+  description: 'Meet Dr. K. Sivakumar (Metabolic Physician, MD, API Gold Medalist) and Dr. B. Lakshmi (Diabetologist, Steno Denmark trained). Specialist diabetes care in Kumbakonam.',
 };
 
 interface TeamMember {

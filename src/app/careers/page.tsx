@@ -6,9 +6,9 @@ import { CareerPosition } from '../api/careers/route';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Careers & Current Openings — Karunya Sugalaya Diabetes Care & Research Centre Pvt Ltd, Kumbakonam',
+  title: 'Careers & Job Openings — Karunya Sugalaya, Kumbakonam',
   description:
-    'Join our team and make a difference in diabetes care. Walk-in interviews Monday to Saturday for Duty Doctors (MBBS/MD), Staff Nurses, Lab Technicians, Receptionists, Billing Assistants, Physician Assistants, and Marketing Executives. Minimum 1 or 2 years experience must.',
+    'Join our team at Karunya Sugalaya Diabetes Centre in Kumbakonam. Openings for Duty Doctors, Staff Nurses, Lab Technicians, Receptionists, and Billing Assistants.',
 };
 
 const DEFAULT_CAREERS: CareerPosition[] = [

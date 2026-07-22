@@ -66,7 +66,7 @@ const quickServices = [
   },
   {
     title: 'Added Value & Wellness Services',
-    description: 'Holistic preventive health programs designed for complete metabolic optimization, foot biomechanics, and longevity.',
+    description: 'Comprehensive preventive health programs designed for complete metabolic optimization, foot biomechanics, and longevity.',
     badge: 'Preventive Programs',
     href: '/services#wellness',
     icon: Sparkles,
@@ -76,7 +76,7 @@ const quickServices = [
       'Master Health Check-Up Packages',
       'Scientific Obesity Management',
       'Customised Diabetic Footwear',
-      'RITAM 360° Holistic Care Program',
+      'RITAM 360° Multidisciplinary Care Program',
     ],
   },
   {
