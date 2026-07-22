@@ -39,217 +39,157 @@ function formatDate(value?: string): string | null {
 const DEFAULT_BLOG_POSTS: Blog[] = [
   {
     id: 1,
-    title: 'Complete Diabetic Education Guide: Understanding & Living Well with Diabetes',
-    slug: 'diabetic-education-guide',
-    excerpt: 'A comprehensive guide explaining diabetes pathophysiology, early warning signs, target blood glucose ranges, and everyday self-management strategies.',
-    cover_image: '/assets/articles/diabetic-education.png',
-    author: 'Dr. K. Sivakumar, M.D.',
+    title: 'நம் உணவும் சர்க்கரை நோயும் — தென்னிந்திய உணவு வழிகாட்டி',
+    slug: 'south-indian-diabetic-nutrition-tamil',
+    excerpt: 'Idli, dosai, rice, sambar — the foods we grew up with. Can you eat them and still control your blood sugar? This article explains the glycaemic impact of common Tamil Nadu staples, practical portion guidance, smart swaps, and how to eat your traditional food without spiking your sugar.',
+    cover_image: '/assets/articles/diet-management.png',
+    author: 'Dr. K. Sivakumar / Dr. B. Lakshmi',
     status: 'published',
     created_at: '2026-07-15T10:00:00Z',
     updated_at: '2026-07-15T10:00:00Z',
-    content: `# Empowering Patients Through Clinical Education
+    content: `# நம் உணவும் சர்க்கரை நோயும் — தென்னிந்திய உணவு வழிகாட்டி
 
-Diabetes mellitus is not merely a condition of elevated blood sugar; it is a complex metabolic syndrome that impacts multiple organ systems. At **Karunya Sugalaya Diabetes Centre**, we firmly believe that an educated patient is the most effective member of the healthcare team.
+இட்லி, தோசை, சோறு, சாம்பார் — நாம் தினமும் சாப்பிடும் உணவுகள். இவற்றை சாப்பிட்டுக்கொண்டே இரத்த சர்க்கரையை கட்டுக்குள் வைத்திருக்க முடியுமா? 
 
----
-
-## Understanding Diabetes Subtypes
-
-1. **Type 1 Diabetes Mellitus (T1DM)**: An autoimmune condition wherein the immune system attacks insulin-producing beta cells in the pancreas. Absolute insulin replacement is essential.
-2. **Type 2 Diabetes Mellitus (T2DM)**: Characterized by progressive insulin resistance combined with insulin secretory defect. It is heavily influenced by genetics, visceral adiposity, and physical inactivity.
-3. **Gestational Diabetes Mellitus (GDM)**: Glucose intolerance diagnosed during pregnancy, requiring strict monitoring to protect both maternal and fetal well-being.
+**கருண்யா சுகாலயா நீரிழிவு மையம்** வழங்கும் தென்னிந்திய உணவுமுறை வழிகாட்டி.
 
 ---
 
-## Key Clinical Targets (IDF & ADA Guidelines)
+## தென்னிந்திய உணவுகளின் Glycaemic Impact (சர்க்கரை ஏற்றம்)
 
-To prevent chronic microvascular (retinopathy, nephropathy, neuropathy) and macrovascular (cardiovascular) complications, target the following glycemic metrics:
+நமது பாரம்பரிய உணவுகளில் கார்போஹைட்ரேட் (Carbohydrate) அதிகம் உள்ளது. 
 
-* **Fasting Plasma Glucose (FPG)**: 80 – 130 mg/dL
-* **Postprandial Glucose (PPG - 2 hours after meals)**: Less than 180 mg/dL
-* **Glycated Hemoglobin (HbA1c)**: Less than 7.0% for most adults (individualized based on age and comorbidities)
-
-> "Structured patient education reduces diabetes-related hospital admissions by over 40% and significantly slows chronic disease progression." — Dr. K. Sivakumar
+* **வெள்ளை அரிசி சாதம் & இட்லி/தோசை**: ரத்தத்தில் சர்க்கரையின் அளவை வேகமாக உயர்த்தும் (High Glycemic Index).
+* **பருப்பு & காய்கறிகள்**: நார்ச்சத்து (Fiber) மற்றும் புரதம் (Protein) நிறைந்தது, சர்க்கரை மெதுவாக உயர உதவும்.
 
 ---
 
-## The Four Pillars of Daily Self-Management
+## 50-25-25 தட்டு முறை (Healthy Plate Method)
 
-* **Nutritional Discipline**: Adopting portion-controlled, high-fiber, low-glycemic meals.
-* **Consistent Physical Activity**: At least 150 minutes per week of moderate-intensity aerobic exercise combined with resistance training.
-* **Precision Glucose Monitoring**: Utilizing Continuous Glucose Monitoring (CGM) or regular self-monitoring of blood glucose (SMBG).
-* **Medication Adherence**: Never skipping prescribed insulin or oral anti-diabetic medications without medical consultation.`,
+சாப்பிடும் போது உங்கள் தட்டை 3 பகுதிகளாக பிரியுங்கள்:
+
+1. **50% காய்கறிகள் & கீரைகள்**: வெண்டைக்காய், சுரைக்காய், பாகற்காய், கீரைகள், வெள்ளரிக்காய் போன்ற நார்ச்சத்து மிகுந்த உணவுகள்.
+2. **25% புரதச்சத்து (Protein)**: சுண்டல், பாசிப்பருப்பு, பன்னீர், முட்டை அல்லது மீன்/கோழி இறைச்சி.
+3. **25% சிறுதானியங்கள் / அரிசி**: அளவு கட்டுப்படுத்தப்பட்ட குதிரைவாளி, சாமை, தினை அல்லது சப்பாத்தி.
+
+---
+
+## சர்க்கரை அளவை உயர்த்தாமல் சாப்பிட எளிய வழிகள்
+
+* **சாப்பாட்டுக்கு முன் காய்/கீரை சாப்பிடுங்கள்**: முதலில் காய்கறிகளை சாப்பிட்டு விட்டு, இறுதியில் சாதம் சாப்பிடுவது ரத்த சர்க்கரை திடீரென உயர்வதை தடுக்கும்.
+* **வெந்தயம் & சீரகம்**: உணவில் வெந்தயம் சேர்ப்பது இன்சுலின் சுரப்பை சீராக்க உதவும்.
+* **இனிப்பு பானங்களை தவிர்க்கவும்**: பாக்கெட் ஜூஸ்கள், அதிக சர்க்கரை போட்ட டீ/காபியை தவிர்த்து மோர் அல்லது சுக்கு நீர் அருந்தலாம்.`,
   },
   {
     id: 2,
-    title: 'Mastering Insulin Management: Types, Storage, and Safe Injection Practices',
-    slug: 'mastering-insulin-management',
-    excerpt: 'Essential practical advice on basal and bolus insulins, proper refrigeration and pen storage, site rotation regimens, and preventing hypoglycemia.',
-    cover_image: '/assets/articles/insulin-management.png',
-    author: 'Dr. B. Lakshmi, D. Diab.',
+    title: 'What is HbA1c — and why does it matter more than your daily sugar reading?',
+    slug: 'what-is-hba1c-and-why-it-matters',
+    excerpt: 'Most patients focus on their fasting blood sugar. But HbA1c tells you the real story — your average blood sugar over the past three months. This article explains what HbA1c measures, how to interpret your result, what your target should be, and why it is the number that matters most in diabetes management.',
+    cover_image: '/assets/articles/diabetic-education.png',
+    author: 'Dr. K. Sivakumar',
     status: 'published',
     created_at: '2026-07-16T11:00:00Z',
     updated_at: '2026-07-16T11:00:00Z',
-    content: `# The Lifesaving Role of Insulin Therapy
+    content: `# Understanding HbA1c: The True Picture of Glycemic Control
 
-Insulin is a natural hormone produced by the pancreas. When natural production declines or cells become highly resistant, exogenous insulin therapy is initiated to restore metabolic harmony and protect vital organs.
+Most patients focus strictly on their fasting blood sugar reading in the morning. However, fasting glucose only gives a single snapshot in time — which can fluctuate based on stress, sleep, or what you ate the night before.
 
----
-
-## Modern Insulin Classifications
-
-* **Rapid-Acting Insulins (e.g., Aspart, Lispro, Glulisine)**: Administered 5–15 minutes prior to meals. Onset occurs within 15 minutes, peaking around 1–2 hours to cover mealtime glucose spikes.
-* **Short-Acting (Regular) Insulins**: Taken 30 minutes before meals, with a duration of 6–8 hours.
-* **Intermediate-Acting (NPH)**: Provides baseline coverage lasting up to 12–16 hours.
-* **Long-Acting Basal Insulins (e.g., Glargine, Detemir, Degludec)**: Administered once or twice daily at the exact same time, providing steady, peakless 24-hour background insulin coverage.
-* **Premixed Insulins**: Combinations of rapid/short and intermediate insulins for simplified dosing schedules.
+**HbA1c (Glycated Hemoglobin)** measures the percentage of blood sugar attached to your red blood cells. Since red blood cells live for approximately 120 days, the HbA1c test reveals your average blood sugar level over the past 2 to 3 months.
 
 ---
 
-## Storage and Handling Protocols
+## How to Interpret Your HbA1c Result
 
-1. **Unopened Insulin Pens/Vials**: Must be stored inside the refrigerator at **2°C to 8°C (36°F to 46°F)**. Never freeze insulin; frozen insulin loses potency and must be discarded.
-2. **In-Use Pens/Vials**: Can be kept at room temperature (up to 25°C/77°F) away from direct sunlight and heat. Must be discarded after **28 days** (or as specified by the manufacturer), even if some medication remains.
+* **Below 5.7%**: Normal / Non-diabetic range.
+* **5.7% to 6.4%**: Pre-diabetes range — a vital window of opportunity for reversal through diet and lifestyle.
+* **6.5% and above**: Diabetic range.
 
 ---
 
-## Best Practices for Safe Injection
+## Target HbA1c Goals
 
-* **Site Rotation**: Rotate injection sites across the abdomen (at least 2 inches away from the navel), outer thighs, upper buttocks, and back of the arms to prevent **lipohypertrophy** (lumpy tissue buildup that causes unpredictable insulin absorption).
-* **Needle Safety**: Always use a fresh, sterile pen needle (4mm or 5mm) for every injection. Never reuse needles.
-* **Recognizing Hypoglycemia**: If blood sugar drops below 70 mg/dL, immediately consume 15 grams of fast-acting carbohydrates (3 glucose tablets, half a cup of fruit juice, or 3 teaspoons of sugar) and retest after 15 minutes (**The Rule of 15**).`,
+For most non-pregnant adults with diabetes, the International Diabetes Federation (IDF) and clinical guidelines recommend maintaining an **HbA1c below 7.0%**.
+
+> "At Karunya Sugalaya, bringing an HbA1c above 12.0% down below 7.0% within six months is routine practice through structured clinical decision support." — Dr. K. Sivakumar
+
+---
+
+## Why HbA1c Prevents Long-Term Complications
+
+Keeping your HbA1c consistently under 7.0% drastically reduces your risk of chronic microvascular and macrovascular complications:
+* **Diabetic Retinopathy** (Vision loss protection)
+* **Diabetic Nephropathy** (Kidney health preservation)
+* **Diabetic Peripheral Neuropathy** (Foot nerve salvage)`,
   },
   {
     id: 3,
-    title: 'Practical Diabetic Diet Management: Plate Method & South Indian Meal Plans',
-    slug: 'practical-diabetic-diet-management',
-    excerpt: 'How to enjoy traditional South Indian favorites while maintaining steady glycemic control using portion planning, fiber optimization, and glycemic index tips.',
-    cover_image: '/assets/articles/diet-management.png',
-    author: 'Mrs. L. Ramya, M.Sc.',
+    title: 'மாத்திரை எடுத்தாலும் சர்க்கரை ஏன் கட்டுக்குள் வரவில்லை?',
+    slug: 'why-blood-sugar-remains-high-despite-medication-tamil',
+    excerpt: 'Many patients take their medication faithfully but still see poor numbers. This article explains why medication alone is not enough — and what lifestyle factors must work alongside it. It also covers how different classes of diabetes medication work, why missing doses matters, and when insulin becomes necessary.',
+    cover_image: '/assets/articles/insulin-management.png',
+    author: 'Dr. K. Sivakumar',
     status: 'published',
     created_at: '2026-07-17T09:30:00Z',
     updated_at: '2026-07-17T09:30:00Z',
-    content: `# Nutrition as Clinical Therapy
+    content: `# மாத்திரை எடுத்தாலும் சர்க்கரை ஏன் கட்டுக்குள் வரவில்லை?
 
-Diet management is the cornerstone of glycemic control. A diabetic diet is not about total starvation or eliminating favorite traditional dishes; rather, it is about understanding glycemic response, portion control, and meal timing.
-
----
-
-## The Karunya Sugalaya Healthy Plate Method
-
-When preparing your lunch or dinner, visualize your plate divided into three zones:
-
-1. **50% Non-Starchy Vegetables**: Fill half your plate with colorful greens and fiber-rich vegetables such as spinach (keerai), bottle gourd (suraikai), bitter gourd (pavakkai), ladies finger (vendakkai), and cucumber.
-2. **25% High-Quality Lean Protein**: Dedicate one quarter of your plate to protein sources like sundal (boiled legumes), dal, paneer, tofu, eggs, or grilled fish/chicken. Protein stabilizes blood sugar curves and promotes satiety.
-3. **25% Complex Carbohydrates**: Limit grains to one quarter of your plate. Replace polished white rice with traditional millets (foxtail millet, little millet, pearl millet), red rice, or whole wheat chapatis.
-
-> "Small adjustments in cooking methods — such as adding methi seeds, parboiling vegetables, and pairing carbohydrates with healthy fats and proteins — can flatten postprandial glucose spikes by up to 35%." — Mrs. L. Ramya, Clinical Dietician
+பல நோயாளிகள் தினமும் தவறாமல் மாத்திரை சாப்பிட்டாலும், அவர்களின் இரத்த சர்க்கரை அளவு 200 mg/dL-க்கும் அதிகமாகவே இருக்கிறது. இதற்கு என்ன காரணம்?
 
 ---
 
-## Smart Eating Rules for Everyday Health
+## 1. மாத்திரை மட்டும் போதாது — வாழ்க்கைமுறை மாற்றம் அவசியம்
 
-* **Avoid Liquid Sugars**: Completely eliminate soft drinks, packet fruit juices, and sweetened teas/coffees. Opt for buttermilk (mor), clear vegetable soups, or tender coconut water in moderation.
-* **Frequent, Balanced Meals**: Eat 3 main meals and 2 small healthy snacks (such as roasted makhana, almonds, or guava) at consistent intervals to prevent severe fluctuations in insulin secretion.
-* **Glycemic Index (GI) Awareness**: Choose foods with a low GI (below 55) that release glucose slowly into the bloodstream.`,
+நீரிழிவு என்பது வெறும் மாத்திரை சாப்பிடுவதால் மட்டும் குணமடையும் நோய் அல்ல. 
+
+* **உணவு நேரம்**: மாத்திரை சாப்பிட்ட பிறகும் அதிக அளவில் அரிசி சாதம் அல்லது இனிப்புகள் சாப்பிட்டால் சர்க்கரை உயரவே செய்யும்.
+* **உடற்பயிற்சி இன்மை**: தினமும் குறைந்தது 30 நிமிடம் நடைபயிற்சி செய்யாவிட்டால் செல்கள் இன்சுலினை சரியாக பயன்படுத்தாது (Insulin Resistance).
+
+---
+
+## 2. மாத்திரை சாப்பிடும் நேரத்தில் தவறு
+
+சில மாத்திரைகள் உணவுக்கு 15 நிமிடத்திற்கு முன் சாப்பிட வேண்டும், சில மாத்திரைகள் உணவுக்கு பின் சாப்பிட வேண்டும். 
+* மாத்திரை சாப்பிடும் நேரத்தை மாற்றினால் அதன் வீரியம் குறையும்.
+* டோஸ் (Dose) தவறவிடுவது சர்க்கரை அளவை திடீரென உயர்த்தும்.
+
+---
+
+## 3. கணையத்தின் இன்சுலின் சுரப்பு குறைதல்
+
+காலப்போக்கில் உடலில் இன்சுலின் சுரக்கும் செல்கள் பலவீனமடையலாம். அப்போது வெறும் வாய்வழி மாத்திரைகள் (Oral Tablets) மட்டும் போதாது. 
+* மருத்துவரின் ஆலோசனைப்படி இன்சுலின் (Insulin Therapy) தொடங்குவது பக்கவிளைவுகளையும் உறுப்பு பாதிப்புகளையும் தடுக்கும்.`,
   },
   {
     id: 4,
-    title: 'RITAM 360° Holistic Care Program: Precision Medicine Meets Lifestyle Science',
-    slug: 'ritam-360-holistic-diabetes-care',
-    excerpt: 'Explore Karunya Sugalaya’s signature multidisciplinary protocol combining AI-assisted glucose tracking, clinical nutrition, yoga, and stress mastery.',
-    cover_image: '/assets/articles/ritam-360.png',
-    author: 'Dr. K. Sivakumar, M.D.',
+    title: 'The 30-minute walk that can lower your HbA1c by 0.5%',
+    slug: '30-minute-walk-lower-hba1c',
+    excerpt: "Exercise is medicine in diabetes — but the advice needs to be practical for Tamil Nadu's climate and daily schedule. This article gives simple, evidence-based guidance on when to walk, how to build the habit, why the timing relative to meals matters for blood sugar, and how even modest physical activity delivers measurable improvements in HbA1c.",
+    cover_image: '/assets/articles/obesity-management.png',
+    author: 'Dr. K. Sivakumar',
     status: 'published',
     created_at: '2026-07-18T14:15:00Z',
     updated_at: '2026-07-18T14:15:00Z',
-    content: `# Introducing RITAM 360°: Total Metabolic Restoration
+    content: `# Exercise as Clinical Medicine in Diabetes
 
-True diabetes remission and long-term complication prevention require more than simply prescribing tablets. At Karunya Sugalaya, we engineered the **RITAM 360° Holistic Diabetes Care Program** — an integrative scientific protocol designed to treat the patient as a whole being.
-
----
-
-## Core Pillars of the RITAM 360° Protocol
-
-1. **Precision Clinical Diabetology & CGM Integration**: Using Continuous Glucose Monitoring sensors to map real-time glucose dynamics, pinpointing exact foods, emotional stressors, and sleep disruptions that trigger glucose spikes.
-2. **Medical Nutrition Therapy (MNT)**: Personalized meal plans crafted by clinical dieticians tailored to individual metabolic rates, gut health, and cultural food preferences.
-3. **Therapeutic Yoga & Pranayama**: Specialized yogic postures (such as Mandukasana, Ardha Matsyendrasana, and Surya Namaskar) clinically proven to stimulate pancreatic blood circulation and enhance cellular insulin sensitivity.
-4. **Mindfulness & Stress Mastery**: Chronic cortisol (stress hormone) secretion directly raises blood glucose. Our structured meditation protocols lower stress biomarkers and stabilize autonomic nervous function.
-5. **Sleep Architecture Optimization**: Ensuring 7–8 hours of restorative deep sleep to balance ghrelin, leptin, and growth hormone secretion.
+Physical activity is one of the most effective non-pharmacological interventions for lowering blood glucose. Engaging in just **30 minutes of brisk walking daily** can improve insulin sensitivity and lower your HbA1c by up to 0.5% — equivalent to the effect of adding an extra oral diabetic medication!
 
 ---
 
-## Clinical Outcomes of RITAM 360°
+## Why Timing Matters: Post-Meal Walking
 
-Patients enrolled in our 6-month and 12-month RITAM protocols consistently achieve:
-* Significant reduction in HbA1c (average drop of 1.8% to 3.2%)
-* Reduction or safe deprescribing of oral medications under close medical supervision
-* Enhanced energy, mental clarity, and improved cardiovascular fitness`,
-  },
-  {
-    id: 5,
-    title: 'Diabetic Foot Care Education: Daily Inspection, Footwear & Neuropathy Prevention',
-    slug: 'diabetic-foot-care-prevention',
-    excerpt: 'Critical daily protective steps to safeguard against neuropathy and foot ulcers, safe toenail care guidelines, and how to choose custom orthopedic footwear.',
-    cover_image: '/assets/articles/foot-care.png',
-    author: 'Dr. B. Lakshmi, D. Diab.',
-    status: 'published',
-    created_at: '2026-07-19T16:20:00Z',
-    updated_at: '2026-07-19T16:20:00Z',
-    content: `# Protecting Your Feet from Diabetic Complications
+The single best time for a walk is **30 minutes after your main meal** (especially after lunch or dinner). 
 
-Diabetic peripheral neuropathy gradually reduces protective sensation in the lower extremities, while peripheral arterial disease reduces vital blood flow. Consequently, even a minor pebble cut, blister, or ingrown toenail can quickly escalate into a serious diabetic foot ulcer if left undetected.
+When you move your legs and large muscle groups after eating:
+1. Muscles absorb glucose directly from the bloodstream **without needing extra insulin**.
+2. Postprandial (post-meal) blood sugar spikes are flattened by up to 40 mg/dL.
 
 ---
 
-## The 5-Minute Daily Foot Inspection Checklist
+## Practical Tips for Tamil Nadu's Climate
 
-Every evening before sleeping, perform a thorough inspection of both feet:
-
-* **Check the Soles and Between Toes**: Use a mirror (or ask a family member) to look for cuts, blisters, redness, swelling, or warm spots.
-* **Wash and Dry Gently**: Wash feet daily in lukewarm water (never hot water). Dry thoroughly using a soft towel, paying extra attention to the spaces between the toes where moisture can foster fungal infections.
-* **Moisturize the Skin**: Apply a mild, unscented moisturizing cream or coconut oil to the tops and soles of the feet to prevent dry, cracked skin. **Never apply moisturizer between the toes.**
-
----
-
-## Safe Toenail & Footwear Guidelines
-
-1. **Straight-Edge Nail Trim**: Cut toenails straight across and file sharp corners gently with an emery board. Never dig into the corners with sharp scissors or clippers.
-2. **Never Walk Barefoot**: Always wear protective footwear inside and outside the home. Even small splinters or hot floor surfaces can cause severe burns without pain warning.
-3. **Customized Orthopedic & Diabetic Footwear**: Wear deep-toe-box shoes made of breathable, soft materials with microcellular polymer (MCP) insoles that evenly distribute plantar pressure. Inspect shoe interiors with your hand before wearing to ensure no foreign objects are inside.
-
-> "Early diagnosis of neuropathy using biothesiometry and Doppler arterial assessment at Karunya Sugalaya prevents over 95% of diabetic foot complications." — Dr. B. Lakshmi`,
-  },
-  {
-    id: 6,
-    title: 'Scientific Obesity Management in Diabetes: Reversing Metabolic Risk',
-    slug: 'scientific-obesity-management-diabetes',
-    excerpt: 'Understanding the biological link between visceral adipose tissue and insulin resistance, structured clinical weight reduction, and long-term metabolic health.',
-    cover_image: '/assets/articles/obesity-management.png',
-    author: 'Dr. K. Sivakumar, M.D.',
-    status: 'published',
-    created_at: '2026-07-20T12:00:00Z',
-    updated_at: '2026-07-20T12:00:00Z',
-    content: `# The Visceral Fat and Insulin Resistance Connection
-
-Obesity and Type 2 Diabetes are deeply interlinked metabolic disorders often referred to clinically as **Diabesity**. When excess fat accumulates around internal organs in the abdominal cavity (visceral adipose tissue), it releases inflammatory cytokines and free fatty acids that directly block insulin signaling pathways.
-
----
-
-## Why Weight Loss is the Most Powerful Diabetes Medicine
-
-Clinical research confirms that losing **5% to 10% of total body weight** can lead to dramatic improvements in insulin sensitivity, blood pressure, and lipid profiles. In many newly diagnosed patients, structured weight loss can achieve complete clinical remission of Type 2 Diabetes.
-
----
-
-## Our Evidence-Based Clinical Obesity Protocols
-
-At Karunya Sugalaya’s specialized **Obesity & Metabolic Clinic**, we do not advocate crash diets or unscientific supplements. Instead, we utilize a tiered medical approach:
-
-1. **Body Composition & Metabolic Assessment**: Advanced bio-impedance analysis to precisely measure visceral fat area, skeletal muscle mass, basal metabolic rate (BMR), and total body water.
-2. **Targeted Medical Nutrition & Caloric Optimization**: Customized hypocaloric high-protein, adequate-fiber diets designed to burn visceral fat while preserving critical skeletal muscle.
-3. **Medical & Pharmacological Management**: When clinically indicated, safe prescription medications (including GLP-1 receptor agonists and SGLT2 inhibitors) are utilized to regulate appetite, enhance satiety curves, and promote cardio-renal protection.
-4. **Behavioral Cognitive Counseling**: Empowering patients with psychological tools to overcome emotional eating, stress-induced cravings, and sedentary habits.`,
+* **Early Morning or Post-Dinner**: Avoid walking in intense heat. A 20 to 30-minute brisk walk after dinner in cool air is highly effective.
+* **Pacing**: Walk at a pace where you can comfortably speak but cannot sing.
+* **Foot Care Safety**: Always wear proper protective footwear with soft insoles. Never walk barefoot on rough surfaces.`,
   },
 ];
 

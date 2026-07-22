@@ -94,7 +94,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full h-[260px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[650px] sm:h-[70svh] lg:h-[75svh] max-h-[800px] overflow-hidden bg-[#0F172A]"
+      className="relative w-full h-[300px] sm:h-[480px] md:h-[540px] lg:h-[600px] xl:h-[650px] overflow-hidden bg-[#0F172A]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -106,10 +106,10 @@ export default function Hero() {
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                 }`}
             >
-              {/* Background Image (Optimized via Next.js Image for LCP & WebP) */}
+              {/* Background Image (Fixed size, no zoom distortion, perfect responsive fit) */}
               <Image
                 src={slide.image}
                 alt={slide.title}
@@ -118,8 +118,7 @@ export default function Hero() {
                 fetchPriority={index === 0 ? "high" : "auto"}
                 loading={index === 0 ? "eager" : "lazy"}
                 sizes="100vw"
-                className={`w-full h-full object-cover object-center transition-transform duration-[6000ms] ease-linear ${isActive ? 'scale-105' : 'scale-100'
-                  }`}
+                className="w-full h-full object-cover object-center select-none"
               />
 
               {/* Gradient Overlays for readable text — active on sm+ where text is visible */}

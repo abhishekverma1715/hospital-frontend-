@@ -116,42 +116,42 @@ export default function ConditionsPage() {
             <nav className="flex flex-col gap-1.5">
               <a
                 href="#type2"
-                className="flex items-center gap-3 px-4 py-3 bg-[#0F172A] text-white font-bold rounded-2xl text-sm transition-all shadow-md group"
+                className="flex items-center gap-3 px-4 py-3 bg-[#422884] text-white font-bold rounded-2xl text-sm transition-all shadow-md group"
               >
                 <span className="material-symbols-outlined text-[20px] text-cyan-300 group-hover:scale-110 transition-transform">biotech</span>
                 <span>Type 2 Diabetes</span>
               </a>
               <a
                 href="#type1"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#0F172A] font-bold rounded-2xl text-sm transition-all group"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#422884] font-bold rounded-2xl text-sm transition-all group"
               >
                 <span className="material-symbols-outlined text-[20px] text-[#0D5C75] group-hover:scale-110 transition-transform">bloodtype</span>
                 <span>Type 1 Diabetes</span>
               </a>
               <a
                 href="#prediabetes"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#0F172A] font-bold rounded-2xl text-sm transition-all group"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#422884] font-bold rounded-2xl text-sm transition-all group"
               >
                 <span className="material-symbols-outlined text-[20px] text-amber-600 group-hover:scale-110 transition-transform">trending_down</span>
                 <span>Pre-Diabetes &amp; IR</span>
               </a>
               <a
                 href="#gestational"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#0F172A] font-bold rounded-2xl text-sm transition-all group"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#422884] font-bold rounded-2xl text-sm transition-all group"
               >
                 <span className="material-symbols-outlined text-[20px] text-pink-600 group-hover:scale-110 transition-transform">pregnant_woman</span>
                 <span>Gestational Diabetes</span>
               </a>
               <a
                 href="#obesity"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#0F172A] font-bold rounded-2xl text-sm transition-all group"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#422884] font-bold rounded-2xl text-sm transition-all group"
               >
                 <span className="material-symbols-outlined text-[20px] text-emerald-600 group-hover:scale-110 transition-transform">monitor_weight</span>
                 <span>Obesity &amp; Metabolic</span>
               </a>
               <a
                 href="#complications"
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#0F172A] font-bold rounded-2xl text-sm transition-all group"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#422884] font-bold rounded-2xl text-sm transition-all group"
               >
                 <span className="material-symbols-outlined text-[20px] text-purple-600 group-hover:scale-110 transition-transform">emergency_home</span>
                 <span>Complications</span>
@@ -161,7 +161,7 @@ export default function ConditionsPage() {
             <div className="pt-4 border-t border-gray-100">
               <Link
                 href="/book"
-                className="w-full py-3.5 px-4 bg-[#0D5C75] hover:bg-[#094356] text-white rounded-2xl font-bold text-sm shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
+                className="w-full py-3.5 px-4 bg-[#422884] hover:bg-[#331e67] text-white rounded-2xl font-bold text-sm shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group"
               >
                 <span className="material-symbols-outlined text-[18px]">calendar_month</span>
                 <span>Book Consultation</span>
@@ -359,44 +359,44 @@ export default function ConditionsPage() {
             </div>
 
             {/* ========================================= */}
-            {/* CARD 6: DIABETIC COMPLICATIONS (Dark Card) */}
+            {/* CARD 6: DIABETIC COMPLICATIONS (Light Theme) */}
             {/* ========================================= */}
             <div
               id="complications"
-              className="scroll-mt-36 bg-[#0F172A] text-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden group"
+              className="scroll-mt-36 bg-gradient-to-br from-purple-50/90 via-violet-50/50 to-cyan-50/40 text-[#0F172A] border-2 border-purple-200 hover:border-purple-400 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+              <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
 
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3.5 mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 border border-purple-200/80 flex items-center justify-center shrink-0 shadow-2xs">
                     <span className="material-symbols-outlined text-2xl sm:text-3xl">emergency_home</span>
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-purple-300 uppercase tracking-widest">
+                    <span className="inline-block text-[11px] font-extrabold text-purple-700 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-purple-100/80 mb-1">
                       Early Prevention &amp; Protection
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-purple-950">
                       Diabetic Complications Screening
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 max-w-3xl">
-                  Our clinical decision support system actively flags early signs of complications at every consultation  neuropathy, nephropathy, retinopathy, and cardiovascular risk. We provide on-site digital fundus photography for early detection of diabetic retinopathy and a dedicated diabetic foot care department. Early detection here is not an aspiration it is an automated clinical protocol.
+                <p className="text-sm sm:text-base text-gray-700 font-medium leading-relaxed mb-6 max-w-3xl">
+                  Our clinical decision support system actively flags early signs of complications at every consultation — neuropathy, nephropathy, retinopathy, and cardiovascular risk. We provide on-site digital fundus photography for early detection of diabetic retinopathy and a dedicated diabetic foot care department. Early detection here is not an aspiration — it is an automated clinical protocol.
                 </p>
 
-                <div className="flex flex-wrap gap-3 pt-4 border-t border-white/10">
-                  <div className="px-4 py-2 rounded-xl bg-white/10 border border-white/15 text-xs sm:text-sm font-semibold flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[18px] text-cyan-300">visibility</span>
+                <div className="flex flex-wrap gap-3 pt-4 border-t border-purple-200/60">
+                  <div className="px-4 py-2 rounded-xl bg-white border border-purple-200/80 text-xs sm:text-sm font-bold text-purple-900 shadow-2xs flex items-center gap-2">
+                    <span className="material-symbols-outlined text-[18px] text-purple-600">visibility</span>
                     <span>On-Site Fundus Retinal Imaging</span>
                   </div>
-                  <div className="px-4 py-2 rounded-xl bg-white/10 border border-white/15 text-xs sm:text-sm font-semibold flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[18px] text-cyan-300">memory</span>
+                  <div className="px-4 py-2 rounded-xl bg-white border border-purple-200/80 text-xs sm:text-sm font-bold text-purple-900 shadow-2xs flex items-center gap-2">
+                    <span className="material-symbols-outlined text-[18px] text-purple-600">memory</span>
                     <span>Diabrain AI Complication Screening</span>
                   </div>
-                  <div className="px-4 py-2 rounded-xl bg-white/10 border border-white/15 text-xs sm:text-sm font-semibold flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[18px] text-cyan-300">healing</span>
+                  <div className="px-4 py-2 rounded-xl bg-white border border-purple-200/80 text-xs sm:text-sm font-bold text-purple-900 shadow-2xs flex items-center gap-2">
+                    <span className="material-symbols-outlined text-[18px] text-purple-600">healing</span>
                     <span>Preventive Diabetic Foot Care</span>
                   </div>
                 </div>
@@ -467,7 +467,7 @@ export default function ConditionsPage() {
                 </div>
                 <Link
                   href="/book"
-                  className="bg-[#0D5C75] hover:bg-[#094356] text-white px-6 py-3 rounded-full font-bold text-xs sm:text-sm shadow-md transition-all shrink-0"
+                  className="bg-[#422884] hover:bg-[#331e67] text-white px-6 py-3 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all shrink-0"
                 >
                   Book Priority Consultation →
                 </Link>

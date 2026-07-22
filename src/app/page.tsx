@@ -243,7 +243,7 @@ export default function HomePage() {
               <div className="pt-4 flex flex-wrap gap-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#0D5C75] hover:bg-[#094356] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#422884] hover:bg-[#331e67] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
                 >
                   <span>Read Full Hospital Story</span>
                   <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -294,6 +294,142 @@ export default function HomePage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Why Karunya Sugalaya — 6 Differentiators (PDF Page 3-4) ===== */}
+      <section id="why-us" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200">
+        <div className="max-w-container-max-width mx-auto">
+          <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+            <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-widest mb-4">
+              Why Karunya Sugalaya
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0F172A] leading-tight mb-5">
+              What makes us different?
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              Six things we do here that you won&apos;t find at most diabetes clinics — not because they&apos;re gimmicks, but because they genuinely improve outcomes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                num: '01',
+                title: 'AI-Assisted Clinical Decisions',
+                desc: 'Diabrain — the clinical decision support system inside Dialog EMR — analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. Most clinics use intuition alone. We use data.',
+                icon: 'smart_toy',
+                badge: 'Diabrain AI',
+              },
+              {
+                num: '02',
+                title: 'Complete Digital Health Records',
+                desc: 'Every consultation, investigation, and prescription since your first visit — stored permanently in Dialog EMR. Your full clinical story is available in seconds. No misplaced reports. No repeating history to a new doctor. No starting over.',
+                icon: 'folder_shared',
+                badge: 'Dialog EMR',
+              },
+              {
+                num: '03',
+                title: 'Remote Care via Diary App',
+                desc: 'Between visits, patients use the Diary health tracking app — built by our team — to log blood sugar readings, weight, symptoms, and lifestyle data. This feeds directly into your consultation, giving your doctor a complete picture of your health between appointments.',
+                icon: 'phonelink_setup',
+                badge: 'Diary App',
+              },
+              {
+                num: '04',
+                title: 'Priority for Elderly',
+                desc: 'With growing elderly population, we prioritise them to have least waiting time. Our service can reach their home either via Remote care else home visits for the needy people.',
+                icon: 'elderly',
+                badge: 'Senior Care',
+              },
+              {
+                num: '05',
+                title: 'Research-Backed Decisions for South Indian Patients',
+                desc: 'Global diabetes guidelines are built on Western patient data. Our clinical decisions are backed by research from our own 50,000-patient database — reflecting specific dietary habits, metabolic patterns, and lifestyle realities of patients in Tamil Nadu and the Cauvery delta. Dedicated Dietician to educate and empower.',
+                icon: 'analytics',
+                badge: '50k+ Dataset',
+              },
+              {
+                num: '06',
+                title: '24 × 7 Emergency Diabetes Care',
+                desc: 'Diabetic and Metabolic emergencies — hypoglycaemia (Low Sugars), DKA and hyperosmolar states, severe foot infections, severe uncontrolled Hypertension — do not wait for clinic hours. Our facility is staffed and equipped around the clock. Call +91 99763 79697 immediately.',
+                icon: 'emergency',
+                badge: '24/7 Helpline',
+                isEmergency: true,
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className={`group rounded-3xl p-7 border transition-all duration-300 flex flex-col justify-between h-full ${
+                  item.isEmergency
+                    ? 'bg-gradient-to-br from-red-50/90 via-rose-50/50 to-orange-50/40 border-2 border-red-200 hover:border-red-400 text-[#0F172A] shadow-md hover:shadow-xl'
+                    : 'bg-[#F8FAFC] border-gray-200/80 hover:bg-white hover:border-[#0D5C75]/40 shadow-sm hover:shadow-xl'
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span
+                      className={`text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full ${
+                        item.isEmergency
+                          ? 'bg-red-100 text-red-700'
+                          : 'bg-[#0D5C75]/10 text-[#0D5C75]'
+                      }`}
+                    >
+                      ITEM {item.num}
+                    </span>
+                    <span
+                      className={`text-xs font-bold px-3 py-1 rounded-full border ${
+                        item.isEmergency
+                          ? 'bg-red-600 text-white border-red-600 shadow-sm'
+                          : 'bg-white text-gray-700 border-gray-200 shadow-2xs'
+                      }`}
+                    >
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${
+                        item.isEmergency
+                          ? 'bg-red-100 text-red-600 border border-red-200'
+                          : 'bg-[#0D5C75]/10 text-[#0D5C75]'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-2xl">{item.icon}</span>
+                    </div>
+                    <h3
+                      className={`text-xl font-extrabold leading-snug ${
+                        item.isEmergency ? 'text-red-950' : 'text-[#0F172A] group-hover:text-[#0D5C75]'
+                      }`}
+                    >
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p
+                    className={`text-sm sm:text-base leading-relaxed ${
+                      item.isEmergency ? 'text-gray-700 font-medium' : 'text-gray-600'
+                    }`}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+
+                {item.isEmergency && (
+                  <div className="mt-6 pt-5 border-t border-red-200/70 flex items-center justify-between">
+                    <span className="text-xs font-bold text-red-700">Direct Emergency Line</span>
+                    <a
+                      href="tel:+919976379697"
+                      className="text-xs font-black bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                    >
+                      📞 99763 79697
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

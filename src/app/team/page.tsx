@@ -41,21 +41,31 @@ async function getTeam(): Promise<TeamMember[]> {
 const DEFAULT_TEAM: TeamMember[] = [
   {
     id: 1,
-    name: 'Dr. K. Sivakumar, M.B.B.S, M.D.,',
-    specialty: 'Consultant Physician & Diabetologist',
+    name: 'Dr. K. Sivakumar Krishnamoorthy',
+    specialty: 'Metabolic Physician & Managing Director',
     photo: '/assets/dr-sivakumar-updated.jpg',
-    qualifications: 'M.B.B.S, M.D. - Medicine, 20+ Years Experience in Diabetology',
-    biography: `Dr. K. Sivakumar is a renowned consultant physician and diabetologist in Kumbakonam, Tamil Nadu with over two decades of clinical excellence. He founded Karunya Sugalaya to transform diabetes therapy into comprehensive, patient-centered care.
+    qualifications: 'MBBS, MD (General Medicine) · Metabolic Physician & Managing Director',
+    biography: `Dr. K. Sivakumar Krishnamoorthy graduated with MBBS and MD in General Medicine from the prestigious Madurai Medical College in 2001, winning the API Gold Medal in Medicine during his undergraduate studies — one of the highest academic honours in the field.
 
-Under his leadership, the hospital pioneered electronic medical records (Dialog EMR), AI support tools (DiaX.AI), and Continuous Glucose Monitoring (CGM) protocols treating more than 50,000 patients across South India.`,
+As a physician in Kumbakonam, Dr. Sivakumar quickly observed that more than 90% of his most complex cases were patients with poorly controlled diabetes — patients who had been elsewhere but were not improving. This pattern transformed him. He chose to dedicate his practice exclusively to metabolic medicine, becoming one of the few physicians in the Cauvery delta region with deep specialisation in diabetes, obesity, and metabolic disease. Today, he practices as a Metabolic Physician — a broader, more complete lens than diabetology alone.
+
+Dr. Sivakumar is unusual among clinicians for building his own clinical tools. In 2022, he founded DiaX.AI, a private limited company developing AI-powered clinical intelligence software for chronic disease management in India. His flagship product, Dialog EMR, now holds the complete records of over 50,000 patients and more than 2 million prescriptions — a data infrastructure that powers both clinical care and ongoing research. DiaX.AI recently received the TANSEED 7.0 startup grant from the Government of Tamil Nadu.
+
+Dr. Sivakumar has been publishing clinical research since 2020, is a participant in landmark clinical trials including LANDMARC (Sanofi), and presented original research on insulin use patterns at the International Diabetes Federation (IDF) World Congress in Bangkok in 2025. He is a Key Opinion Leader for several leading pharmaceutical companies and a frequent invited speaker at state and national diabetes conferences.
+
+He is a Life Member of RSSDI (Research Society for the Study of Diabetes in India), the API (Association of Physicians of India), and the IDF (International Diabetes Federation). He served as Secretary of IMA Kumbakonam, playing a key role in raising funds to construct the IMA building. He is Treasurer of the Metabolic Club, Kumbakonam, and a core organiser of KumbMetCon — the annual professional conference for metabolic medicine practitioners in Kumbakonam. He currently serves as Secretary of the API, Thanjavur chapter.`,
   },
   {
     id: 2,
-    name: 'Dr. B. Lakshmi, M.B.B.S, D. Diab.,',
-    specialty: 'Consultant Diabetologist & Women’s Metabolic Care Specialist',
+    name: 'Dr. B. Lakshmi Sivakumar',
+    specialty: 'Consultant Diabetologist & Director of Administration',
     photo: '/assets/dr-lakshmi.jpg',
-    qualifications: 'M.B.B.S, D. Diab., Comprehensive Insulin & Gestational Care',
-    biography: `Dr. B. Lakshmi heads the Diabetic Foot & Neuropathy Prevention Unit and the RITAM Holistic Women's Diabetes Care Program at Karunya Sugalaya. Specializing in gestational diabetes mellitus (GDM) and endocrine care, her consults are unhurried, thorough, and focused on preventive wellness.`,
+    qualifications: 'MBBS, D.Diab · Consultant Diabetologist & Director of Administration',
+    biography: `Dr. B. Lakshmi Sivakumar completed her MBBS at Government Mohan Kumaramangalam Medical College, Salem, and her specialist training in diabetology through a programme facilitated by the Steno Diabetes Centre, Denmark — one of the world's foremost diabetes research and training institutions.
+
+Dr. Lakshmi brings a particular focus to women's health in diabetes — an area that is frequently underprioritised in general diabetes practice. She manages gestational diabetes, PCOS-related insulin resistance, and the unique metabolic challenges women face through different life stages. She has designed and launched RITAM 360, an exclusive programme for women living with diabetes or obesity, combining medical management, group and individual psychological counselling, dietary guidance, yoga, meditation, and stress management — developed in partnership with psychologist Ishwarya.
+
+Beyond clinical practice, Dr. Lakshmi manages the administrative operations of Karunya Sugalaya — ensuring the hospital runs with the precision and care that patients deserve. She is deeply committed to patient education and community outreach, regularly organising and conducting diabetes awareness camps both inside and outside the hospital.`,
   },
 ];
 

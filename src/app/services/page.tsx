@@ -167,6 +167,302 @@ export default async function ServicesPage() {
             );
           })}
         </div>
+
+        {/* ===== A. Outpatient (OP) Services ===== */}
+        <div id="op-services" className="mt-20 pt-16 border-t border-gray-200">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
+                Section A — Outpatient Care
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A]">
+                Outpatient (OP) Services
+              </h2>
+              <p className="text-sm text-gray-500 font-medium mt-1">Starting from ₹500 per consultation</p>
+            </div>
+            <Link
+              href="/book"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#422884] hover:bg-[#331e67] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all shrink-0"
+            >
+              <span>Book OP Slot</span>
+              <span className="material-symbols-outlined text-[18px]">calendar_month</span>
+            </Link>
+          </div>
+
+          {/* Consultation Types Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: 'New Patient Consultation',
+                price: '₹500',
+                time: '10 min',
+                desc: 'First visit, full history, examination and personalised assessment.',
+                badge: 'First Visit',
+              },
+              {
+                title: 'Review Consultation',
+                price: '₹300',
+                time: '5 min',
+                desc: 'Brief follow-up for established patients.',
+                badge: 'Routine Follow-up',
+              },
+              {
+                title: 'Review — Extended',
+                price: '₹400',
+                time: '10 min',
+                desc: 'Follow-up with additional time for multiple concerns.',
+                badge: 'Extended Time',
+              },
+              {
+                title: 'Review — Detailed',
+                price: '₹500',
+                time: '15 min',
+                desc: 'Comprehensive review of reports and treatment adjustments.',
+                badge: 'Detailed Review',
+              },
+              {
+                title: 'Review — Comprehensive',
+                price: '₹1,000',
+                time: '30 min',
+                desc: 'In-depth consultation for complex cases, insulin initiation, CGM review.',
+                badge: 'Complex Care',
+                featured: true,
+              },
+            ].map((type, i) => (
+              <div
+                key={i}
+                className={`p-6 rounded-3xl border transition-all duration-300 flex flex-col justify-between h-full ${
+                  type.featured
+                    ? 'bg-gradient-to-br from-purple-50/90 via-indigo-50/50 to-cyan-50/40 text-[#0F172A] border-2 border-[#422884]/40 hover:border-[#422884] shadow-md hover:shadow-xl'
+                    : 'bg-white border-gray-200 shadow-sm hover:shadow-md'
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`text-xs font-bold px-3 py-1 rounded-full ${
+                        type.featured
+                          ? 'bg-[#422884] text-white shadow-xs'
+                          : 'bg-gray-100 text-[#0D5C75]'
+                      }`}
+                    >
+                      {type.badge}
+                    </span>
+                    <span className={`text-xs font-semibold ${type.featured ? 'text-[#422884] font-bold' : 'text-gray-500'}`}>
+                      ⏱ {type.time}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-extrabold mb-2 text-[#0F172A]">
+                    {type.title}
+                  </h3>
+                  <p className={`text-sm leading-relaxed mb-6 ${type.featured ? 'text-gray-700 font-medium' : 'text-gray-600'}`}>
+                    {type.desc}
+                  </p>
+                </div>
+                <div className={`pt-4 border-t flex items-center justify-between ${type.featured ? 'border-[#422884]/20' : 'border-gray-100'}`}>
+                  <span className={`text-2xl font-black ${type.featured ? 'text-[#422884]' : 'text-[#0D5C75]'}`}>
+                    {type.price}
+                  </span>
+                  <Link
+                    href={`/book?type=${encodeURIComponent(type.title)}`}
+                    className={`text-xs font-bold px-4 py-2 rounded-xl transition-all ${
+                      type.featured
+                        ? 'bg-[#422884] text-white hover:bg-[#331e67] shadow-md hover:shadow-lg'
+                        : 'bg-gray-100 text-[#0F172A] hover:bg-[#422884] hover:text-white'
+                    }`}
+                  >
+                    Select
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* OP Packages Structure Banner */}
+          <div className="bg-[#F8FAFC] border border-gray-200 rounded-3xl p-6 sm:p-8">
+            <h4 className="text-lg font-extrabold text-[#0F172A] mb-2 flex items-center gap-2">
+              <span className="material-symbols-outlined text-[#0D5C75]">package</span>
+              Outpatient Care Packages (Quarterly / Half-yearly / Annual)
+            </h4>
+            <p className="text-xs sm:text-sm text-gray-600 mb-4 leading-relaxed">
+              Bundled consultations and diagnostic investigations designed for long-term glycemic stability.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-white p-4 rounded-2xl border border-gray-200 text-xs shadow-2xs">
+                <span className="font-bold text-[#0D5C75] block mb-1">Quarterly Care Package</span>
+                <span className="text-gray-600">Includes planned consultations + core investigations.</span>
+              </div>
+              <div className="bg-white p-4 rounded-2xl border border-gray-200 text-xs shadow-2xs">
+                <span className="font-bold text-[#0D5C75] block mb-1">Half-yearly Care Package</span>
+                <span className="text-gray-600">Extended doctor reviews + organ function screening.</span>
+              </div>
+              <div className="bg-white p-4 rounded-2xl border border-gray-200 text-xs shadow-2xs">
+                <span className="font-bold text-[#0D5C75] block mb-1">Annual Care Package</span>
+                <span className="text-gray-600">365-day continuous care + comprehensive annual lab panel.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ===== B. Inpatient (IP) Services ===== */}
+        <div id="ip-services" className="mt-20 pt-16 border-t border-gray-200">
+          <div className="mb-10">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
+              Section B — Inpatient Care
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A]">
+              Inpatient (IP) Services &amp; 12-Bed Facility
+            </h2>
+            <p className="text-sm text-gray-500 font-medium mt-1">
+              Dedicated day-care and acute inpatient stabilization facility.
+            </p>
+          </div>
+
+          {/* 12-Bed Capacity Banner */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+            <div className="bg-[#F8FAFC] border border-gray-200 p-6 rounded-3xl text-center">
+              <div className="text-3xl font-black text-[#0D5C75]">5 Beds</div>
+              <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mt-1">Common Ward</div>
+            </div>
+            <div className="bg-[#F8FAFC] border border-gray-200 p-6 rounded-3xl text-center">
+              <div className="text-3xl font-black text-[#0D5C75]">5 Beds</div>
+              <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mt-1">Individual AC Rooms</div>
+            </div>
+            <div className="bg-red-50 border border-red-100 p-6 rounded-3xl text-center">
+              <div className="text-3xl font-black text-red-600">2 Beds</div>
+              <div className="text-xs font-bold text-red-600 uppercase tracking-wider mt-1">24x7 Emergency Beds</div>
+            </div>
+          </div>
+
+          {/* 6 IP Clinical Programmes */}
+          <h3 className="text-xl font-bold text-[#0F172A] mb-6 flex items-center gap-2">
+            <span className="material-symbols-outlined text-[#0D5C75]">healing</span>
+            IP Clinical Programmes
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Pain Management in Diabetes',
+                desc: 'Specialist care for severe diabetic neuropathic pain and peripheral sensory loss.',
+                icon: 'personal_injury',
+              },
+              {
+                title: 'Glycaemic Control Programme',
+                desc: 'Intensive inpatient blood sugar stabilisation for acute hyperglycemia.',
+                icon: 'monitoring',
+              },
+              {
+                title: 'Pregnancy Diabetes Management',
+                desc: 'Inpatient care for gestational diabetes emergencies and fetal protection.',
+                icon: 'pregnant_woman',
+              },
+              {
+                title: 'Rejuvenation Package',
+                desc: 'Comprehensive metabolic reset programme for chronic fatigue and burnout.',
+                icon: 'spa',
+              },
+              {
+                title: 'Diabetic Foot Management',
+                desc: 'Inpatient wound care, infection management, and ulcer salvage.',
+                icon: 'footprint',
+              },
+              {
+                title: 'Mindfulness Package',
+                desc: 'Stress and mental health support in metabolic disease.',
+                icon: 'self_improvement',
+              },
+            ].map((prog, i) => (
+              <div key={i} className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#0D5C75]/10 text-[#0D5C75] flex items-center justify-center mb-4">
+                    <span className="material-symbols-outlined text-2xl">{prog.icon}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-2">{prog.title}</h4>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{prog.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ===== C. Laboratory Services ===== */}
+        <div id="lab-services" className="mt-20 pt-16 border-t border-gray-200">
+          <div className="mb-10">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
+              Section C — Laboratory Services
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A]">
+              Laboratory Services &amp; Diagnostic Packages
+            </h2>
+            <p className="text-sm text-gray-500 font-medium mt-1">
+              CMC Vellore EQAS Certified · HbA1c by HPLC method using Bio-Rad D10 analyser
+            </p>
+          </div>
+
+          {/* Lab Quality Banner */}
+          <div className="bg-gradient-to-br from-emerald-50/90 via-teal-50/50 to-cyan-50/40 text-[#0F172A] border-2 border-emerald-200 hover:border-emerald-400 rounded-3xl p-6 sm:p-8 mb-10 shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center gap-3.5 mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 border border-emerald-200/80 flex items-center justify-center shrink-0 shadow-2xs">
+                <span className="material-symbols-outlined text-3xl">verified</span>
+              </div>
+              <div>
+                <span className="inline-block text-[11px] font-extrabold text-emerald-700 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-emerald-100/80 mb-1">
+                  Gold Standard Standards
+                </span>
+                <h4 className="text-lg sm:text-xl font-extrabold text-emerald-950">CMC Vellore EQAS Certified Quality Assurance</h4>
+              </div>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed">
+              Our laboratory is certified under the CMC Vellore External Quality Assurance Scheme (EQAS) — a gold standard in clinical laboratory quality assurance in India. HbA1c is measured using the HPLC method on the Bio-Rad D10 analyser — the most accurate method available, recommended by the International Federation of Clinical Chemistry (IFCC).
+            </p>
+          </div>
+
+          {/* 7 Lab Packages */}
+          <h3 className="text-xl font-bold text-[#0F172A] mb-6 flex items-center gap-2">
+            <span className="material-symbols-outlined text-[#0D5C75]">science</span>
+            Lab Packages
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Complete Diabetes Care Package',
+                desc: 'Comprehensive panel for full diabetes assessment including HbA1c, renal & lipid profiling.',
+              },
+              {
+                title: 'Comprehensive Care Package',
+                desc: 'Extended metabolic and multi-organ function panel for advanced complication screening.',
+              },
+              {
+                title: 'Basic Diabetes Package',
+                desc: 'Core investigations for routine glycemic monitoring.',
+              },
+              {
+                title: 'Hypertension Package',
+                desc: 'Cardiovascular and renal risk assessment panel.',
+              },
+              {
+                title: 'Thyroid Package',
+                desc: 'Full thyroid function panel (T3, T4, TSH).',
+              },
+              {
+                title: 'Obesity Package',
+                desc: 'Metabolic and hormonal panel for obesity management.',
+              },
+              {
+                title: 'Mindfulness Package',
+                desc: 'Stress hormone (cortisol) and related metabolic markers.',
+              },
+            ].map((pkg, i) => (
+              <div key={i} className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#0D5C75] mb-3" />
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-2">{pkg.title}</h4>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{pkg.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ===== CTA ===== */}

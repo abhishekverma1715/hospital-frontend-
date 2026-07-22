@@ -89,12 +89,16 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-primary-container text-on-primary-container p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center">
-            <span className="material-symbols-outlined text-[48px] mb-4">calendar_month</span>
-            <h2 className="text-[24px] font-bold mb-2">Book an Appointment</h2>
-            <p className="text-[16px] opacity-90 mb-6">Booking an appointment guarantees your time slot and avoids waiting time.</p>
-            <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-6 py-2.5 sm:px-8 sm:py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
-              Book Online Now
+          <div className="bg-gradient-to-br from-purple-50/90 via-indigo-50/50 to-cyan-50/40 border-2 border-[#422884]/30 hover:border-[#422884] text-[#0F172A] p-6 sm:p-8 rounded-3xl flex flex-col items-center text-center shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="w-14 h-14 rounded-2xl bg-[#422884]/10 text-[#422884] flex items-center justify-center mb-4 shrink-0 shadow-2xs">
+              <span className="material-symbols-outlined text-[32px]">calendar_month</span>
+            </div>
+            <h2 className="text-2xl font-extrabold text-[#0F172A] mb-2">Book an Appointment</h2>
+            <p className="text-sm sm:text-base text-gray-700 font-medium mb-6 leading-relaxed">
+              Booking an appointment guarantees your time slot and avoids waiting time.
+            </p>
+            <Link href="/book" className="bg-[#422884] hover:bg-[#331e67] text-white px-8 py-3.5 rounded-full text-sm sm:text-base font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              Book Online Now →
             </Link>
           </div>
 
