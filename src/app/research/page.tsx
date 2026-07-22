@@ -84,7 +84,7 @@ export default function ResearchPage() {
           <article className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant/30 hover-elevation transition-all relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-2 h-full bg-primary/40 group-hover:bg-primary transition-colors"></div>
             <span className="inline-block px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-[12px] font-bold tracking-widest uppercase mb-4">Clinical Trial Participation</span>
-            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-on-surface mb-4">LANDMARC Trial — Sanofi</h3>
+            <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-on-surface mb-4">LANDMARC Trial Sanofi</h3>
             <p className="text-[16px] text-on-surface-variant leading-relaxed">
               Karunya Sugalaya has participated as a site in the LANDMARC clinical trial by Sanofi, contributing real-world patient data to a landmark multinational study.
             </p>

@@ -173,7 +173,7 @@ export default async function ServicesPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
               <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
-                Section A — Outpatient Care
+                Section A Outpatient Care
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A]">
                 Outpatient (OP) Services
@@ -207,21 +207,21 @@ export default async function ServicesPage() {
                 badge: 'Routine Follow-up',
               },
               {
-                title: 'Review — Extended',
+                title: 'Review Extended',
                 price: '₹400',
                 time: '10 min',
                 desc: 'Follow-up with additional time for multiple concerns.',
                 badge: 'Extended Time',
               },
               {
-                title: 'Review — Detailed',
+                title: 'Review Detailed',
                 price: '₹500',
                 time: '15 min',
                 desc: 'Comprehensive review of reports and treatment adjustments.',
                 badge: 'Detailed Review',
               },
               {
-                title: 'Review — Comprehensive',
+                title: 'Review Comprehensive',
                 price: '₹1,000',
                 time: '30 min',
                 desc: 'In-depth consultation for complex cases, insulin initiation, CGM review.',
@@ -231,20 +231,18 @@ export default async function ServicesPage() {
             ].map((type, i) => (
               <div
                 key={i}
-                className={`p-6 rounded-3xl border transition-all duration-300 flex flex-col justify-between h-full ${
-                  type.featured
-                    ? 'bg-gradient-to-br from-purple-50/90 via-indigo-50/50 to-cyan-50/40 text-[#0F172A] border-2 border-[#422884]/40 hover:border-[#422884] shadow-md hover:shadow-xl'
-                    : 'bg-white border-gray-200 shadow-sm hover:shadow-md'
-                }`}
+                className={`p-6 rounded-3xl border transition-all duration-300 flex flex-col justify-between h-full ${type.featured
+                  ? 'bg-gradient-to-br from-purple-50/90 via-indigo-50/50 to-cyan-50/40 text-[#0F172A] border-2 border-[#422884]/40 hover:border-[#422884] shadow-md hover:shadow-xl'
+                  : 'bg-white border-gray-200 shadow-sm hover:shadow-md'
+                  }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span
-                      className={`text-xs font-bold px-3 py-1 rounded-full ${
-                        type.featured
-                          ? 'bg-[#422884] text-white shadow-xs'
-                          : 'bg-gray-100 text-[#0D5C75]'
-                      }`}
+                      className={`text-xs font-bold px-3 py-1 rounded-full ${type.featured
+                        ? 'bg-[#422884] text-white shadow-xs'
+                        : 'bg-gray-100 text-[#0D5C75]'
+                        }`}
                     >
                       {type.badge}
                     </span>
@@ -265,11 +263,10 @@ export default async function ServicesPage() {
                   </span>
                   <Link
                     href={`/book?type=${encodeURIComponent(type.title)}`}
-                    className={`text-xs font-bold px-4 py-2 rounded-xl transition-all ${
-                      type.featured
-                        ? 'bg-[#422884] text-white hover:bg-[#331e67] shadow-md hover:shadow-lg'
-                        : 'bg-gray-100 text-[#0F172A] hover:bg-[#422884] hover:text-white'
-                    }`}
+                    className={`text-xs font-bold px-4 py-2 rounded-xl transition-all ${type.featured
+                      ? 'bg-[#422884] text-white hover:bg-[#331e67] shadow-md hover:shadow-lg'
+                      : 'bg-gray-100 text-[#0F172A] hover:bg-[#422884] hover:text-white'
+                      }`}
                   >
                     Select
                   </Link>
@@ -308,7 +305,7 @@ export default async function ServicesPage() {
         <div id="ip-services" className="mt-20 pt-16 border-t border-gray-200">
           <div className="mb-10">
             <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
-              Section B — Inpatient Care
+              Section B Inpatient Care
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A]">
               Inpatient (IP) Services &amp; 12-Bed Facility
@@ -389,7 +386,7 @@ export default async function ServicesPage() {
         <div id="lab-services" className="mt-20 pt-16 border-t border-gray-200">
           <div className="mb-10">
             <span className="inline-block px-3 py-1 rounded-full bg-[#0D5C75]/10 text-[#0D5C75] text-xs font-bold uppercase tracking-wider mb-3">
-              Section C — Laboratory Services
+              Section C Laboratory Services
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A]">
               Laboratory Services &amp; Diagnostic Packages
@@ -400,20 +397,16 @@ export default async function ServicesPage() {
           </div>
 
           {/* Lab Quality Banner */}
-          <div className="bg-gradient-to-br from-emerald-50/90 via-teal-50/50 to-cyan-50/40 text-[#0F172A] border-2 border-emerald-200 hover:border-emerald-400 rounded-3xl p-6 sm:p-8 mb-10 shadow-md hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center gap-3.5 mb-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 border border-emerald-200/80 flex items-center justify-center shrink-0 shadow-2xs">
-                <span className="material-symbols-outlined text-3xl">verified</span>
-              </div>
+          <div className="bg-[#0F172A] text-white rounded-3xl p-6 sm:p-8 mb-10 shadow-xl border border-slate-800">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="material-symbols-outlined text-cyan-300 text-3xl">verified</span>
               <div>
-                <span className="inline-block text-[11px] font-extrabold text-emerald-700 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-emerald-100/80 mb-1">
-                  Gold Standard Standards
-                </span>
-                <h4 className="text-lg sm:text-xl font-extrabold text-emerald-950">CMC Vellore EQAS Certified Quality Assurance</h4>
+                <h4 className="text-lg font-bold text-white">CMC Vellore EQAS Certified Quality Assurance</h4>
+                <p className="text-xs text-gray-300">Gold Standard Clinical Laboratory Standards in India</p>
               </div>
             </div>
-            <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed">
-              Our laboratory is certified under the CMC Vellore External Quality Assurance Scheme (EQAS) — a gold standard in clinical laboratory quality assurance in India. HbA1c is measured using the HPLC method on the Bio-Rad D10 analyser — the most accurate method available, recommended by the International Federation of Clinical Chemistry (IFCC).
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Our laboratory is certified under the CMC Vellore External Quality Assurance Scheme (EQAS)  a gold standard in clinical laboratory quality assurance in India. HbA1c is measured using the HPLC method on the Bio-Rad D10 analyser the most accurate method available, recommended by the International Federation of Clinical Chemistry (IFCC).
             </p>
           </div>
 

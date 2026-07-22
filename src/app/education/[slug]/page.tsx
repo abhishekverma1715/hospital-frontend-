@@ -39,17 +39,17 @@ function formatDate(value?: string): string | null {
 const DEFAULT_BLOG_POSTS: Blog[] = [
   {
     id: 1,
-    title: 'நம் உணவும் சர்க்கரை நோயும் — தென்னிந்திய உணவு வழிகாட்டி',
+    title: 'நம் உணவும் சர்க்கரை நோயும் தென்னிந்திய உணவு வழிகாட்டி',
     slug: 'south-indian-diabetic-nutrition-tamil',
-    excerpt: 'Idli, dosai, rice, sambar — the foods we grew up with. Can you eat them and still control your blood sugar? This article explains the glycaemic impact of common Tamil Nadu staples, practical portion guidance, smart swaps, and how to eat your traditional food without spiking your sugar.',
+    excerpt: 'Idli, dosai, rice, sambar the foods we grew up with. Can you eat them and still control your blood sugar? This article explains the glycaemic impact of common Tamil Nadu staples, practical portion guidance, smart swaps, and how to eat your traditional food without spiking your sugar.',
     cover_image: '/assets/articles/diet-management.png',
     author: 'Dr. K. Sivakumar / Dr. B. Lakshmi',
     status: 'published',
     created_at: '2026-07-15T10:00:00Z',
     updated_at: '2026-07-15T10:00:00Z',
-    content: `# நம் உணவும் சர்க்கரை நோயும் — தென்னிந்திய உணவு வழிகாட்டி
+    content: `# நம் உணவும் சர்க்கரை நோயும் தென்னிந்திய உணவு வழிகாட்டி
 
-இட்லி, தோசை, சோறு, சாம்பார் — நாம் தினமும் சாப்பிடும் உணவுகள். இவற்றை சாப்பிட்டுக்கொண்டே இரத்த சர்க்கரையை கட்டுக்குள் வைத்திருக்க முடியுமா? 
+இட்லி, தோசை, சோறு, சாம்பார் நாம் தினமும் சாப்பிடும் உணவுகள். இவற்றை சாப்பிட்டுக்கொண்டே இரத்த சர்க்கரையை கட்டுக்குள் வைத்திருக்க முடியுமா? 
 
 **கருண்யா சுகாலயா நீரிழிவு மையம்** வழங்கும் தென்னிந்திய உணவுமுறை வழிகாட்டி.
 
@@ -82,9 +82,9 @@ const DEFAULT_BLOG_POSTS: Blog[] = [
   },
   {
     id: 2,
-    title: 'What is HbA1c — and why does it matter more than your daily sugar reading?',
+    title: 'What is HbA1c and why does it matter more than your daily sugar reading?',
     slug: 'what-is-hba1c-and-why-it-matters',
-    excerpt: 'Most patients focus on their fasting blood sugar. But HbA1c tells you the real story — your average blood sugar over the past three months. This article explains what HbA1c measures, how to interpret your result, what your target should be, and why it is the number that matters most in diabetes management.',
+    excerpt: 'Most patients focus on their fasting blood sugar. But HbA1c tells you the real story your average blood sugar over the past three months. This article explains what HbA1c measures, how to interpret your result, what your target should be, and why it is the number that matters most in diabetes management.',
     cover_image: '/assets/articles/diabetic-education.png',
     author: 'Dr. K. Sivakumar',
     status: 'published',
@@ -92,7 +92,7 @@ const DEFAULT_BLOG_POSTS: Blog[] = [
     updated_at: '2026-07-16T11:00:00Z',
     content: `# Understanding HbA1c: The True Picture of Glycemic Control
 
-Most patients focus strictly on their fasting blood sugar reading in the morning. However, fasting glucose only gives a single snapshot in time — which can fluctuate based on stress, sleep, or what you ate the night before.
+Most patients focus strictly on their fasting blood sugar reading in the morning. However, fasting glucose only gives a single snapshot in time which can fluctuate based on stress, sleep, or what you ate the night before.
 
 **HbA1c (Glycated Hemoglobin)** measures the percentage of blood sugar attached to your red blood cells. Since red blood cells live for approximately 120 days, the HbA1c test reveals your average blood sugar level over the past 2 to 3 months.
 
@@ -101,7 +101,7 @@ Most patients focus strictly on their fasting blood sugar reading in the morning
 ## How to Interpret Your HbA1c Result
 
 * **Below 5.7%**: Normal / Non-diabetic range.
-* **5.7% to 6.4%**: Pre-diabetes range — a vital window of opportunity for reversal through diet and lifestyle.
+* **5.7% to 6.4%**: Pre-diabetes range a vital window of opportunity for reversal through diet and lifestyle.
 * **6.5% and above**: Diabetic range.
 
 ---
@@ -110,7 +110,7 @@ Most patients focus strictly on their fasting blood sugar reading in the morning
 
 For most non-pregnant adults with diabetes, the International Diabetes Federation (IDF) and clinical guidelines recommend maintaining an **HbA1c below 7.0%**.
 
-> "At Karunya Sugalaya, bringing an HbA1c above 12.0% down below 7.0% within six months is routine practice through structured clinical decision support." — Dr. K. Sivakumar
+> "At Karunya Sugalaya, bringing an HbA1c above 12.0% down below 7.0% within six months is routine practice through structured clinical decision support." Dr. K. Sivakumar
 
 ---
 
@@ -125,7 +125,7 @@ Keeping your HbA1c consistently under 7.0% drastically reduces your risk of chro
     id: 3,
     title: 'மாத்திரை எடுத்தாலும் சர்க்கரை ஏன் கட்டுக்குள் வரவில்லை?',
     slug: 'why-blood-sugar-remains-high-despite-medication-tamil',
-    excerpt: 'Many patients take their medication faithfully but still see poor numbers. This article explains why medication alone is not enough — and what lifestyle factors must work alongside it. It also covers how different classes of diabetes medication work, why missing doses matters, and when insulin becomes necessary.',
+    excerpt: 'Many patients take their medication faithfully but still see poor numbers. This article explains why medication alone is not enough and what lifestyle factors must work alongside it. It also covers how different classes of diabetes medication work, why missing doses matters, and when insulin becomes necessary.',
     cover_image: '/assets/articles/insulin-management.png',
     author: 'Dr. K. Sivakumar',
     status: 'published',
@@ -137,7 +137,7 @@ Keeping your HbA1c consistently under 7.0% drastically reduces your risk of chro
 
 ---
 
-## 1. மாத்திரை மட்டும் போதாது — வாழ்க்கைமுறை மாற்றம் அவசியம்
+## 1. மாத்திரை மட்டும் போதாது வாழ்க்கைமுறை மாற்றம் அவசியம்
 
 நீரிழிவு என்பது வெறும் மாத்திரை சாப்பிடுவதால் மட்டும் குணமடையும் நோய் அல்ல. 
 
@@ -163,7 +163,7 @@ Keeping your HbA1c consistently under 7.0% drastically reduces your risk of chro
     id: 4,
     title: 'The 30-minute walk that can lower your HbA1c by 0.5%',
     slug: '30-minute-walk-lower-hba1c',
-    excerpt: "Exercise is medicine in diabetes — but the advice needs to be practical for Tamil Nadu's climate and daily schedule. This article gives simple, evidence-based guidance on when to walk, how to build the habit, why the timing relative to meals matters for blood sugar, and how even modest physical activity delivers measurable improvements in HbA1c.",
+    excerpt: "Exercise is medicine in diabetes but the advice needs to be practical for Tamil Nadu's climate and daily schedule. This article gives simple, evidence-based guidance on when to walk, how to build the habit, why the timing relative to meals matters for blood sugar, and how even modest physical activity delivers measurable improvements in HbA1c.",
     cover_image: '/assets/articles/obesity-management.png',
     author: 'Dr. K. Sivakumar',
     status: 'published',
@@ -171,7 +171,7 @@ Keeping your HbA1c consistently under 7.0% drastically reduces your risk of chro
     updated_at: '2026-07-18T14:15:00Z',
     content: `# Exercise as Clinical Medicine in Diabetes
 
-Physical activity is one of the most effective non-pharmacological interventions for lowering blood glucose. Engaging in just **30 minutes of brisk walking daily** can improve insulin sensitivity and lower your HbA1c by up to 0.5% — equivalent to the effect of adding an extra oral diabetic medication!
+Physical activity is one of the most effective non-pharmacological interventions for lowering blood glucose. Engaging in just **30 minutes of brisk walking daily** can improve insulin sensitivity and lower your HbA1c by up to 0.5% equivalent to the effect of adding an extra oral diabetic medication!
 
 ---
 
@@ -199,7 +199,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!blog) {
     blog = DEFAULT_BLOG_POSTS.find((b) => b.slug === slug) || null;
   }
-  if (!blog) return { title: 'Article Not Found — Karunya Sugalaya' };
+  if (!blog) return { title: 'Article Not Found Karunya Sugalaya' };
   return {
     title: `${blog.title} — Karunya Sugalaya`,
     description: blog.excerpt || undefined,

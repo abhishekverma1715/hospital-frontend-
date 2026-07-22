@@ -318,21 +318,21 @@ export default function HomePage() {
               {
                 num: '01',
                 title: 'AI-Assisted Clinical Decisions',
-                desc: 'Diabrain — the clinical decision support system inside Dialog EMR — analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. Most clinics use intuition alone. We use data.',
+                desc: 'Diabrain the clinical decision support system inside Dialog EMR analyses your records at every visit, flags early signs of complications, and suggests evidence-based treatment adjustments in real time. Most clinics use intuition alone. We use data.',
                 icon: 'smart_toy',
                 badge: 'Diabrain AI',
               },
               {
                 num: '02',
                 title: 'Complete Digital Health Records',
-                desc: 'Every consultation, investigation, and prescription since your first visit — stored permanently in Dialog EMR. Your full clinical story is available in seconds. No misplaced reports. No repeating history to a new doctor. No starting over.',
+                desc: 'Every consultation, investigation, and prescription since your first visit stored permanently in Dialog EMR. Your full clinical story is available in seconds. No misplaced reports. No repeating history to a new doctor. No starting over.',
                 icon: 'folder_shared',
                 badge: 'Dialog EMR',
               },
               {
                 num: '03',
                 title: 'Remote Care via Diary App',
-                desc: 'Between visits, patients use the Diary health tracking app — built by our team — to log blood sugar readings, weight, symptoms, and lifestyle data. This feeds directly into your consultation, giving your doctor a complete picture of your health between appointments.',
+                desc: 'Between visits, patients use the Diary health tracking app built by our team to log blood sugar readings, weight, symptoms, and lifestyle data. This feeds directly into your consultation, giving your doctor a complete picture of your health between appointments.',
                 icon: 'phonelink_setup',
                 badge: 'Diary App',
               },
@@ -346,14 +346,14 @@ export default function HomePage() {
               {
                 num: '05',
                 title: 'Research-Backed Decisions for South Indian Patients',
-                desc: 'Global diabetes guidelines are built on Western patient data. Our clinical decisions are backed by research from our own 50,000-patient database — reflecting specific dietary habits, metabolic patterns, and lifestyle realities of patients in Tamil Nadu and the Cauvery delta. Dedicated Dietician to educate and empower.',
+                desc: 'Global diabetes guidelines are built on Western patient data. Our clinical decisions are backed by research from our own 50,000-patient database reflecting specific dietary habits, metabolic patterns, and lifestyle realities of patients in Tamil Nadu and the Cauvery delta. Dedicated Dietician to educate and empower.',
                 icon: 'analytics',
                 badge: '50k+ Dataset',
               },
               {
                 num: '06',
                 title: '24 × 7 Emergency Diabetes Care',
-                desc: 'Diabetic and Metabolic emergencies — hypoglycaemia (Low Sugars), DKA and hyperosmolar states, severe foot infections, severe uncontrolled Hypertension — do not wait for clinic hours. Our facility is staffed and equipped around the clock. Call +91 99763 79697 immediately.',
+                desc: 'Diabetic and Metabolic emergencies hypoglycaemia (Low Sugars), DKA and hyperosmolar states, severe foot infections, severe uncontrolled Hypertension do not wait for clinic hours. Our facility is staffed and equipped around the clock. Call +91 99763 79697 immediately.',
                 icon: 'emergency',
                 badge: '24/7 Helpline',
                 isEmergency: true,
@@ -361,29 +361,26 @@ export default function HomePage() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className={`group rounded-3xl p-7 border transition-all duration-300 flex flex-col justify-between h-full ${
-                  item.isEmergency
-                    ? 'bg-gradient-to-br from-red-50/90 via-rose-50/50 to-orange-50/40 border-2 border-red-200 hover:border-red-400 text-[#0F172A] shadow-md hover:shadow-xl'
-                    : 'bg-[#F8FAFC] border-gray-200/80 hover:bg-white hover:border-[#0D5C75]/40 shadow-sm hover:shadow-xl'
-                }`}
+                className={`group rounded-3xl p-7 border transition-all duration-300 flex flex-col justify-between h-full ${item.isEmergency
+                  ? 'bg-gradient-to-br from-red-50/90 via-rose-50/50 to-orange-50/40 border-2 border-red-200 hover:border-red-400 text-[#0F172A] shadow-md hover:shadow-xl'
+                  : 'bg-[#F8FAFC] border-gray-200/80 hover:bg-white hover:border-[#0D5C75]/40 shadow-sm hover:shadow-xl'
+                  }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <span
-                      className={`text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full ${
-                        item.isEmergency
-                          ? 'bg-red-100 text-red-700'
-                          : 'bg-[#0D5C75]/10 text-[#0D5C75]'
-                      }`}
+                      className={`text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full ${item.isEmergency
+                        ? 'bg-red-100 text-red-700'
+                        : 'bg-[#0D5C75]/10 text-[#0D5C75]'
+                        }`}
                     >
                       ITEM {item.num}
                     </span>
                     <span
-                      className={`text-xs font-bold px-3 py-1 rounded-full border ${
-                        item.isEmergency
-                          ? 'bg-red-600 text-white border-red-600 shadow-sm'
-                          : 'bg-white text-gray-700 border-gray-200 shadow-2xs'
-                      }`}
+                      className={`text-xs font-bold px-3 py-1 rounded-full border ${item.isEmergency
+                        ? 'bg-red-600 text-white border-red-600 shadow-sm'
+                        : 'bg-white text-gray-700 border-gray-200 shadow-2xs'
+                        }`}
                     >
                       {item.badge}
                     </span>
@@ -391,27 +388,24 @@ export default function HomePage() {
 
                   <div className="flex items-center gap-3 mb-4">
                     <div
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${
-                        item.isEmergency
-                          ? 'bg-red-100 text-red-600 border border-red-200'
-                          : 'bg-[#0D5C75]/10 text-[#0D5C75]'
-                      }`}
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${item.isEmergency
+                        ? 'bg-red-100 text-red-600 border border-red-200'
+                        : 'bg-[#0D5C75]/10 text-[#0D5C75]'
+                        }`}
                     >
                       <span className="material-symbols-outlined text-2xl">{item.icon}</span>
                     </div>
                     <h3
-                      className={`text-xl font-extrabold leading-snug ${
-                        item.isEmergency ? 'text-red-950' : 'text-[#0F172A] group-hover:text-[#0D5C75]'
-                      }`}
+                      className={`text-xl font-extrabold leading-snug ${item.isEmergency ? 'text-red-950' : 'text-[#0F172A] group-hover:text-[#0D5C75]'
+                        }`}
                     >
                       {item.title}
                     </h3>
                   </div>
 
                   <p
-                    className={`text-sm sm:text-base leading-relaxed ${
-                      item.isEmergency ? 'text-gray-700 font-medium' : 'text-gray-600'
-                    }`}
+                    className={`text-sm sm:text-base leading-relaxed ${item.isEmergency ? 'text-gray-700 font-medium' : 'text-gray-600'
+                      }`}
                   >
                     {item.desc}
                   </p>

@@ -383,7 +383,7 @@ export default function ConditionsPage() {
                 </div>
 
                 <p className="text-sm sm:text-base text-gray-700 font-medium leading-relaxed mb-6 max-w-3xl">
-                  Our clinical decision support system actively flags early signs of complications at every consultation — neuropathy, nephropathy, retinopathy, and cardiovascular risk. We provide on-site digital fundus photography for early detection of diabetic retinopathy and a dedicated diabetic foot care department. Early detection here is not an aspiration — it is an automated clinical protocol.
+                  Our clinical decision support system actively flags early signs of complications at every consultation neuropathy, nephropathy, retinopathy, and cardiovascular risk. We provide on-site digital fundus photography for early detection of diabetic retinopathy and a dedicated diabetic foot care department. Early detection here is not an aspiration it is an automated clinical protocol.
                 </p>
 
                 <div className="flex flex-wrap gap-3 pt-4 border-t border-purple-200/60">
